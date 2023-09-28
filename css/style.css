@@ -2487,7 +2487,8 @@ footer .ft_link {
   font-weight: 500;
   font-size: 1.1em;
 }
-.under .sitemap > ul > li a, .under .sitemap > ul > li p {
+.under .sitemap > ul > li a,
+.under .sitemap > ul > li p {
   display: block;
   width: 100%;
   padding: 15px 15px 15px 30px;
@@ -2497,7 +2498,8 @@ footer .ft_link {
   box-sizing: border-box;
   text-decoration: none;
 }
-.under .sitemap > ul > li a:before, .under .sitemap > ul > li p:before {
+.under .sitemap > ul > li a:before,
+.under .sitemap > ul > li p:before {
   content: "";
   position: absolute;
   width: 15px;
@@ -2532,10 +2534,11 @@ footer .ft_link {
 }
 .under .key {
   background-image: url(../images/und_key_bg.jpg);
+  background-position: center;
   background-size: auto 100%;
   background-color: #ddd;
-  margin-top: 90px;
-  height: 300px;
+  margin-top: 80px;
+  height: 442px;
 }
 .under .key .inner {
   height: 100%;
@@ -2554,19 +2557,28 @@ footer .ft_link {
   height: 100%;
   padding: 0 140px;
 }
-.under .key .key_text h2 {
+.under .key h2 {
   display: table;
   font-size: 42px;
-  font-weight: 500;
+  font-weight: 700;
+  letter-spacing: 0.15em;
   text-align: center;
   color: #fff;
 }
-.under h2, .under h3, .under h4, .under h5, .under h6 {
+.under h2,
+.under h3,
+.under h4,
+.under h5,
+.under h6 {
   line-height: 1.4;
   letter-spacing: 0.1em;
-  font-family: var(--f-jp);
+  font-family: var(--f-zennew);
 }
-.under h2:last-child, .under h3:last-child, .under h4:last-child, .under h5:last-child, .under h6:last-child {
+.under h2:last-child,
+.under h3:last-child,
+.under h4:last-child,
+.under h5:last-child,
+.under h6:last-child {
   margin-bottom: 0;
 }
 .under h3 {
@@ -2607,10 +2619,14 @@ footer .ft_link {
 .under .inner > section:first-child > h3 {
   margin-top: 131px;
 }
-.under .section > p:last-of-type, .under section > p:last-of-type {
+.under .section > p:last-of-type,
+.under section > p:last-of-type {
   margin-bottom: 0;
 }
-.under .section > p:last-of-type + table, .under .section > p:last-of-type + ul, .under section > p:last-of-type + table, .under section > p:last-of-type + ul {
+.under .section > p:last-of-type + table,
+.under .section > p:last-of-type + ul,
+.under section > p:last-of-type + table,
+.under section > p:last-of-type + ul {
   margin-top: 15px;
 }
 .under section {
@@ -2628,7 +2644,8 @@ footer .ft_link {
 .under .secH6 {
   padding-top: 40px;
 }
-.under .imgBox.rowImg .image_l img, .under .imgBox.rowImg .image_r img {
+.under .imgBox.rowImg .image_l img,
+.under .imgBox.rowImg .image_r img {
   max-width: 100%;
   max-height: 500px;
 }
@@ -2640,7 +2657,8 @@ footer .ft_link {
   float: right;
   margin-left: 60px;
 }
-.under .imgBox.rowImg .image_l, .under .imgBox.rowImg .image_r {
+.under .imgBox.rowImg .image_l,
+.under .imgBox.rowImg .image_r {
   max-width: 450px;
   margin-bottom: 30px;
 }
@@ -2650,16 +2668,20 @@ footer .ft_link {
 .under .imgBox.rowImg .txt_r {
   float: right;
 }
-.under .imgBox.rowImg .txt_l, .under .imgBox.rowImg .txt_r {
+.under .imgBox.rowImg .txt_l,
+.under .imgBox.rowImg .txt_r {
   width: calc(100% - 510px);
 }
-.under .imgBox.rowImg.large .image_l, .under .imgBox.rowImg.large .image_r {
+.under .imgBox.rowImg.large .image_l,
+.under .imgBox.rowImg.large .image_r {
   max-width: 440px;
 }
-.under .imgBox.rowImg.large .txt_l, .under .imgBox.rowImg.large .txt_r {
+.under .imgBox.rowImg.large .txt_l,
+.under .imgBox.rowImg.large .txt_r {
   width: calc(100% - 475px);
 }
-.under .imgBox.rowImg.full .image_l, .under .imgBox.rowImg.full .image_r {
+.under .imgBox.rowImg.full .image_l,
+.under .imgBox.rowImg.full .image_r {
   max-width: 60vw;
 }
 .under .imgBox.colImg .list {
@@ -2722,7 +2744,9 @@ footer .ft_link {
 .under .imgBox.colImg1 .item img {
   max-height: 500px;
 }
-.under .acf_block h3, .under .acf_block h4, .under .acf_block h5 {
+.under .acf_block h3,
+.under .acf_block h4,
+.under .acf_block h5 {
   margin-bottom: 0;
 }
 .under .acf_block .text_h3 {
@@ -2739,7 +2763,8 @@ footer .ft_link {
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1280px) {
-  .under .imgBox.rowImg .image_l, .under .imgBox.rowImg .image_r {
+  .under .imgBox.rowImg .image_l,
+  .under .imgBox.rowImg .image_r {
     float: none;
     max-width: 100%;
     margin-right: auto;
@@ -2752,11 +2777,13 @@ footer .ft_link {
 .under table.rollTable {
   width: 100%;
 }
-.under table.tbl_style01 th, .under table.tbl_style01 td {
+.under table.tbl_style01 th,
+.under table.tbl_style01 td {
   border: 1px solid #ddd;
   padding: 0.625rem;
 }
-.under table.tbl_style01 th img, .under table.tbl_style01 td img {
+.under table.tbl_style01 th img,
+.under table.tbl_style01 td img {
   max-width: 100%;
 }
 .under table.tbl_style01 th {
@@ -2777,13 +2804,15 @@ footer .ft_link {
 .under table.tbl_style01.colHead tr:not(:last-child) th {
   border-bottom: 1px solid #ddd;
 }
-.under table.tbl_style02 th, .under table.tbl_style02 td {
+.under table.tbl_style02 th,
+.under table.tbl_style02 td {
   border: 2px solid #9dba38;
   border-left: none;
   border-right: none;
   padding: 0.625em;
 }
-.under table.tbl_style02 th img, .under table.tbl_style02 td img {
+.under table.tbl_style02 th img,
+.under table.tbl_style02 td img {
   max-width: 100%;
 }
 .under table.tbl_style02 th {
@@ -2804,7 +2833,8 @@ footer .ft_link {
 }
 
 @media only screen and (max-width: 1000px) and (min-width: 769px) {
-  .under table.tbl_style01 th, .under table.tbl_style01 td {
+  .under table.tbl_style01 th,
+  .under table.tbl_style01 td {
     padding: 0.5rem;
   }
   .under table.tbl_style01 th {
@@ -3113,6 +3143,12 @@ footer .ft_link {
   margin-bottom: 10px;
 }
 
+@media only screen and (min-width: 769px) {
+  .under .key h2 {
+    padding-left: 8px;
+    padding-bottom: 2px;
+  }
+}
 /* START BLOG
 ------------------------------------------------------------------------*/
 #pagination {
@@ -3129,7 +3165,8 @@ footer .ft_link {
 #pagination:empty {
   display: none;
 }
-#pagination a, #pagination span {
+#pagination a,
+#pagination span {
   background-color: var(--main-color);
   display: -webkit-flex;
   display: -moz-flex;
@@ -3147,16 +3184,20 @@ footer .ft_link {
   line-height: 1;
   text-decoration: none;
 }
-#pagination a.prev, #pagination a.next, #pagination span.prev, #pagination span.next {
+#pagination a.prev, #pagination a.next,
+#pagination span.prev,
+#pagination span.next {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 7px auto;
   color: transparent;
 }
-#pagination a.prev, #pagination span.prev {
+#pagination a.prev,
+#pagination span.prev {
   background-image: url(../images/shared_blog_arrow_prev.svg);
 }
-#pagination a.next, #pagination span.next {
+#pagination a.next,
+#pagination span.next {
   background-image: url(../images/shared_blog_arrow_next.svg);
 }
 #pagination a:hover {
@@ -3166,7 +3207,8 @@ footer .ft_link {
 #pagination span {
   opacity: 0.5;
 }
-#pagination .active a, #pagination a.active:hover {
+#pagination .active a,
+#pagination a.active:hover {
   background: none repeat scroll 0 0 #000000;
   color: #FFFFFF;
 }
@@ -3644,7 +3686,8 @@ footer .ft_link {
 .main_blog_container .sidebar {
   width: 220px;
 }
-.main_blog_container .sidebar .txt_head, .main_blog_container .sidebar .widgettitle {
+.main_blog_container .sidebar .txt_head,
+.main_blog_container .sidebar .widgettitle {
   background-color: var(--main-color);
   transform: none;
   position: static;
@@ -3805,7 +3848,8 @@ footer .ft_link {
   text-decoration: none;
 }
 @media screen and (max-width: 768px) {
-  .blog_post_button > div a:not(.tel_click):hover, .blog_post_button > div a:not(.tel_click):active {
+  .blog_post_button > div a:not(.tel_click):hover,
+  .blog_post_button > div a:not(.tel_click):active {
     opacity: 1;
     color: #fff;
   }
@@ -3846,7 +3890,9 @@ footer .ft_link {
   right: 0;
   bottom: 0;
 }
-.contact-form-style01 .contact-table input, .contact-form-style01 .contact-table select, .contact-form-style01 .contact-table textarea {
+.contact-form-style01 .contact-table input,
+.contact-form-style01 .contact-table select,
+.contact-form-style01 .contact-table textarea {
   border: 1px solid;
   padding: 4px 8px;
   border-radius: 5px;
@@ -3860,7 +3906,8 @@ footer .ft_link {
   width: 100%;
   height: 7em;
 }
-.contact-form-style01 .contact-table input, .contact-form-style01 .contact-table textarea {
+.contact-form-style01 .contact-table input,
+.contact-form-style01 .contact-table textarea {
   transition: all 0.2s ease-in-out;
 }
 .contact-form-style01 .contact-table input[type=radio],
@@ -3887,7 +3934,8 @@ footer .ft_link {
   flex-wrap: wrap;
   justify-content: space-between;
 }
-.contact-form-style01 .contact-table dl:last-child dt, .contact-form-style01 .contact-table dl:last-child dd {
+.contact-form-style01 .contact-table dl:last-child dt,
+.contact-form-style01 .contact-table dl:last-child dd {
   border-bottom: 0px;
 }
 .contact-form-style01 .contact-table dt {
@@ -3956,14 +4004,16 @@ footer .ft_link {
   resize: none;
   width: 100%;
 }
-.contact-form-style01 .confirm-table input:not([type=radio]):not([type=checkbox]):focus, .contact-form-style01 .confirm-table textarea:focus {
+.contact-form-style01 .confirm-table input:not([type=radio]):not([type=checkbox]):focus,
+.contact-form-style01 .confirm-table textarea:focus {
   color: inherit;
   background-color: transparent;
   border-color: transparent;
   outline: 0;
   box-shadow: none;
 }
-.contact-form-style01 .input_btn, .contact-form-style01 .button.thanks_btn {
+.contact-form-style01 .input_btn,
+.contact-form-style01 .button.thanks_btn {
   position: relative;
   display: flex;
   justify-content: center;
@@ -3972,18 +4022,24 @@ footer .ft_link {
   max-width: 520px;
   margin: 40px auto 0;
 }
-.contact-form-style01 .input_btn input, .contact-form-style01 .input_btn a, .contact-form-style01 .button.thanks_btn input, .contact-form-style01 .button.thanks_btn a {
+.contact-form-style01 .input_btn input,
+.contact-form-style01 .input_btn a,
+.contact-form-style01 .button.thanks_btn input,
+.contact-form-style01 .button.thanks_btn a {
   color: inherit;
   text-decoration: none;
   line-height: 1;
 }
-.contact-form-style01 .input_btn a, .contact-form-style01 .button.thanks_btn a {
+.contact-form-style01 .input_btn a,
+.contact-form-style01 .button.thanks_btn a {
   margin: 0 !important;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.contact-form-style01 .input_btn input[type=button], .contact-form-style01 .input_btn input[type=submit], .contact-form-style01 .button.thanks_btn a {
+.contact-form-style01 .input_btn input[type=button],
+.contact-form-style01 .input_btn input[type=submit],
+.contact-form-style01 .button.thanks_btn a {
   width: 200px;
   height: 45px;
   border: none;
@@ -3995,18 +4051,24 @@ footer .ft_link {
   text-decoration: none;
   cursor: pointer;
 }
-.contact-form-style01 .input_btn input[type=button]:hover, .contact-form-style01 .input_btn input[type=submit]:hover, .contact-form-style01 .button.thanks_btn a:hover {
+.contact-form-style01 .input_btn input[type=button]:hover,
+.contact-form-style01 .input_btn input[type=submit]:hover,
+.contact-form-style01 .button.thanks_btn a:hover {
   opacity: 1;
   background-color: #ccc;
 }
-.contact-form-style01 .input_btn input[type=button], .contact-form-style01 .input_btn input[type=submit], .contact-form-style01 .button.thanks_btn {
+.contact-form-style01 .input_btn input[type=button],
+.contact-form-style01 .input_btn input[type=submit],
+.contact-form-style01 .button.thanks_btn {
   background-color: var(--main-color);
   color: #fff;
 }
 .contact-form-style01 .contact-table {
   border: 1px solid #ddd;
 }
-.contact-form-style01 .contact-table input, .contact-form-style01 .contact-table select, .contact-form-style01 .contact-table textarea {
+.contact-form-style01 .contact-table input,
+.contact-form-style01 .contact-table select,
+.contact-form-style01 .contact-table textarea {
   border-color: #ddd;
 }
 .contact-form-style01 .contact-table dt {
@@ -4081,17 +4143,20 @@ footer .ft_link {
     border-left: 1px solid var(--main-color);
     border-right: 1px solid var(--main-color);
   }
-  .contact-form-style01 .contact-table dt, .contact-form-style01 .contact-table dd {
+  .contact-form-style01 .contact-table dt,
+  .contact-form-style01 .contact-table dd {
     width: 100%;
   }
   .contact-form-style01 .contact-table dd {
     border-left: 1px solid #ddd;
     border-right: 1px solid #ddd;
   }
-  .contact-form-style01 .contact-table input, .contact-form-style01 .contact-table textarea {
+  .contact-form-style01 .contact-table input,
+  .contact-form-style01 .contact-table textarea {
     width: 100%;
   }
-  .contact-form-style01 .contact-table input[type=checkbox], .contact-form-style01 .contact-table input[type=radio] {
+  .contact-form-style01 .contact-table input[type=checkbox],
+  .contact-form-style01 .contact-table input[type=radio] {
     width: auto;
   }
   .contact-form-style01 .wpcf7-list-item {
@@ -4100,7 +4165,8 @@ footer .ft_link {
   .contact-form-style02 {
     padding: 40px 30px 40px;
   }
-  .contact-form-style02 .contact-table input, .contact-form-style02 .contact-table textarea {
+  .contact-form-style02 .contact-table input,
+  .contact-form-style02 .contact-table textarea {
     padding-bottom: 20px;
     text-align: center;
   }
