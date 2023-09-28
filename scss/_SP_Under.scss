@@ -1,38 +1,43 @@
-
 @media only screen and (max-width: 768px) {
 	.under {
 		#mainContent {
 			padding-bottom: 50px;
 		}
-		
+
 		.key {
 			margin-top: 0;
 			height: 250px;
+
 			.key_text {
 				padding: 10px;
 			}
+
 			h2 {
-			
+
 				font-size: var(--ttl_size);
 			}
 		}
-		
+
 		h3 {
 			margin-bottom: 25px;
 			font-size: calc(var(--ttl_size) - 2px);
-			
+
 		}
+
 		h4 {
 			margin-bottom: 20px;
 			font-size: calc(var(--ttl_size) - 4px);
 		}
+
 		h5 {
-		    margin-bottom: 15px;
-		    font-size: calc(var(--ttl_size) - 6px);
+			margin-bottom: 15px;
+			font-size: calc(var(--ttl_size) - 6px);
 		}
+
 		h6 {
+			margin-top: 20px;
 			margin-bottom: 10px;
-		    font-size: calc(var(--ttl_size) - 8px);
+			font-size: calc(var(--ttl_size) - 8px);
 		}
 	}
 }
@@ -44,19 +49,30 @@
 		.inner>section {
 			&:first-child {
 				>h3 {
-					margin-top: 81px;
+					margin-top: 60px;
 				}
 			}
 		}
+
+		.section,
 		section {
-			padding-top: 1px;
-			h3 {
-				margin-top: 60px;
+			>p {
+				font-size: 14px;
 			}
 		}
+
+		section {
+			padding-top: 1px;
+
+			h3 {
+				margin-top: 50px;
+			}
+		}
+
 		.secH4 {
 			padding-top: 40px;
 		}
+
 		.secH5 {
 			padding-top: 30px;
 		}
@@ -64,47 +80,63 @@
 
 		.imgBox {
 			&.rowImg {
-				.image_l, .image_r {
+
+				.image_l,
+				.image_r {
 					float: none;
 					width: auto;
 					margin: 0 0 20px;
 					text-align: center;
 					max-width: none;
+
 					&:nth-child(n) {
 						max-width: none;
 					}
 				}
-				.txt_l, .txt_r {
+
+				.txt_l,
+				.txt_r {
 					float: none;
 					width: auto;
 				}
+
 				&.large {
-					.image_l, .image_r {
+
+					.image_l,
+					.image_r {
 						max-width: none;
 					}
-					.txt_l, .txt_r {
+
+					.txt_l,
+					.txt_r {
 						width: auto;
 					}
 				}
 			}
+
 			&.colImg {
 				.item {
-					&:not(:last-of-type){
+					&:not(:last-of-type) {
 						margin-bottom: 30px;
 					}
 				}
+
 				figure {
 					margin-bottom: 15px;
 				}
+
 				.text {
 					font-size: 14px;
 				}
 			}
-			&.colImg2, &.colImg3 {
+
+			&.colImg2,
+			&.colImg3 {
 				.item {
 					width: 100%;
 				}
-				img{
+
+				img {
 					max-height: 100%;
 				}
 			}
@@ -114,12 +146,15 @@
 			h3 {
 				margin-bottom: 0;
 			}
+
 			.text_h3 {
 				margin: 25px 0 0;
 			}
+
 			.text_h4 {
 				margin: 20px 0 0;
 			}
+
 			.text_h5 {
 				margin: 15px 0 0;
 			}
@@ -131,42 +166,53 @@
 					border-top-width: 0;
 				}
 			}
-			th:first-child{
+
+			th:first-child {
 				width: 200px;
 			}
-		} 
+		}
+
 		table {
 			&.rollTable {
 				width: 768px;
 			}
+
 			&.tbl_style01 {
-				th {
-				}
-				td {
-				}
+				th {}
+
+				td {}
+
 				@include iOS() {
-					tr:last-child td{
+					tr:last-child td {
 						border-bottom-width: 1.4px;
-					}}
+					}
+				}
 			}
+
 			&.resTable {
 				display: block;
-				tbody, tr, th, td {
+
+				tbody,
+				tr,
+				th,
+				td {
 					display: block;
 				}
-				
+
 				td {
 					&:not(:last-child) {
 						border-bottom: 0;
 					}
 				}
+
 				&.tbl_style01 {
 					&.colHead {
 						tr {
 							th {
-								border: 1px solid var(--main-color);	
+								border: 1px solid var(--main-color);
 								border-bottom: none;
 							}
+
 							&:not(:first-child) {
 								th {
 									border-top: none;
@@ -175,12 +221,14 @@
 						}
 					}
 				}
+
 				&.tbl_style02 {
-					
+
 					&.colHead {
 						th {
 							border-bottom: none;
 						}
+
 						tr:not(:last-child) {
 							td {
 								border-bottom: none;
@@ -190,6 +238,7 @@
 				}
 			}
 		}
+
 		.tbl_note {
 			display: block;
 		}
@@ -197,8 +246,9 @@
 
 		ul.list01 {
 			li {
-				font-size: 14px;
+				font-size: 16px;
 			}
+
 			&.mcol-2 {
 				li {
 					width: 100%;
@@ -209,22 +259,22 @@
 		}
 
 
-		.doctor_box {
-            padding: 0vw;
+		.lawyer_box {
+			padding: 0vw;
 
-            .doctor_name {
-                bottom: 5vw;
-                right: 3.5vw;
-                font-size: 4vw;
-                padding: 3vw 2vw;
-            }
-        }
+			.lawyer_name {
+				bottom: 5vw;
+				right: 3.5vw;
+				font-size: 4vw;
+			}
+		}
 	}
 }
+
 @media only screen and (max-width: 375px) {
 	.under {
 		.imgBox {
-		
+
 			&.colImg2,
 			&.colImg3 {
 				.item {
@@ -232,16 +282,21 @@
 				}
 			}
 		}
-	}	
+	}
 }
+
 // End Under General
 
 
 @media only screen and (max-width: 768px) {
 	.under {
 		.clinic_tbl01 {
-			th {width: auto; text-align: left;}
+			th {
+				width: auto;
+				text-align: left;
+			}
 		}
+
 		.teeth_box {
 			.secH4 {
 				width: 100%;
@@ -252,17 +307,21 @@
 
 @include screen('max425') {
 	.under {
-		.access_box_img01, .access_box_img02 {
+
+		.access_box_img01,
+		.access_box_img02 {
 			.block {
 				&:nth-child(even) {
 					.big {
 						order: 0;
 					}
 				}
-				.big, .small {
+
+				.big,
+				.small {
 					width: 100%;
 				}
 			}
-		}		
+		}
 	}
 }
