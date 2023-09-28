@@ -22,7 +22,7 @@
 	.key {
 		background-color: var(--main-color);
 
-		height: 56vw;
+		height: 56.25vw;
 		min-height: 690px;
 		max-height: 1081px;
 		overflow: hidden;
@@ -32,7 +32,7 @@
 		-webkit-animation: idx_key 40s linear infinite;
 		animation: idx_key 40s linear infinite;
 
-		background-position: 00px center;
+		background-position: top 0 center;
 
 		.inner {
 			position: relative;
@@ -50,7 +50,7 @@
 				flex-wrap: wrap;
 				justify-content: center;
 				align-items: center;
-				height: 56vw;
+				height: 56.25vw;
 				min-height: 690px;
 				max-height: 1081px;
 				background-size: cover;
