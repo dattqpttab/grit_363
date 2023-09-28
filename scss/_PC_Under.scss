@@ -154,18 +154,19 @@
 		letter-spacing: .2em;
 		color: var(--main-color);
 		background-size: 50px auto;
+	
 
 		&:before {
 			content: "";
 			display: block;
 			position: absolute;
-			transition: all 0.3s;
+			width: 100px;
+			height: 4px;
 
 			background-color: #0b7ec5;
 			left: 0;
 			bottom: 0;
 			border-radius: 2px;
-			height: 2.17392em;
 		}
 
 		&:after {
