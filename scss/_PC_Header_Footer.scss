@@ -62,7 +62,7 @@ header.active,
 	bottom: 0;
 	width: 100%;
 	background-color: rgba($color: #183d80, $alpha: 0.95);
-	height: var(--wrapper);
+	height: calc(var(--wrapper) + 10px);
 	display: flex;
 	align-items: center;
 

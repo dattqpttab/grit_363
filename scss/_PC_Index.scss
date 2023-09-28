@@ -22,7 +22,7 @@
 	.key {
 		background-color: var(--main-color);
 
-		height: 56.25vw;
+		height: 56.28vw;
 		min-height: 690px;
 		max-height: 1081px;
 		overflow: hidden;
@@ -50,7 +50,7 @@
 				flex-wrap: wrap;
 				justify-content: center;
 				align-items: center;
-				height: 56.25vw;
+				height: 56.28vw;
 				min-height: 690px;
 				max-height: 1081px;
 				background-size: cover;
@@ -83,6 +83,7 @@
 		}
 
 		.catch {
+			margin-top: 3.6em;
 
 			h2,
 			p {
@@ -93,19 +94,19 @@
 			}
 
 			h2 {
-				margin-bottom: 1em;
+				margin-bottom: 20px;
 				font-size: 6em;
 				line-height: 1.2;
 				display: flex;
-
+align-items: center;
 				font-weight: 700;
 
 				&::before {
-					margin: 0px 20px;
+					margin: 17px 15px 0;
 					content: "";
 					display: block;
 					width: 145px;
-					bottom: 145px;
+					height: 145px;
 					background-image: url(../images/ic_x.png);
 					background-size: 100% auto;
 					background-repeat: no-repeat;
@@ -154,10 +155,10 @@
 				color: var(--main-color2);
 
 				span {
-					padding: 0 0.52em;
+					padding: 0 0.8em;
 					line-height: 1.8;
 					display: table;
-					margin: 0.2em auto 0;
+					margin: 0 auto 0.25em;
 					background-color: #fff;
 				}
 			}
