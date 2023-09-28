@@ -836,12 +836,13 @@ figure {
 .btn a {
     &::after {
         @include before;
-        width: 0.777778em;
+ 
         height: 12px;
         right: 20px;
+        width: 0.25em;
         top: calc(50% - 6px);
 
-        --mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 12' %3E%3Cpath d='M12.444,5.999 L12.444,6.4 L13.999,5.999 L7.777,11.999 L6.222,11.0 L10.700,6.999 L0.0,6.999 L0.0,5.0 L10.578,5.0 L6.222,1.1 L7.777,0.0 L13.999,5.999 L12.444,5.999 Z'/%3E%3C/svg%3E");
+        --mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 90' %3E%3Cpath d='M49.947,45.222 L6.705,89.919 L0.051,83.084 L36.914,44.985 L0.051,6.874 L6.705,0.024 L49.947,44.729 L49.707,44.976 L49.947,45.222 Z'/%3E%3C/svg%3E");
         mask-image: var(--mask);
         -webkit-mask-image: var(--mask);
         mask-repeat: no-repeat;
@@ -857,7 +858,9 @@ figure {
         }
     }
 }
-
+picture{
+    display: table;
+}
 .btn-group {
     font-size: 10px;
 
@@ -867,7 +870,7 @@ figure {
         &.style01 {
             width: 100%;
             min-width: 170px;
-            max-width: 408px;
+            max-width: 400px;
             overflow: hidden;
 
             a {
@@ -875,7 +878,7 @@ figure {
                 align-items: center;
                 justify-content: center;
                 min-height: 3.3em;
-                padding: 1em;
+                padding: 0.8em;
                 position: relative;
                 font-size: 2em;
                 font-weight: 400;
