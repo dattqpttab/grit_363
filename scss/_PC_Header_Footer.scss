@@ -16,6 +16,13 @@ header.active,
 
 
 	background-color: #fff;
+	.header_top {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.logo img{
+		max-height: calc(var(--wrapper) - 10px);
+	}
 }
 
 .header_top {
@@ -45,6 +52,9 @@ header.active,
 		width: 100%;
 		text-align: center;
 	}
+	img{
+		transition: all .3s;
+	}
 }
 
 .right_head {
@@ -62,7 +72,7 @@ header.active,
 	bottom: 0;
 	width: 100%;
 	background-color: rgba($color: #183d80, $alpha: 0.95);
-	height: var(--wrapper);
+	height: calc(var(--wrapper) + 10px);
 	display: flex;
 	align-items: center;
 
