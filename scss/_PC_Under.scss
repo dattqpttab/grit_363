@@ -147,53 +147,53 @@
 	}
 
 	h3 {
-		margin-bottom: 40px;
-		padding-bottom: 40px;
+		margin-bottom: 43px;
+		padding-bottom: 0.84375em;
 		font-size: 32px;
 		text-align: center;
 		letter-spacing: .2em;
 		color: var(--main-color);
 		background-size: 50px auto;
-	
+
 
 		&:before {
 			content: "";
 			display: block;
 			position: absolute;
-			width: 100px;
-			height: 4px;
+			left: calc(50.1% - 1.5625em);
+			width: 3.125em;
+			height: 0.125em;
 
 			background-color: #0b7ec5;
-			left: 0;
-			bottom: 0;
+
+			bottom: 0.125em;
 			border-radius: 2px;
 		}
 
 		&:after {
 			content: "";
+			bottom: 0;
 			display: block;
 			position: absolute;
-			transition: all 0.3s;
+			left: calc(49.8% - .078125em);
 
-			width: 0;
-			height: 0;
 
-			border-bottom: 4px solid transparent;
-			border-top: 4px solid transparent;
-			
-			background-color: #0b7ec5;
+			border-top: 0.15625em solid #0b7ec5;
+			;
+			border-left: 0.15625em solid transparent;
+			border-right: 0.15625em solid transparent;
 
 		}
 	}
 
 
-}
+
 
 h4 {
 	z-index: 1;
 	border-radius: 10px;
-	margin-bottom: 30px;
-	padding: 10px 10px 10px 20px;
+	margin-bottom: 32px;
+	padding: 7px 10px 9px 19px;
 
 	font-weight: 500;
 	font-size: 26px;
@@ -219,11 +219,8 @@ h4 {
 
 	&:after {
 		z-index: -2;
-		width: 20%;
-		clip-path: polygon(0% 0%,
-				70% 0%,
-				100% 100%,
-				0% 100%);
+		width: 5.9231em;
+		clip-path:polygon(0% 0%,65% 0%,100% 100%,0% 100%);
 		background-color: #1c5373;
 		opacity: .2;
 	}
@@ -234,11 +231,11 @@ h4 {
 }
 
 h5 {
-	margin-bottom: 25px;
+	margin-bottom: 24px;
 	font-size: 22px;
 	color: var(--bl-cl);
-
-	padding-bottom: 5px;
+	letter-spacing: .2em;
+	padding-bottom: 0.3636em;
 	border-bottom: 1px solid #bad0db;
 
 
@@ -246,13 +243,11 @@ h5 {
 
 h6 {
 	margin-top: 30px;
-	padding: 12px 20px;
 	margin-bottom: 25px;
 	font-size: 20px;
+	letter-spacing: .2em;
 	color: var(--bl-cl);
-
-	background-color: var(--main-color);
-
+}
 }
 
 @media only screen and (max-width: 1000px) and (min-width: 769px) {}
@@ -266,7 +261,7 @@ h6 {
 	.inner>section {
 		&:first-child {
 			>h3 {
-				margin-top: 131px;
+				margin-top: 80px;
 			}
 		}
 	}
@@ -276,7 +271,7 @@ h6 {
 		p {
 			font-family: var(--f-hiragino);
 			font-size: 16px;
-			letter-spacing: .2em;
+			letter-spacing: .3625em;
 			line-height: 2.5;
 		}
 
@@ -294,7 +289,7 @@ h6 {
 		padding-top: 1px;
 
 		h3 {
-			margin-top: 80px;
+			margin-top: 70px;
 		}
 	}
 
@@ -307,7 +302,7 @@ h6 {
 	}
 
 	.secH6 {
-		padding-top: 40px;
+		padding-top: 25px;
 	}
 
 
@@ -662,9 +657,13 @@ h6 {
 		li {
 			background-size: 10px auto;
 			position: relative;
-			padding-left: 20px;
-			padding-bottom: 10px;
-			letter-spacing: 0.1em;
+		
+			padding-left: 1.4444em;
+			padding-bottom: 1.3889em;
+		
+			font-size: 18px;
+			font-weight: 700;
+			letter-spacing: 0.29em;
 
 			&:last-child {
 				padding-bottom: 0;
@@ -672,10 +671,10 @@ h6 {
 
 			&::before {
 				content: '';
-				width: 8px;
-				height: 8px;
+				width: 0.66667em;
+				height: 0.66667em;
 				border-radius: 50%;
-				background: #333;
+				background: #3d90ba;
 				position: absolute;
 				left: 0;
 				top: 0.4em;
