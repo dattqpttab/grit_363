@@ -269,6 +269,44 @@
 			}
 		}
 	}
+
+	//und_feature
+	.under {
+		.und_feature {
+			.box {
+				font-size: 8px;
+				margin-top: calc(var(--h-shape) + 60px);
+				.txt {
+				
+					>p {
+						font-size: 14px;
+					}
+				}
+			}
+
+
+		}
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.under {
+		.und_feature {
+			.box {
+				--h-shape:20px;
+				&:before,
+				&:after {
+					width: 40%;
+				
+				
+				}
+
+				.txt {
+					padding: 30px 30px 60px 30px;
+				}
+			}
+		}
+	}
 }
 
 @media only screen and (max-width: 375px) {
@@ -325,3 +363,4 @@
 		}
 	}
 }
+
