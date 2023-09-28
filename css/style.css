@@ -2480,6 +2480,11 @@ footer .ft_link {
 /*==========================================================================*/
 /*                                Under                                     */
 /*==========================================================================*/
+:root {
+  --bl-cl:#177aad;
+  --bl-dk-cl: #183d80;
+}
+
 .under .sitemap {
   padding-top: 40px;
 }
@@ -2532,7 +2537,24 @@ footer .ft_link {
   left: 40px;
 }
 .under #mainContent {
+  position: relative;
   padding-bottom: 100px;
+  background-image: url(../images/idx05_bg.png);
+  background-repeat: repeat;
+  background-size: auto;
+  background-position: left -7px top 7px;
+}
+.under #mainContent:before {
+  content: "";
+  display: block;
+  position: absolute;
+  transition: all 0.3s;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  clip-path: circle(16% at 50% -3.4%);
+  background: rgba(248, 190, 39, 0.1);
 }
 .under .key {
   background-image: url(../images/und_key_bg.jpg);
@@ -2562,7 +2584,6 @@ footer .ft_link {
 .under .key h2 {
   display: table;
   font-size: 42px;
-  font-weight: 700;
   letter-spacing: 0.15em;
   text-align: center;
   color: #fff;
@@ -2572,8 +2593,9 @@ footer .ft_link {
 .under h4,
 .under h5,
 .under h6 {
+  position: relative;
   line-height: 1.4;
-  letter-spacing: 0.1em;
+  font-weight: 700;
   font-family: var(--f-zennew);
 }
 .under h2:last-child,
@@ -2584,42 +2606,72 @@ footer .ft_link {
   margin-bottom: 0;
 }
 .under h3 {
-  background-size: 50px auto;
-  position: relative;
   margin-bottom: 40px;
-  color: var(--main-color);
-  font-size: 40px;
-  font-weight: 500;
+  font-size: 32px;
   text-align: center;
+  letter-spacing: 0.2em;
+  color: var(--main-color);
+  background-size: 50px auto;
 }
 .under h4 {
-  background-repeat: repeat;
+  z-index: 1;
   border-radius: 10px;
   margin-bottom: 30px;
-  position: relative;
+  padding: 10px 10px 10px 20px;
   font-weight: 500;
-  font-size: 30px;
-  color: var(--main-color);
+  font-size: 26px;
+  letter-spacing: 0.1em;
+  color: white;
+  background-repeat: repeat;
+}
+.under h4:before, .under h4:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+.under h4:before {
+  z-index: -2;
+  width: 100%;
+  background-color: var(--bl-cl);
+}
+.under h4:after {
+  z-index: -2;
+  width: 20%;
+  clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%);
+  background-color: #1c5373;
+  opacity: 0.2;
 }
 .under h5 {
   margin-bottom: 25px;
-  position: relative;
-  font-weight: 500;
-  font-size: 26px;
-  color: var(--clr1);
+  font-size: 22px;
+  color: var(--bl-cl);
+  padding-bottom: 5px;
+  border-bottom: 1px solid #bad0db;
 }
 .under h6 {
   margin-top: 30px;
-  position: relative;
   padding: 12px 20px;
   margin-bottom: 25px;
-  font-size: 18px;
-  color: var(--clr1);
+  font-size: 20px;
+  color: var(--bl-cl);
   background-color: var(--main-color);
 }
 
+.under .inner {
+  max-width: 1056px;
+}
 .under .inner > section:first-child > h3 {
   margin-top: 131px;
+}
+.under .section p,
+.under section p {
+  font-family: var(--f-hiragino);
+  font-size: 16px;
+  letter-spacing: 0.2em;
+  line-height: 2.5;
 }
 .under .section > p:last-of-type,
 .under section > p:last-of-type {
@@ -2904,15 +2956,15 @@ footer .ft_link {
 }
 .under .topic_path {
   font-size: 14px;
+  font-family: var(--f-hiragino);
+  font-weight: 500;
   line-height: 1.45;
-  letter-spacing: 1.5px;
-  padding: 27px 0 7px;
+  letter-spacing: 0.2em;
+  padding: 17px 0 7px;
 }
 .under .topic_path ul {
-  background: url(../images/shared_path_icon.svg) left top 4px no-repeat;
-  background-size: auto 15px;
   display: block;
-  padding: 4px 10px 4px 35px;
+  padding: 4px 10px 4px 1px;
 }
 .under .topic_path ul::after {
   content: "";
@@ -2926,17 +2978,21 @@ footer .ft_link {
 }
 .under .topic_path a {
   text-decoration: none;
-  color: var(--main-color);
+  color: var(--bl-dk-cl);
+  letter-spacing: 0.3571em;
 }
 .under .topic_path a:hover {
   opacity: 1;
   text-decoration: underline;
 }
 .under .topic_path span {
+  position: relative;
+  top: 1px;
   display: inline-block;
-  padding: 0 12px;
-  transform: scaleX(0.6);
-  color: var(--main-color);
+  padding: 0 8px 0 5px;
+  font-weight: 700;
+  transform: scaleY(0.8);
+  color: var(--bl-dk-cl);
   line-height: 1;
 }
 .under .anchor-links {

@@ -1,3 +1,9 @@
+:root {
+	--bl-cl:#177aad;
+	--bl-dk-cl: #183d80;
+
+}
+
 .under {
 	.sitemap {
 		padding-top: 40px;
@@ -64,7 +70,23 @@
 	}
 
 	#mainContent {
+		position: relative;
 		padding-bottom: 100px;
+		background-image: url(../images/idx05_bg.png);
+		background-repeat: repeat;
+		background-size: auto;
+		background-position: left -7px top 7px;
+
+		&:before {
+			@include before;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 50%;
+			clip-path: circle(16% at 50% -3.4%);
+			background: rgba($color: #f8be27, $alpha: .1);
+		}
+
 	}
 
 	.key {
@@ -96,15 +118,14 @@
 
 		}
 
-		
+
 		h2 {
 			display: table;
 			font-size: 42px;
-			font-weight: 700;
 			letter-spacing: .15em;
 			text-align: center;
 			color: #fff;
-			
+
 		}
 	}
 
@@ -115,8 +136,9 @@
 	h4,
 	h5,
 	h6 {
+		position: relative;
 		line-height: 1.4;
-		letter-spacing: 0.1em;
+		font-weight: 700;
 		font-family: var(--f-zennew);
 
 		&:last-child {
@@ -125,44 +147,79 @@
 	}
 
 	h3 {
-		background-size: 50px auto;
-		position: relative;
-		margin-bottom: 40px;
-		color: var(--main-color);
-		font-size: 40px;
-		font-weight: 500;
 
+
+		margin-bottom: 40px;
+		font-size: 32px;
 		text-align: center;
+		letter-spacing: .2em;
+		color: var(--main-color);
+		background-size: 50px auto;
+
+
 	}
 
 	h4 {
-		background-repeat: repeat;
+		z-index: 1;
 		border-radius: 10px;
 		margin-bottom: 30px;
-		position: relative;
+		padding: 10px 10px 10px 20px;
+
 		font-weight: 500;
-		font-size: 30px;
-		color: var(--main-color);
+		font-size: 26px;
+		letter-spacing: .1em;
+		color: white;
+		background-repeat: repeat;
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			display: block;
+			top: 0;
+			left: 0;
+			height: 100%;
+		}
+
+		&:before {
+			z-index: -2;
+			width: 100%;
+			background-color: var(--bl-cl);
+		}
+
+		&:after {
+			z-index: -2;
+			width: 20%;
+			clip-path: polygon(0% 0%,
+					70% 0%,
+					100% 100%,
+					0% 100%);
+			background-color: #1c5373;
+			opacity: .2;
+		}
+
+
+
 
 	}
 
 	h5 {
 		margin-bottom: 25px;
-		position: relative;
-		font-weight: 500;
-		font-size: 26px;
-		color: var(--clr1);
+		font-size: 22px;
+		color: var(--bl-cl);
+
+		padding-bottom: 5px;
+		border-bottom: 1px solid #bad0db;
+
 
 	}
 
 	h6 {
 		margin-top: 30px;
-		position: relative;
 		padding: 12px 20px;
 		margin-bottom: 25px;
-
-		font-size: 18px;
-		color: var(--clr1);
+		font-size: 20px;
+		color: var(--bl-cl);
 
 		background-color: var(--main-color);
 	}
@@ -172,6 +229,10 @@
 
 
 .under {
+	.inner {
+		max-width: 1056px;
+	}
+
 	.inner>section {
 		&:first-child {
 			>h3 {
@@ -182,6 +243,13 @@
 
 	.section,
 	section {
+		p {
+			font-family: var(--f-hiragino);
+			font-size: 16px;
+			letter-spacing: .2em;
+			line-height: 2.5;
+		}
+
 		>p:last-of-type {
 			margin-bottom: 0;
 
@@ -596,15 +664,15 @@
 
 	.topic_path {
 		font-size: 14px;
+		font-family: var(--f-hiragino);
+		font-weight: 500;
 		line-height: 1.45;
-		letter-spacing: 1.5px;
-		padding: 27px 0 7px;
+		letter-spacing: .2em;
+		padding: 17px 0 7px;
 
 		ul {
-			background: url(../images/shared_path_icon.svg) left top 4px no-repeat;
-			background-size: auto 15px;
 			display: block;
-			padding: 4px 10px 4px 35px;
+			padding: 4px 10px 4px 1px;
 
 			&::after {
 				content: "";
@@ -623,7 +691,8 @@
 
 		a {
 			text-decoration: none;
-			color: var(--main-color);
+			color: var(--bl-dk-cl);
+			letter-spacing: 0.3571em;
 
 			&:hover {
 				opacity: 1;
@@ -632,10 +701,13 @@
 		}
 
 		span {
+			position: relative;
+			top: 1px;
 			display: inline-block;
-			padding: 0 12px;
-			transform: scaleX(0.6);
-			color: var(--main-color);
+			padding: 0 8px 0 5px;
+			font-weight: 700;
+			transform: scaleY(.8);
+			color: var(--bl-dk-cl);
 			line-height: 1;
 		}
 	}
@@ -925,6 +997,7 @@
 		}
 	}
 }
+
 @media only screen and (max-width: 1000px) and (min-width: 769px) {}
 
 // End Under Content
