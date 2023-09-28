@@ -16,6 +16,13 @@ header.active,
 
 
 	background-color: #fff;
+	.header_top {
+		padding-top: 5px;
+		padding-bottom: 5px;
+	}
+	.logo img{
+		max-height: calc(var(--wrapper) - 10px);
+	}
 }
 
 .header_top {
@@ -44,6 +51,9 @@ header.active,
 		display: block;
 		width: 100%;
 		text-align: center;
+	}
+	img{
+		transition: all .3s;
 	}
 }
 
