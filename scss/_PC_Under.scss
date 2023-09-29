@@ -366,13 +366,13 @@
 		max-width: 800px;
 		margin-left: auto;
 		margin-right: auto;
-		--size-w:3px;
+		--size-w: 3px;
 
 		&:after {
 			@include before;
 			z-index: 0;
 			top: 0;
-		
+
 			left: calc(50% - var(--size-w) / 2 - 1px);
 			width: var(--size-w);
 			height: 100%;
@@ -385,7 +385,7 @@
 			z-index: 1;
 			// padding-left: 15em;
 			font-size: 10px;
-			--size-max:6.6em;
+			--size-max: 6.6em;
 
 			&:last-child {
 				margin-bottom: calc(var(--size-max) * .8)
@@ -395,7 +395,7 @@
 			.design_arr {
 				@include before;
 				left: calc(50% - var(--size-max));
-				bottom:0;
+				bottom: 0;
 
 				.arr_f,
 				.arr_sc {
@@ -434,7 +434,7 @@
 					}
 
 					&:before {
-						--size:var(--size-max);
+						--size: var(--size-max);
 					}
 				}
 			}
@@ -1126,6 +1126,7 @@
 
 @media only screen and (max-width: 1000px) and (min-width: 769px) {}
 
+
 // End Under General
 
 
@@ -1463,7 +1464,7 @@
 
 			.button {
 				background-color: #fff;
-				border: 3px solid #ddd;
+				border: 3px solid var(--main-color);
 				position: absolute;
 				bottom: 0px;
 				right: 0;
@@ -2430,6 +2431,7 @@
 			margin: 0px 10px 10px;
 			text-decoration: none;
 			cursor: pointer;
+			
 
 			&:hover {
 				opacity: 1;
@@ -2443,10 +2445,12 @@
 		.button.thanks_btn {
 			background-color: var(--main-color);
 			color: #fff;
+		
 		}
 
 		.contact-table {
 			border: 1px solid #ddd;
+			background-color: white;
 
 			input,
 			select,
