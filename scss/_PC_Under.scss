@@ -83,7 +83,7 @@
 			left: 0;
 			width: 100%;
 			height: 50%;
-			clip-path: circle(21% at 50% -3.1vw);
+			clip-path: circle(300px at 50% -3.1vw);
 			background: rgba($color: #f8be27, $alpha: .1);
 		}
 
@@ -315,8 +315,9 @@
 
 		&:before {
 			bottom: 5px;
-			right: 0.1428em;
+			right: 0.1628em;
 			font-size: 7em;
+			letter-spacing: .1em;
 			font-weight: 700;
 			opacity: .1;
 		}
@@ -362,14 +363,18 @@
 	.und_flow {
 		position: relative;
 		z-index: 1;
+		max-width: 800px;
+		margin-left: auto;
+		margin-right: auto;
+		--size-w:3px;
 
 		&:after {
 			@include before;
 			z-index: 0;
 			top: 0;
-			left: 65px;
-
-			width: 3px;
+		
+			left: calc(50% - var(--size-w) / 2 - 1px);
+			width: var(--size-w);
 			height: 100%;
 			background-color: var(--bl-cl)
 		}
@@ -378,16 +383,19 @@
 		.box_container {
 			position: relative;
 			z-index: 1;
-			padding-left: 15em;
+			// padding-left: 15em;
 			font-size: 10px;
+			--size-max:6.6em;
+
+			&:last-child {
+				margin-bottom: calc(var(--size-max) * .8)
+			}
 
 
 			.design_arr {
 				@include before;
-				left: 0;
-				top: 0%;
-				width: 50%;
-				height: 100%;
+				left: calc(50% - var(--size-max));
+				bottom:0;
 
 				.arr_f,
 				.arr_sc {
@@ -426,7 +434,7 @@
 					}
 
 					&:before {
-						--size: 6.6em;
+						--size:var(--size-max);
 					}
 				}
 			}
@@ -449,8 +457,6 @@
 		}
 
 		.box {
-			margin-right: 0;
-
 			.txt {
 				&:after {
 					content: 'step';
@@ -736,7 +742,7 @@
 				background-color: var(--main-color);
 				color: #fff;
 				font-size: 1.125em;
-				font-weight: normal;
+				font-weight: 500;
 				text-align: center;
 			}
 
