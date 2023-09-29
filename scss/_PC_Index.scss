@@ -187,7 +187,7 @@
 			left: var(--p1);
 			width: 0;
 			height: 0;
-			bottom: calc(50% - var(--p1));
+			bottom: calc(43% - var(--p1));
 			border-bottom: 4px solid transparent;
 			border-top: 4px solid transparent;
 			border-left: 4px solid var(--clr_h3);
@@ -198,14 +198,19 @@
 			width: var(--p1);
 			background-color: var(--clr_h3);
 			left: 0;
-			bottom: 0;
+			bottom: -0.108em;
 			border-radius: 2px;
 			height: 2.17392em;
 
 		}
 
 		&.st1 {
-			padding-left: 1em;
+			padding-left: 0.6em;
+			.en{
+				margin-top: 0.3em;
+				line-height: 1;
+				letter-spacing: 0.2em;
+			}
 
 		}
 
@@ -255,6 +260,12 @@
 				font-size: 0.6em;
 				letter-spacing: 0.2em;
 			}
+		}
+	}
+	.txt {
+	>	p{
+			font-size: var(--fz18);
+			line-height: 2.22;
 		}
 	}
 }
@@ -826,31 +837,50 @@
 
 	// background-image: url(../images/idx0_bg.jpg);
 }
-.idx_en{
+
+.idx_en {
 	font-size: 72px;
 	letter-spacing: 0.2em;
 
 	color: #0b7ec5;
 	writing-mode: vertical-lr;
 	position: absolute;
-    right: -32px;
-    top: 17px;
-    line-height: 1;
+	right: -32px;
+	top: 17px;
+	line-height: 1;
 	text-transform: uppercase;
 	opacity: 0.2;
 	font-weight: 600;
 }
 
 .index03 {
-	padding: 76px 0px 100px;
+	padding: 76px 0px 43px;
 	background-image: url(../images/idx03_bg.jpg);
+	background-position: top 0 left -5px;
 
 	.box_left {
+		padding-top: 37px;
 		width: 50%;
+		h3{
+			margin-bottom: 46px;
+		}
 
-		.content{
-			max-width: 549px;
+		.content {
+			max-width: 598px;
 			margin: 0px auto;
+			
+		}
+		.txt{
+			max-width: 549px;
+			margin-left: auto;
+			margin-right: auto;
+			p{
+				font-feature-settings: "palt";
+				letter-spacing: 0.1em;
+			}
+			.btn-group{
+				margin-top: 44px;
+			}
 		}
 
 	}
@@ -867,7 +897,8 @@
 			z-index: 1;
 			align-items: flex-start;
 
-			&::before,&::after {
+			&::before,
+			&::after {
 				@include before;
 				width: 100%;
 				height: 170px;
@@ -877,15 +908,16 @@
 				background-color: #236692;
 				opacity: 0.2;
 			}
-			&::after{
-background-color: #f8be27;
-opacity: 0.8;
-width: 40px;
-height: 40px;
-bottom: auto;
-top: -21px;
-left: 16px;
-z-index: 1;
+
+			&::after {
+				background-color: #f8be27;
+				opacity: 0.8;
+				width: 40px;
+				height: 40px;
+				bottom: auto;
+				top: -21px;
+				left: 16px;
+				z-index: 1;
 			}
 
 			picture {
