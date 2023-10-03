@@ -253,7 +253,8 @@
 				font-size: 16px;
 			}
 
-			&.mcol-2 {
+			&.mcol-2,
+			&.mcol-3 {
 				li {
 					width: 100%;
 					padding-bottom: 9px;
@@ -265,6 +266,7 @@
 
 		.lawyer_box {
 			padding: 0vw;
+			margin-bottom: 25px;
 
 			.lawyer_name {
 				bottom: 5vw;
@@ -288,6 +290,57 @@
 			}
 		}
 	}
+
+	//und_faq 
+	.under {
+		.und_faq {
+			.box_q {
+				.plus_ico {
+					--size-ico: 15px;
+				}
+
+				h4 {
+					&:after {
+						width: 30%;
+					}
+				}
+			}
+
+			.box_a {
+				padding: 30px;
+			}
+		}
+	}
+
+	.mt_rps {
+		margin-top: 50px;
+	}
+	.txt-big {
+		font-size: 22px;
+	}
+
+	.txt_ms {
+		margin-bottom: 15px;
+		font-size: 20px;
+		text-align: center;
+	}
+	.under .box_ct {
+		padding: 20px;
+	}
+
+	.under .und_bn_gr {
+		>div {
+			width: 50%;
+			padding: 5px;
+
+			&:not(:last-child) {
+				margin-bottom: 0;
+			}
+		}
+	}
+
+
+
 }
 
 @media only screen and (max-width: 639px) {
@@ -305,6 +358,25 @@
 					}
 				}
 			}
+		}
+
+		//und_faq
+		.und_faq {
+			.box_a {
+				flex-direction: column;
+
+				picture {
+					margin-left: auto;
+					margin-right: auto;
+				}
+
+				p {
+					width: 100%;
+					padding-left: 0;
+					padding-top: 25px;
+				}
+			}
+
 		}
 	}
 }
@@ -337,6 +409,23 @@
 				font-size: 6px;
 			}
 		}
+
+		.und_faq .box_q {
+			h4 {
+				&:after {
+					width: 50%;
+				}
+			}
+		}
+
+		.und_bn_gr {
+			>div {
+				width: 100%;
+				max-width: 320px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
 	}
 }
 
@@ -366,6 +455,22 @@
 			}
 
 		}
+
+		.mt_rps {
+			margin-top: 30px;
+		}
+	}
+
+	.txt-big {
+		font-size: 20px;
+	} 
+
+	.under table.tbl_style01 th {
+		font-size: 14px;
+	}
+
+	.under ul.list01 li  {
+		font-size: 14px;
 	}
 }
 
