@@ -505,33 +505,53 @@ a {
             }
         }
 .flex{
-    margin: 30px 0px;
+    margin: 47px 0px 40px;
 }
     }
 
     .TabPager {
         display: flex;
+        justify-content: space-between;
         min-width: 290px;
 
         li {
-            width: 50%;
+            width: calc(50% - 1px);
             background-color: #0b7ec5;
             border-radius: 12px 12px 0px 0px;
             display: block;
 text-align: center;
             position: relative;
             margin: 0;
-            padding: 9px 20px;
+            padding: 15px 20px 26px;
       font-size: 24px;
       font-weight: 500;
      
             transition: all 0.3s ease;
             cursor: pointer;
             color: #fff;
+            --p1:8px;
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                transition: all 0.3s;
+                bottom:calc(0px - var(--p1));
+                width: 0;
+                height: 0;
+                left:  calc(50% - var(--p1));
+                border-right: var(--p1) solid transparent;
+                border-left: var(--p1) solid transparent;
+                border-top: var(--p1) solid #0b7ec5;
+                opacity: 0;
+                transition: all .3s;
+            }
 
             p {
                 margin: 0;
                 line-height: 1.8;
+                letter-spacing: 0.2em;
+                font-weight: 500;
+                font-family: var(--f-zennew);
                 .en{
                     display: block;
                     font-size: 0.66667em;
@@ -544,6 +564,9 @@ text-align: center;
                 background-color: #177aad;
                 z-index: 1;
                 transform: translateY(0px);
+                &::after{
+                    opacity: 1;
+                }
             }
         }
     }
