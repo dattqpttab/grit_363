@@ -5,18 +5,89 @@
     &.page-interview {
 
         .key {
-            max-height: 770px;
-            //    background-image: url(../images/key_interview.jpg);
+            max-height: 600px;
+            background-image: url(../images/interview_bg.jpg);
+            background-repeat: no-repeat;
+            background-position: right;
+            background-size: cover;
             height: 50vw;
 
             .key_text {
-                padding-top: 4.6%;
-                padding-right: 10%;
-                justify-content: flex-end;
+                display: block;
+                font-size: 10px;
+                margin-right: auto;
+                padding-right: 10px;
+                height: auto;
+
+                h2 {
+                    text-align: left;
+                    position: relative;
+                    color: #fff;
+                    margin-top: -0.625em;
+                    margin-bottom: 0.625em ;
+                    padding-left: 10px;
+                    padding-top: 0;
+                    font-size: 4em;
+                    font-family: var(--f_lato);
+                    line-height: 1;
+                    font-weight: 500;
+                }
+            }
+
+            .en {
+                font-size: 8em;
+                letter-spacing: 0.15em;
+                line-height: 1;
+                text-transform: uppercase;
+                font-weight: 600;
+                color: #fff;
+                margin: 0;
+                opacity: 0.25;
+
+            }
+
+            .inter_name {
+                display: flex;
+                align-items: flex-end;
+                color: #fff;
+                line-height: 1;
+                padding-bottom: 1.1875em;
+                margin-bottom: 1em;
+                padding-left: .5em;
+                font-weight: 500;
+                font-family: var(--f_zen);
+                font-size: 2em;
+
+                &01 {
+                    display: inline-block;
+                    font-size: 1.25em;
+                    letter-spacing: 0.2em;
+                    position: relative;
+
+                }
+
+                &02 {
+                    font-size: 2em;
+                    letter-spacing: 0.1em;
+                    padding: 0 5px;
+                }
+
+                &03 {
+                    display: inline-block;
+                    font-size: 0.8em;
+                    letter-spacing: 0.15em;
+                    position: relative;
+
+                    opacity: 1;
+                    font-weight: 400;
+                }
+
             }
 
             .inner {
                 max-width: 1280px;
+                display: flex;
+                align-items: center;
             }
 
 
@@ -26,71 +97,6 @@
                 color: #fff;
                 letter-spacing: 0.1em;
             }
-
-            .catch {
-                min-width: 50em;
-                font-size: 10px;
-            }
-
-            .idx_en {
-                margin-bottom: 0.49em;
-                font-size: 8em;
-
-                line-height: 1;
-                font-weight: 500;
-            }
-
-            h2 {
-                margin-bottom: 0.1em;
-
-                font-size: 2.4em;
-
-            }
-
-            .name {
-                display: inline-flex;
-                position: relative;
-                margin-bottom: 0.75em;
-                padding-bottom: 0.62em;
-                padding-right: 0.66em;
-                align-items: center;
-                font-size: 3.6em;
-                font-weight: 500;
-                line-height: 1.5;
-
-                font-family: var(--f-jp);
-
-                &::before {
-                    @include before;
-                    width: 100%;
-                    height: 0px;
-                    left: 0;
-                    bottom: 0;
-                    border-bottom: 1px solid #fff;
-                }
-
-                .en {
-                    margin-left: 0.8em;
-                    font-size: 0.5em;
-                    letter-spacing: 0.1em;
-
-                }
-            }
-
-            .sub {
-                font-weight: 500;
-                line-height: 2.1153;
-                letter-spacing: 0.08em;
-                font-size: 2.6em;
-                font-family: var(--f-zen-antique);
-            }
-
-
-
-
-
-
-
 
 
 
@@ -126,15 +132,20 @@
 
     }
 
-    &_sec {}
+    &_sec {
+        margin-top: 100px;
+    }
 
     &_box {
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
-        margin-bottom: 80px;
+        align-items: flex-start;
+        padding: 40px 0;
+        background-color: white;
+        box-shadow: 2.828px 2.828px 20px 0px rgba(0, 0, 0, 0.15);
 
         &.box_left {
+
             .interview_content {
                 margin-left: 80px;
             }
@@ -151,27 +162,40 @@
 
     &_img {
         position: relative;
+        display: block;
         width: 51%;
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
         &:before {
             content: counter(count, decimal-leading-zero);
             counter-increment: count;
 
             position: absolute;
-            bottom: 0.2em;
+            bottom: -0.1em;
             left: 40px;
 
             line-height: 0.5;
             font-size: 120px;
-            color: #fff;
+            color: #f8be27;
         }
     }
 
     &_content {
-        max-width: 464px;
+        max-width: 538px;
         width: calc(49% - 80px);
 
         h4 {}
+    }
+}
+
+@media only screen and (max-width: 1366px) and (min-width: 769px) {
+    .under.page-interview .key {
+        background-position: right 27% top;
     }
 }
 
@@ -259,9 +283,43 @@
             &:before {
                 font-size: 90px;
             }
+        }
+    }
+}
 
-            img {
-                border-radius: 20px;
+@media only screen and (max-width: 1020px) and (min-width: 769px) {
+    .under.page-interview {
+        .key {
+            .key_text {
+                padding-top: 10%;
+                font-size: 1vw;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 769px) {
+    .interview {
+        &_box {
+            &.box_left {
+                padding-right: 40px;
+
+                .interview_img {
+                    img {
+                        margin-left: 0;
+                    }
+                }
+
+            }
+
+            &.box_right {
+                padding-left: 40px;
+
+                .interview_img {
+                    img {
+                        margin-right: 0;
+                    }
+                }
             }
         }
     }
