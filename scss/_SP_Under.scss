@@ -337,9 +337,12 @@
 				margin-bottom: 0;
 			}
 		}
+
+		&.flex_02 >div{
+			width: 100%;
+			max-width: 320px;
+		}
 	}
-
-
 
 }
 
@@ -471,6 +474,10 @@
 
 	.under ul.list01 li  {
 		font-size: 14px;
+	}
+
+	.under .btn-group .btn.style01 {
+		min-width: 100%;
 	}
 }
 

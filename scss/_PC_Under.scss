@@ -605,11 +605,51 @@
 //component
 .under {
 	.btn-group .btn.style01 {
+		min-width: 350px;
+
+		a {
+			padding: 0.8em 1.4em;
+		}
+
 		&.big {
 			max-width: 700px;
+			min-width: 310px;
 
 			a {
 				padding: 1em 1.85em;
+			}
+		}
+	}
+
+	.btn-group {
+		&.flex {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+
+			&.col-3 {
+				p {
+					margin: 10px;
+				}
+			}
+
+			&.col-2 {
+				p {
+					width: 50%;
+					margin: 10px;
+				}
+			}
+		}
+
+		@media only screen and (min-width:769px) {
+			&.flex {
+				&.col-3 {
+					p {
+						width: 31%;
+						min-width: 300px;
+					}
+				}
 			}
 		}
 	}
@@ -618,6 +658,14 @@
 		display: flex;
 		justify-content: space-between;
 		flex-wrap: wrap;
+
+		&.flex_02 {
+			justify-content: center;
+
+			>div {
+				margin: 10px;
+			}
+		}
 
 		>div {
 			width: 33%;
@@ -628,6 +676,11 @@
 			}
 		}
 	}
+}
+
+//img
+.under .box_img {
+	margin: 30px auto;
 }
 
 
@@ -671,6 +724,14 @@
 	text-align: center;
 }
 
+.txt_left {
+	text-align: left;
+}
+
+.txt_right {
+	text-align: right;
+}
+
 .txt-big {
 	font-size: 24px;
 	font-weight: 500;
@@ -682,10 +743,34 @@
 	margin-top: 80px;
 }
 
+.under .btn-group {
+	margin: 30px 0 10px;
+}
+
 .under .box_ct {
+	position: relative;
+	margin: 40px 0 20px;
 	padding: 40px;
-	background-image: url(../images/idx03_bg.jpg);
+	// background-image: url(../images/idx03_bg.jpg);
+	background-image: url(../images/und_bn_sty01.jpg);
 	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	box-shadow: 0px 0px 10px 4px #ddd;
+	border: 2px solid #f8be27;
+
+	&:before {
+		@include before;
+		top: 3px;
+		bottom: 3px;
+		left: 3px;
+		right: 3px;
+		border: 1px solid #f8be27;
+	}
+
+	&.style02 {
+		background-image: none;
+	}
 
 	p {
 		text-align: center;
@@ -1028,7 +1113,7 @@
 				background-color: var(--bl-cl);
 				color: #fff;
 				font-size: 1.125em;
-				font-weight: 600;
+				font-weight: 500;
 				text-align: center;
 			}
 
