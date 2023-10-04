@@ -643,8 +643,8 @@ figure {
     cursor: pointer;
     position: fixed;
     z-index: 19;
-    bottom: 45px;
-    right: 95px;
+    bottom: 100px;
+    right: 0px;
 
     &.active {
         opacity: 1;
@@ -877,9 +877,6 @@ figure {
         -webkit-mask-position: center;
         background-color: var(--main-color);
 
-        @include FF() {
-            -webkit-mask-size: auto;
-        }
     }
 }
 picture{
@@ -1017,7 +1014,7 @@ font-family: var(--f-zennew);
     }
 
     .totop {
-        right: 10px;
+
 
         .icon {
             width: 60px;

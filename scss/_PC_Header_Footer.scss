@@ -16,11 +16,13 @@ header.active,
 
 
 	background-color: #fff;
+
 	.header_top {
 		padding-top: 5px;
 		padding-bottom: 5px;
 	}
-	.logo img{
+
+	.logo img {
 		max-height: calc(var(--wrapper) - 10px);
 	}
 }
@@ -52,7 +54,8 @@ header.active,
 		width: 100%;
 		text-align: center;
 	}
-	img{
+
+	img {
 		transition: all .3s;
 	}
 }
@@ -288,7 +291,7 @@ footer {
 	//dattq
 
 	position: relative;
-	padding: 67px 0 73px;
+	padding: 67px 0 71px;
 	background-image: url(../images/ft_bg.jpg);
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -300,7 +303,7 @@ footer {
 		left: 0;
 		width: 100%;
 		height: 6px;
-		background-color: #1e5f97;
+		background-color: #177aad;
 
 	}
 
@@ -328,39 +331,49 @@ footer {
 
 .ft_link {
 	font-size: 10px;
+
 	a {
 		text-decoration: none;
 	}
 
-	.menu01 {
-		width: 61%;
+	@include screen('min769') {
+		.link_list {
+			.menu01 {
+				width: 61%;
 
-		ul {
-			max-height: 73em;
+				>ul {
+					max-height: 73em;
 
-			li {
-				width: 43.7%;
+					>li{
+						width: 54%;
+						&:nth-child(n + 9) {
+							max-width: 301px;
+							width: 44%;
+						}
+					}
+				}
+			}
+
+			.menu02 {
+				width: 36%;
+
+				ul {
+
+					li {
+						width: 100%;
+					}
+				}
 			}
 		}
 	}
 
-	.menu02 {
-		width: 36%;
 
-		ul {
-
-			li {
-				width: 100%;
-			}
-		}
-	}
-
-	ul {
+	.link_list>div>ul {
 		display: flex;
 		flex-flow: column wrap;
 		align-content: space-between;
 
-		li {
+		>li {
 			width: 50%;
 		}
 	}
@@ -399,7 +412,9 @@ footer {
 		}
 
 		&.ct-space {
-			margin-bottom: 1.35em;
+			ul {
+				margin-top: 1.35em;
+			}
 		}
 
 		&.last {
@@ -410,8 +425,7 @@ footer {
 			margin-bottom: 0;
 		}
 
-		&.sty02,
-		&.sty03 {
+		&.lv li {
 
 			a {
 				font-size: 1.4em;
@@ -423,7 +437,7 @@ footer {
 			}
 		}
 
-		&.sty02 {
+		&.lv > ul > li {
 			margin-bottom: 1.1em;
 
 
@@ -431,16 +445,17 @@ footer {
 				margin-bottom: 2.6em;
 			}
 
-			&.ct-space-03 {
-				margin-bottom: 14px;
-			}
+		
 
-			a {
-				padding-left: 2.5em;
+			margin-left: 1.7em;
+
+		>	a {
+				padding-left: 1.2em;
+
 
 				&:before {
 					top: .5714em;
-					left: 1.2857em;
+					left: 0;
 					width: 0.7143em;
 					height: 0.4285em;
 					--mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 91 51' %3E%3Cpath d='M61.278,50.711 L53.666,42.611 L67.434,31.015 L0.148,31.015 L0.148,19.949 L67.434,19.949 L53.666,8.354 L61.278,0.253 L90.409,25.482 L61.278,50.711 Z'/%3E%3C/svg%3E");
@@ -456,20 +471,27 @@ footer {
 			}
 		}
 
-		&.sty03 {
-			margin-bottom: .68em;
-			line-height: 1.79;
-
-			&.ct-space {
-				margin-bottom: 2.7em;
+		&.lv_sub {
+			ul{
+				margin-top: 1.2em;
 			}
-
-			a {
-				padding-left: 3.5714em;
-
-				&::before {
-					left: 2.5em;
-					border-radius: 50%;
+			li{
+				margin-left: 1.7em;
+				margin-bottom: .68em;
+				line-height: 1.79;
+				&:last-child{
+					margin-bottom: 0.1em;
+				}
+	
+			
+	
+				a {
+					
+	
+					&::before {
+					
+						border-radius: 50%;
+					}
 				}
 			}
 		}
@@ -481,8 +503,8 @@ footer {
 		padding-left: 1.0625em;
 		color: inherit;
 		font-size: 1.6em;
-		font-weight: 500;
-		font-feature-settings: "palt";
+	
+
 		letter-spacing: .2em;
 
 		&::before {
@@ -528,7 +550,7 @@ footer {
 		top: 0;
 		height: 100%;
 		width: 100vw;
-		background-color: var(--main-color);
+		background-color: #177aad;
 	}
 
 	.textwidget {
@@ -549,12 +571,12 @@ footer {
 			margin-bottom: 0;
 			text-align: center;
 			line-height: inherit;
-			letter-spacing: 0.2em;
+			letter-spacing: 0.1em;
+			font-size: 14px;
+			font-feature-settings: "palt";
 
 			span {
-				display: inline-flex;
-				letter-spacing: .1em;
-				padding-left: 9px;
+			
 			}
 		}
 	}
@@ -610,8 +632,9 @@ footer {
 		background-repeat: no-repeat;
 		background-position: top left, bottom right;
 
-	
+
 	}
+
 	.ft_link {
 		font-size: 9px;
 
@@ -631,36 +654,36 @@ footer {
 
 @media only screen and (min-width: 769px) and (max-width: 920px) {
 
-		.ft_link {
-			.menu01 {
-				width: 100%;
+	.ft_link {
+		.menu01 {
+			width: 100%;
 
-				ul {
-					max-height: 55em;
+			>ul {
+				max-height: 55em;
 
-					li {
-						width: 50%;
-					}
+				>li {
+					width: 50%;
 				}
-			}
-
-			.menu02 {
-				width: 100%;
-				margin-top: 50px;
-
-				ul {
-					max-height: 40em;
-
-					li {
-						width: 50%;
-					}
-				}
-			}
-
-			.ttl {
-				margin-bottom: 30px;
 			}
 		}
+
+		.menu02 {
+			width: 100%;
+			margin-top: 50px;
+
+			ul {
+				max-height: 40em;
+
+				li {
+					width: 50%;
+				}
+			}
+		}
+
+		.ttl {
+			margin-bottom: 30px;
+		}
+	}
 
 	.copyright {
 		.flex {
