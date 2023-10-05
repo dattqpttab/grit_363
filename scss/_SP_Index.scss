@@ -11,6 +11,7 @@
 
                 .item {
                     padding: 10px;
+                    padding-left: calc(8em + 10px);
                     height: calc(100vh - 60px);
                     max-height: 156vw;
                     min-height: 320px;
@@ -34,8 +35,12 @@
                 //	background-image: url(../images/idx_mv03_sp.jpg);
             }
 
-            .key_copy .scroll a {
-                font-size: 0.6em;
+            .key_copy {
+                height: 100%;
+
+                .scroll a {
+                    font-size: 0.6em;
+                }
             }
 
         }
@@ -44,13 +49,13 @@
 
 @media only screen and (max-width: 640px) {
     .home_page .key {
-        font-size: 1.2vmin;
+        font-size: 1.15vmin;
     }
 }
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {
     .home_page .key {
-        font-size: 1.2vmin;
+        font-size: 1.15vmin;
     }
 }
 
@@ -72,24 +77,24 @@
 @media only screen and (max-width: 375px) {}
 
 @media only screen and (max-width: 768px) {
-:root{
-    --fz18:16px;
-}
+    :root {
+        --fz18: 1.125em;
+    }
 
 
     .index01 {
 
-        padding: 60px 0px 55px;
+        padding: 0px 0px;
 
         .content {
             flex-direction: column;
             align-items: center;
 
             .box {
-                margin-bottom: 5px;
+                margin-bottom: 0px;
                 width: 100%;
                 padding: 40px 5%;
-                max-width: 680px;
+
 
             }
 
@@ -117,168 +122,308 @@
 
         }
     }
+
     .index02 {
-        .box{
+        background: none;
+        padding: 0;
+
+        .box {
             width: 100%;
+            margin: 0px auto 40px;
         }
-        .box_head    {
-            padding: 80px 0px;
-            h3{
+
+        >.flex {
+            background-repeat: no-repeat;
+            background-image: url(../images/idx02_bg_sp.jpg);
+            background-position: top 40px center;
+            background-size: cover;
+            padding-bottom: 60px;
+        }
+
+        .box_head {
+            padding: 60px 0 0;
+            background-size: cover;
+            background-image: url(../images/idx02_bg_sp1.jpg);
+
+            h3 {
+                .en {
+                    left: 0;
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            &.line::before {
+                top: 0;
+                height: 100%;
+
+                mask-position: top center;
+                -webkit-mask-position: top center;
+            }
+
+            picture {
+                padding-bottom: 90px;
+
+                &::before {
+                    right: -239px;
+                }
+            }
+
+            h3 {
+                padding-top: 0;
                 position: relative;
                 z-index: 3;
+                font-size: 26px;
+                text-align: center;
+                margin-left: auto;
+                margin-bottom: 20px;
+
+                .en {
+                    margin-top: 0;
+                }
             }
         }
 
-        .content{
-            picture{
+        .content {
+            picture {
                 position: relative;
                 z-index: 2;
             }
         }
-        .flex{
+
+        .flex {
             margin-top: -40px;
         }
-        h4{
+
+        h4 {
             font-size: 20px;
         }
-        .text{
+
+        .text {
             padding: 20px 5px;
         }
-   
+
     }
-    .btn-group{
+
+    .btn-group {
         width: 100%;
-      .btn{
+
+        .btn {
             margin-left: auto;
             margin-right: auto;
         }
     }
-    .index03{
-       padding: 60px 0px ;
-        .flex{
+
+    .index03 {
+        padding: 60px 0px;
+
+        .flex {
             padding-top: 100px;
-            flex-direction: column-reverse; position: relative;
+            flex-direction: column-reverse;
+            position: relative;
+            max-width: 624px;
+            margin: auto;
         }
-        h3{
+
+        h3 {
             position: absolute;
             left: 0;
             top: 0;
         }
+
+
         .box_right {
-            .box_img{
-                margin-bottom: 20px;
+            .box_img {
+                margin: 0px auto 20px;
                 padding: 0px 20px 20px;
             }
         }
     }
-    .index04{
+
+    .idx_bg::before {
+        font-size: 1vw;
+    }
+
+    .index04 {
         padding: 55px 0px 60px;
-        p.white{
+        background-image: url(../images/idx04_bg_sp.jpg);
+
+        p.white {
             font-size: 18px;
         }
-        .btn-group .btn.style01{
+
+        .btn-group .btn.style01 {
             font-size: 8px;
         }
     }
+
     .index05 {
-        .TabContainer .TabContent   .flex{
-            margin-left: -1vw;
-            margin-right: -1vw;
+        padding: 60px 0px;
+
+        .TabContainer .TabContent .flex {
+            margin: 30px -1vw 0;
+
         }
-        .box{
+
+        .TabContainer .TabPager li {
+            padding: 10px 5px;
+
+            p {
+                margin-left: auto;
+                margin-right: auto;
+
+                span {
+                    display: inline-block;
+                }
+
+                .en {
+                    display: block;
+                }
+            }
+        }
+
+        .box {
             width: calc(50% - 2vw);
             margin: 20px 1vw 0;
-    font-size: 8px;
+            font-size: 8px;
         }
     }
+
     .index06 {
-        background-image: url(../images/idx06_bg_sp.jpg);
-        background-position: top center;
-        background-size:auto 65vw ;
+
         padding: 55vw 0px 60px;
-        .box_text{
+        &::before{
+            background-image: url(../images/idx06_bg_sp.jpg);
+            background-position: top center;
+            height: 65vw;
+        }
+
+        .box_text {
+            width: 100%;
             padding: 50px 4% 50px;
-            .txt{
+            max-width: 624px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .txt {
                 margin-bottom: 30px;
+
+                p {
+                    line-height: 2;
+                }
             }
         }
-      
-        .bot{
-            .box_name{
+
+        .bot {
+            .box_name {
                 font-size: 8px;
             }
-            .btn-group{
+
+            .btn-group {
                 margin-top: 25px;
                 order: 2;
             }
         }
     }
-    .index07{
+
+    .index07 {
         background-color: #fafafa;
-        padding: calc(65vw + 60px) 0px 95vw;
-        background-image: url(../images/idx07_bg_sp1.jpg),url(../images/idx07_bg_sp2.jpg);
+        padding: 65vw 0px 95vw;
+        background-image: url(../images/idx07_bg_sp1.jpg), url(../images/idx07_bg_sp2.jpg);
         background-size: 100% auto;
-        background-position: top 50px center,bottom center;
-        
-        h3.t_center span{
+        background-position: top 0px center, bottom center;
+
+        h3.t_center span {
             font-size: calc(var(--ttl_size) + 0px);
         }
-        .text p{
+
+        .text p {
             font-size: 16px;
             line-height: 2;
         }
     }
-    .index08{
+
+    .index08 {
         padding: 60px 0px;
-        h3{
+        background-image: url(../images/idx08_bg_sp.jpg);
+
+        h3 {
             margin-bottom: 20px;
         }
-        .box{
+
+        .box {
             margin: 20px auto 0;
             max-width: 100%;
             padding: 30px 10px;
             font-size: 10px;
         }
-        .text{
+
+        .text {
             font-size: 14px;
         }
-        .tel_click span{
-            font-size:4.6em;
+
+        .tel_click span {
+            font-size: 4.6em;
         }
-        .contact span{
+
+        .contact span {
             font-size: 3.2em;
         }
     }
-    .index09{
-        .box_left{
+
+    .index09 {
+        .box_left {
             width: 100%;
             height: 71vw;
         }
-        .box_right{
+
+        .box_right {
             padding: 50px 10px 40px;
-            width: 100%;
-            ul{
+            width: 90%;
+            max-width: 400px;
+            margin: 0px auto;
+
+            .ft_logo {
+                max-width: 400px;
+            }
+
+            ul {
                 margin: 40px auto 0;
                 width: 100%;
             }
-            li{
+
+            .tt {
+                width: 7em;
+            }
+
+            .text {
+                width: calc(100% - 7em);
+            }
+
+            li {
                 margin-top: 20px;
             }
         }
     }
+
     .index10 {
         padding: 20px 0px 60px;
-     .box{
-        margin: 40px auto 0;
+        background-image: url(../images/idx10_bg_sp.jpg);
+
+        .box {
+            margin: 40px auto 0;
             width: 100%;
         }
-        h4{
+
+        h4 {
             font-size: 24px;
         }
     }
-    .index11{
+
+    .index11 {
         padding: 60px 0px;
-        .flex .box{
+
+        .flex .box {
             max-width: 285px;
             margin: 10px 5px 0px;
         }
@@ -289,7 +434,7 @@
 
 @media only screen and (max-width: 639px) {
 
-    .idx_en{
+    .idx_en {
         font-size: 10vw;
         right: -0.5vw;
         top: 0.18vw;
@@ -298,16 +443,27 @@
 }
 
 @media only screen and (max-width: 425px) {
+    .index02 .box_head h3 {
+        font-size: 5.6vw;
+    }
+
     .index05 .box {
         font-size: 1.6vw;
     }
-    .index08 .box{
+
+    .TabContainer .TabPager li {
+        font-size: 3.4vw;
+
+    }
+
+    .index08 .box {
         font-size: 2.1vw;
     }
-    .bnr{
-      &.st2{
-        font-size: 2vw;
-      }
+
+    .bnr {
+        &.st2 {
+            font-size: 2vw;
+        }
     }
 }
 

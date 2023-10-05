@@ -12,6 +12,7 @@
 		align-items: center;
 		height: 60px;
 		padding: 0;
+		padding-right: 60px;
 
 
 
@@ -37,11 +38,11 @@
 
 
 	footer {
-		padding: 50px 0;
-		background-image: url(../images/ft_bg01.jpg), url(../images/ft_bg02.jpg);
-		background-size: 100% auto, auto 70%;
-		background-repeat: no-repeat;
-		background-position: top left, right bottom;
+		padding: 0px 0;
+	//	background-image: url(../images/ft_bg01.jpg), url(../images/ft_bg02.jpg);
+	//	background-size: 100% auto, auto 70%;
+	//	background-repeat: no-repeat;
+	//	background-position: top left, right bottom;
 	}
 
 	.ft_link {
@@ -191,13 +192,13 @@
 				line-height: 1;
 
 				&::before {
-					height: 22px;
+					height: 20px;
 				}
 			}
 		}
 
 		.tel {
-			width: 40%;
+			width: 60%;
 
 			p {
 				span {
@@ -207,7 +208,7 @@
 		}
 
 		.web {
-			width: 30%;
+			width: 40%;
 
 			p {}
 		}

@@ -255,22 +255,25 @@ header.active,
 
 
 	.pc_navi {
-		>ul {
-			>li {
-
-				>a,
-				p {
-					font-size: 1.5vw;
-
-
+		height: 7.5vw;
+		.inner_big {
+			>ul {
+				>li {
+	
+					>a,
+					p {
+						font-size: 1.4vw;
+	
+	
+					}
 				}
-			}
-
-			.subInner {
-				ul {
-					li {
-						a {
-							font-size: 12px;
+	
+				.subInner {
+					ul {
+						li {
+							a {
+								font-size: 12px;
+							}
 						}
 					}
 				}
@@ -284,6 +287,9 @@ header.active,
 
 		--ttl_size: 22px;
 		--wrapper: 80px;
+	}
+	.pc_navi .inner_big > ul > li > a, .pc_navi .inner_big > ul > li p{
+		font-size: 1.5vw;
 	}
 }
 
@@ -355,7 +361,7 @@ footer {
 			}
 
 			.menu02 {
-				width: 36%;
+				width: 37%;
 
 				ul {
 
@@ -636,13 +642,9 @@ footer {
 	}
 
 	.ft_link {
-		font-size: 9px;
+		font-size: 8.75px;
 
-		.menu01 {
-			ul li {
-				width: 45.5%;
-			}
-		}
+	
 	}
 
 	.copyright {
@@ -655,34 +657,11 @@ footer {
 @media only screen and (min-width: 769px) and (max-width: 920px) {
 
 	.ft_link {
-		.menu01 {
-			width: 100%;
 
-			>ul {
-				max-height: 55em;
+font-size: 1vw;
+	
 
-				>li {
-					width: 50%;
-				}
-			}
-		}
-
-		.menu02 {
-			width: 100%;
-			margin-top: 50px;
-
-			ul {
-				max-height: 40em;
-
-				li {
-					width: 50%;
-				}
-			}
-		}
-
-		.ttl {
-			margin-bottom: 30px;
-		}
+	
 	}
 
 	.copyright {

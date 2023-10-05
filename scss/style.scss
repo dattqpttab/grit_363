@@ -8,7 +8,7 @@
     --clr1: #333;
     --ttl_size: 28px;
     --wrapper: 80px;
-    --fz18:18px;
+    --fz18: 18px;
 }
 
 /*==========================================================================*/
@@ -477,10 +477,10 @@ a {
 
 .TabContainer {
     .TabContent {
-       
+
         position: relative;
         z-index: 2;
- 
+
 
         >ul {
             transition: all 0.3s ease-in-out;
@@ -501,12 +501,11 @@ a {
                     visibility: visible;
                 }
 
-              
+
             }
         }
-.flex{
-    margin: 47px 0px 40px;
-}
+
+      
     }
 
     .TabPager {
@@ -519,26 +518,27 @@ a {
             background-color: #0b7ec5;
             border-radius: 12px 12px 0px 0px;
             display: block;
-text-align: center;
+            text-align: center;
             position: relative;
             margin: 0;
-            padding: 15px 20px 26px;
-      font-size: 24px;
-      font-weight: 500;
-     
+            padding: 0.625em 20px 1.0833em;
+            font-size: 24px;
+            font-weight: 500;
+
             transition: all 0.3s ease;
             cursor: pointer;
             color: #fff;
-            --p1:8px;
-            &::after{
+            --p1: 8px;
+
+            &::after {
                 content: "";
                 display: block;
                 position: absolute;
                 transition: all 0.3s;
-                bottom:calc(0px - var(--p1));
+                bottom: calc(0px - var(--p1));
                 width: 0;
                 height: 0;
-                left:  calc(50% - var(--p1));
+                left: calc(50% - var(--p1));
                 border-right: var(--p1) solid transparent;
                 border-left: var(--p1) solid transparent;
                 border-top: var(--p1) solid #0b7ec5;
@@ -552,7 +552,8 @@ text-align: center;
                 letter-spacing: 0.2em;
                 font-weight: 500;
                 font-family: var(--f-zennew);
-                .en{
+
+                .en {
                     display: block;
                     font-size: 0.66667em;
                     line-height: 1;
@@ -564,7 +565,8 @@ text-align: center;
                 background-color: #177aad;
                 z-index: 1;
                 transform: translateY(0px);
-                &::after{
+
+                &::after {
                     opacity: 1;
                 }
             }
@@ -743,16 +745,19 @@ figure {
         top: 0;
         left: 0;
         right: 0;
-        bottom: 0;display: block;
+        bottom: 0;
+        display: block;
         z-index: 1;
     }
 
     p {
         margin-bottom: 0;
         color: #fff;
-        letter-spacing: 0.12em;
+        letter-spacing: 0.1em;
         line-height: 1.222222222222222;
         text-align: center;
+        font-weight: 500;
+        font-family: var(--f-zennew);
 
         &::before {
             content: "";
@@ -761,12 +766,12 @@ figure {
             background-size: auto 100%;
             display: block;
             width: 100%;
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
     }
 
     .tel {
-        background-color: #b3b3b3;
+        background-color: #1467ad;
 
 
         p {
@@ -788,7 +793,7 @@ figure {
     }
 
     .web {
-        background-color: #ccc;
+        background-color: #246693;
 
 
         p {
@@ -801,55 +806,59 @@ figure {
         }
     }
 
-    .mail {
-        background-color: #dcdcdc;
-
-
-        p {
-
-
-            &::before {
-                background-image: url("../images/shared_fixed_bnr_icon03.png");
-
-            }
-        }
-    }
 }
 
 @media only screen and (min-width: 769px) {
     .fixed_banner {
         font-size: 10px;
+        top: var(--wrapper);
 
         >div {
-            width: 9em;
-            height: 9em;
+            margin-top: 1px;
+            width: 8em;
+            height: 8em;
         }
-        p{
-            font-size: 1.5em;
-            letter-spacing: 0.05em;
+
+        p {
+            display: flex;
+            align-items: center;
+            font-size: 2.2em;
+            writing-mode: vertical-lr;
         }
-        .tel{
-            height: 12em;
-        }
-        .web{
-            p{
-                &::before{
-                    height: 1.9333em;
+
+        .tel {
+            height: 26em;
+            padding-top: 0.4em;
+
+            p {
+                &::before {
+                    width: 1em;
+                    height: 1em;
                 }
             }
         }
-        .mail{
-            p{
-                &::before{
-                    height: 1.9333em;
+
+        .web {
+            height: 18em;
+            padding-top: 0.4em;
+            p {
+                span{
+                    padding-left: 0.2em;
+                }
+                &::before {
+                    width: 1.04546em;
+                    height: 1.04546em;
+                    max-width: 23px;
                 }
             }
         }
+
     }
 }
 
 
-@media only screen and (min-width: 769px) and (max-width: 1366px), (min-width: 769px) and (max-height: 780px) {
+@media only screen and (min-width: 769px) and (max-width: 1366px),
+(min-width: 769px) and (max-height: 780px) {
     .fixed_banner {
         font-size: 8.75px;
     }
@@ -860,7 +869,7 @@ figure {
 .btn a {
     &::after {
         @include before;
- 
+
         height: 12px;
         right: 20px;
         width: 0.25em;
@@ -879,9 +888,11 @@ figure {
 
     }
 }
-picture{
+
+picture {
     display: table;
 }
+
 .btn-group {
     font-size: 10px;
 
@@ -890,7 +901,7 @@ picture{
 
         &.style01 {
             width: 100%;
-            min-width: 170px;
+            min-width: 150px;
             max-width: 400px;
             overflow: hidden;
 
@@ -911,7 +922,8 @@ picture{
                 background-color: var(--main-color);
                 transition: all .3s;
                 border-radius: 40px;
-font-family: var(--f-zennew);
+                font-family: var(--f-zennew);
+
                 &::after {
                     background-color: #fff;
                 }
@@ -934,11 +946,12 @@ font-family: var(--f-zennew);
 
             }
 
-            &.md {    
-                a {background-color: transparent;
+            &.md {
+                a {
+                    background-color: transparent;
                     border: 1px solid #fff;
 
-             
+
                     min-height: 2.2em;
                     padding: 0.1em;
 
@@ -951,12 +964,10 @@ font-family: var(--f-zennew);
         &.bg01 {
             a {
                 background-color: transparent;
-               color: #fff;
-               border: 1px solid #fff;
+                color: #fff;
+                border: 1px solid #fff;
 
-                &::after {
-                 
-                }
+                &::after {}
             }
         }
 
