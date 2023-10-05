@@ -259,7 +259,9 @@ body:not(.ovh) {
 /********************************
 General
 ********************************/
+
 @media only screen and (max-width: 768px) {
+
     body {
         font-size: 87.5%;
     }
@@ -273,7 +275,17 @@ General
     }
 
     .TabContainer .TabPager li {
-        width: 33%;
+ font-size: 20px;
+ padding: 10px 10px 21px;
+ display: flex;
+ align-items: center;
+ p{
+    line-height: 1.4;
+    .en{
+        margin-top: 0.2em;
+        font-size: 0.7em;
+    }
+ }
     }
 
     .totop {
@@ -393,7 +405,11 @@ General
         top: 15vw;
     }
 }
-
+@media only screen and (max-width: 768px) {
+    .TabContainer .TabPager li {
+        font-size: 18px;
+           }
+}
 /* END General
 ********************************/
 /*

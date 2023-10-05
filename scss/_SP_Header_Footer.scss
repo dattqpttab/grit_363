@@ -304,7 +304,7 @@
 
 			img {
 				margin: auto;
-				max-width: 140px;
+				max-width: 120px;
 			}
 		}
 
@@ -315,6 +315,9 @@
 			margin-right: auto;
 			padding: 0px 10px;
 			text-align: center;
+			p{
+				font-size: 13px;
+			}
 
 			span {
 				display: inline-block;
