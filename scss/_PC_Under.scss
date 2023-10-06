@@ -273,6 +273,16 @@
 		&:first-child {
 			margin-top: calc(var(--h-shape));
 		}
+
+		&.none_ttl {
+			&:nth-child(2n) {
+
+				&:before,
+				&:after {
+					background-color: var(--bl-cl);
+				}
+			}
+		}
 	}
 
 	&:first-child {
@@ -320,7 +330,7 @@
 		}
 
 		>p {
-			font-size: 1.6em;
+			font-size: 16px;
 		}
 
 	}
@@ -329,6 +339,8 @@
 //und_feature-m
 .under {
 	.und_feature {
+		padding: 10px 0 30px;
+
 		.box {
 			@for $i from 1 through 6 {
 				&:nth-child(#{$i}) {
@@ -350,9 +362,8 @@
 	.und_flow {
 		position: relative;
 		z-index: 1;
-		max-width: 800px;
-		margin-left: auto;
-		margin-right: auto;
+
+		margin: 50px auto 30px;
 		--size-w: 3px;
 
 		&:after {
@@ -366,6 +377,32 @@
 			background-color: var(--bl-cl)
 		}
 
+		.list01 {
+			li {
+				font-size: 16px;
+			}
+		}
+
+		.box {
+			max-width: 1000px;
+		}
+
+		.box_ct {
+			margin-top: 20px;
+
+			p {
+				font-size: 16px;
+			}
+		}
+
+		.btn-group .btn.style01 {
+			min-width: auto;
+			margin-bottom: 40px;
+		}
+
+		figure {
+			margin-bottom: 60px;
+		}
 
 		.box_container {
 			position: relative;
@@ -613,7 +650,6 @@
 
 		&.big {
 			max-width: 700px;
-			min-width: 310px;
 
 			a {
 				padding: 1em 1.85em;
@@ -661,10 +697,6 @@
 
 		&.flex_02 {
 			justify-content: center;
-
-			>div {
-				margin: 10px;
-			}
 		}
 
 		>div {
@@ -712,10 +744,15 @@
 	margin-right: auto;
 }
 
+.right {
+	margin-right: 0;
+	margin-left: auto;
+}
+
 .txt_ms {
 	color: var(--main-color);
 	margin-bottom: 20px;
-	font-size: 22px;
+	font-size: 22px !important;
 	font-weight: 600;
 	text-transform: uppercase;
 }
@@ -735,8 +772,8 @@
 .txt-big {
 	font-size: 24px;
 	font-weight: 500;
-
 }
+
 
 
 .mt_rps {
@@ -775,6 +812,141 @@
 	p {
 		text-align: center;
 		font-weight: 500;
+	}
+}
+
+.und_voice {
+	margin: 40px auto;
+}
+.under .box_voice {
+	background-color: white;
+	padding: 40px 20px;
+	margin-bottom: 60px;
+	border: 2px solid var(--bl-cl);
+
+	background-image: url(../images/voice_bg01.jpg);
+	background-position: left bottom;
+	background-repeat: no-repeat;
+	background-size: auto 500px;
+	&:nth-child(2n) {
+		background-image: url(../images/voice_bg02.jpg);
+	}
+
+
+}
+
+.under .und_lawyer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	--size-space:20px;
+	margin-left: var(--size-space);
+
+}
+
+.under .card_lawyer {
+	display: flex;
+	flex-direction: column;
+	margin-top: var(--size-space);
+
+	width: calc(100% /3  - var(--size-space));
+	margin-right: var(--size-space);
+	max-width: 350px;
+	padding: 20px 10px;
+	background-color: white;
+	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
+	  
+	picture {
+		position: relative;
+		display: block;
+		margin-bottom: 30px;
+		&:after {
+			@include before;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-image: url(../images/card_lawyer_bg.jpg);
+			background-position: center;
+			background-size: cover;
+		}
+
+		img {
+			position: relative;
+			z-index: 1;
+			display: block;
+
+			max-height: 250px;
+			width: auto;
+		}
+
+	}
+	.card_body {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+
+	p {
+		text-align: center;
+		font-family: var(--f-zennew);
+		font-weight: 600;
+		line-height: 1.5;
+
+
+		&.title {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+
+		&.name {
+			font-size: 22px;
+			font-weight: 500;
+			margin-bottom: 30px;
+
+			.name_en {
+				display: block;
+				font-size: .8em;
+				font-weight: 400;
+			}
+		}
+	}
+
+	.btn-group {
+		margin-top: auto;
+		margin-bottom: 0;
+		.btn.style01{
+			max-width: 280px;
+			min-width: 80%;
+
+			a {
+				font-size: 1.6em;
+				min-height: 1.3em;
+				padding: 0.6em 1.4em;
+			}
+		}
+	}
+}
+
+@media only screen and (min-width:769px) and (max-width:1000px) {
+	.under .card_lawyer {
+		width: calc(100% /2 - var(--size-space));
+
+	}
+}
+
+.under ul.list02 {
+	li {
+		display: flex;
+		margin-bottom: 1.1111em;
+
+		.li_head {
+			min-width: 2.778em;
+			font-weight: 600;
+			color: var(--bl-cl);
+		}
+
+		.li_ct {}
 	}
 }
 
@@ -954,7 +1126,7 @@
 		&.colImg2 {
 			figure {
 				position: relative;
-				background: #efefef;
+				// background: #efefef;
 				overflow: hidden;
 				height: 280px;
 				width: 100%;
