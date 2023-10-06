@@ -315,15 +315,17 @@
 	.mt_rps {
 		margin-top: 50px;
 	}
+
 	.txt-big {
 		font-size: 22px;
 	}
 
 	.txt_ms {
 		margin-bottom: 15px;
-		font-size: 20px;
+		font-size: 20px !important;
 		text-align: center;
 	}
+
 	.under .box_ct {
 		padding: 20px;
 	}
@@ -331,16 +333,63 @@
 	.under .und_bn_gr {
 		>div {
 			width: 50%;
-			padding: 5px;
 
 			&:not(:last-child) {
 				margin-bottom: 0;
 			}
 		}
 
-		&.flex_02 >div{
+		&.flex_02>div {
 			width: 100%;
-			max-width: 320px;
+			max-width: 350px;
+		}
+	}
+
+	.under {
+		.und_flow {
+
+			.box_ct p,
+			.list01 li {
+				font-size: 14px;
+			}
+
+			figure {
+				margin-bottom: 40px;
+			}
+		}
+
+		.und_voice {
+			margin: 30px auto;
+		}
+
+		.box_voice {
+			margin-bottom: 40px;
+		}
+
+		//card_lawyer
+		.card_lawyer {
+			width: calc(100% /2 - var(--size-space));
+			margin-top: var(--size-space);
+
+			picture {
+				margin-bottom: 20px;
+
+				img {
+					max-height: 200px;
+				}
+			}
+
+			p {
+
+				&.title {
+					font-size: 22px;
+				}
+
+				&.name {
+					font-size: 20px;
+					margin-bottom: 20px;
+				}
+			}
 		}
 	}
 
@@ -381,6 +430,26 @@
 			}
 
 		}
+
+		.und_bn_gr {
+			>div {
+				width: 100%;
+				max-width: 320px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 580px) {
+	.under .und_lawyer {
+		--size-space: 0;
+	}
+
+	.under .card_lawyer {
+		width: 100%;
+		margin-top: 40px;
 	}
 }
 
@@ -421,14 +490,6 @@
 			}
 		}
 
-		.und_bn_gr {
-			>div {
-				width: 100%;
-				max-width: 320px;
-				margin-left: auto;
-				margin-right: auto;
-			}
-		}
 	}
 }
 
@@ -466,13 +527,13 @@
 
 	.txt-big {
 		font-size: 20px;
-	} 
+	}
 
 	.under table.tbl_style01 th {
 		font-size: 14px;
 	}
 
-	.under ul.list01 li  {
+	.under ul.list01 li {
 		font-size: 14px;
 	}
 
