@@ -94,7 +94,6 @@
 		background-position: center;
 		background-size: auto 100%;
 		background-color: #ddd;
-		margin-top: 80px;
 		height: 442px;
 
 		.inner {
@@ -643,6 +642,8 @@
 .under {
 	.btn-group .btn.style01 {
 		min-width: 350px;
+		display: table;
+		width: auto;
 
 		a {
 			padding: 0.8em 1.4em;
@@ -653,6 +654,20 @@
 
 			a {
 				padding: 1em 1.85em;
+			}
+		}
+
+		&.disable {
+
+
+			@include screen('min769') {
+				a:hover {
+					background-color: var(--main-color);
+
+					&:after {
+						right: 20px;
+					}
+				}
 			}
 		}
 	}
@@ -781,20 +796,22 @@
 }
 
 .under .btn-group {
-	margin: 30px 0 10px;
+	margin-top: 30px;
 }
 
 .under .box_ct {
 	position: relative;
 	margin: 40px 0 20px;
 	padding: 40px;
-	// background-image: url(../images/idx03_bg.jpg);
-	background-image: url(../images/und_bn_sty01.jpg);
+	// background-image: url(../images/und_bn_sty01.jpg);
+	background-color: white;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
 	box-shadow: 0px 0px 10px 4px #ddd;
 	border: 2px solid #f8be27;
+
+
 
 	&:before {
 		@include before;
@@ -812,6 +829,12 @@
 	p {
 		text-align: center;
 		font-weight: 500;
+	}
+
+	@include screen('min769') {
+		ul.list01.mcol-3 li:nth-child(-n + 3) {
+			margin-top:1.3889em;
+		}
 	}
 }
 
@@ -863,7 +886,7 @@
 	transition: all .2s;
 
 
-	&:hover {
+	&:not(.disable):hover {
 		top: -5px;
 		box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
 
@@ -997,6 +1020,7 @@
 				display: none;
 			}
 		}
+
 		.big {
 			font-size: 1.5em;
 			font-weight: 600;
@@ -1060,8 +1084,8 @@
 			background-color: var(--bl-cl);
 			width: 80px;
 			padding: 10px;
-			color:white;
-			
+			color: white;
+
 
 		}
 
@@ -1076,6 +1100,7 @@
 			display: flex;
 			justify-content: center;
 			align-items: center;
+
 			p {
 				text-align: center;
 			}
