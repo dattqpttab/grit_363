@@ -57,7 +57,7 @@
         }
 
         &_sec {
-            margin-top: 50px;
+            margin-top: 60px;
         }
 
         &_content,
@@ -101,7 +101,7 @@
     }
 }
 @media only screen and (max-width: 700px)  {
-    .interview_box.box_right .interview_content {
+    .interview_box .interview_content {
         >p {
             padding:10px 40px 0 40px;
         }
@@ -130,7 +130,7 @@
     }
 }
 @media only screen and (max-width: 425px) {
-    .interview_box.box_right .interview_content {
+    .interview_box .interview_content {
         >p {
             padding:10px 20px 0 20px;
         }
