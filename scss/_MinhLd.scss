@@ -1,0 +1,20 @@
+.under {
+    .und_flow  {
+        .box_container {
+            &:last-child {
+                .design_arr {
+                    .arr_f {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                    .arr_sc {
+                        &::before {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
