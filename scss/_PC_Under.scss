@@ -818,6 +818,7 @@
 .und_voice {
 	margin: 40px auto;
 }
+
 .under .box_voice {
 	background-color: white;
 	padding: 40px 20px;
@@ -828,6 +829,7 @@
 	background-position: left bottom;
 	background-repeat: no-repeat;
 	background-size: auto 500px;
+
 	&:nth-child(2n) {
 		background-image: url(../images/voice_bg02.jpg);
 	}
@@ -835,31 +837,43 @@
 
 }
 
+//under_lawyer
 .under .und_lawyer {
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	--size-space:20px;
+	--size-space: 20px;
 	margin-left: var(--size-space);
 
 }
 
 .under .card_lawyer {
+	position: relative;
+	top: 0;
 	display: flex;
 	flex-direction: column;
-	margin-top: var(--size-space);
+	margin-top: calc(var(--size-space) * 2);
 
-	width: calc(100% /3  - var(--size-space));
+	width: calc(100% /3 - var(--size-space));
 	margin-right: var(--size-space);
 	max-width: 350px;
 	padding: 20px 10px;
 	background-color: white;
 	box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.15);
-	  
+	transition: all .2s;
+
+
+	&:hover {
+		top: -5px;
+		box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.45);
+
+	}
+
 	picture {
 		position: relative;
 		display: block;
 		margin-bottom: 30px;
+
 		&:after {
 			@include before;
 			top: 0;
@@ -881,6 +895,7 @@
 		}
 
 	}
+
 	.card_body {
 		display: flex;
 		flex-direction: column;
@@ -913,9 +928,12 @@
 	}
 
 	.btn-group {
+		position: relative;
+		z-index: 2;
 		margin-top: auto;
 		margin-bottom: 0;
-		.btn.style01{
+
+		.btn.style01 {
 			max-width: 280px;
 			min-width: 80%;
 
@@ -934,6 +952,138 @@
 
 	}
 }
+
+//end und_lawyer
+
+//und_fee
+.under {
+	.und_fee {
+		--size-sp-fee: 40px;
+		margin: 40px 0;
+		margin-left: var(--size-sp-fee);
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.fee_card {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+
+		padding: 15px 10px;
+		margin-right: var(--size-sp-fee);
+
+		width: calc(100%/6 - var(--size-sp-fee));
+		max-width: 70px;
+		box-shadow: 0px 0px 5px 2px #ddd;
+		background-color: white;
+		border: 1px solid var(--bl-cl);
+
+		&::after {
+			@include before;
+			right: calc(var(--size-sp-fee) / -1.3);
+			top: calc(50% - var(--size-sp-fee) / 2);
+			width: 0;
+			height: 0;
+			border: calc(var(--size-sp-fee) / 2) solid transparent;
+			border-right: none;
+			border-left-color: var(--bl-cl);
+		}
+
+		&:last-child {
+			&::after {
+				display: none;
+			}
+		}
+		.big {
+			font-size: 1.5em;
+			font-weight: 600;
+		}
+
+		.card_num {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin: 0 auto;
+			margin-bottom: 20px;
+			background-color: var(--bl-cl);
+			width: 35px;
+			height: 35px;
+			border-radius: 50%;
+			color: white;
+		}
+
+		.card_ct {
+			display: flex;
+			justify-content: center;
+
+			p {
+				writing-mode: vertical-rl;
+				line-height: 1.5;
+			}
+		}
+	}
+
+	.und_fee.style02 {
+		justify-content: space-between;
+		max-width: 1000px;
+		margin-left: auto;
+		margin-right: auto;
+
+
+
+	}
+
+	.fee_card.style02 {
+		flex-direction: row;
+		width: calc(50% - var(--size-sp-fee));
+		max-width: 500px;
+		border: 1px solid var(--bl-cl);
+		margin-right: 0;
+		padding: 0;
+
+		&:after {
+			display: none;
+		}
+
+		&.w100 {
+			width: 100%;
+			max-width: 100%;
+		}
+
+		.card_left {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			background-color: var(--bl-cl);
+			width: 80px;
+			padding: 10px;
+			color:white;
+			
+
+		}
+
+		.card_num {
+			background-color: white;
+			color: var(--bl-cl);
+		}
+
+		.card_right {
+			width: calc(100% - 80px);
+			padding-left: 20px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			p {
+				text-align: center;
+			}
+		}
+	}
+}
+
+//end_und_fee
 
 .under ul.list02 {
 	li {
@@ -1001,6 +1151,7 @@
 
 	section {
 		padding-top: 1px;
+		counter-reset: count;
 
 		h3 {
 			margin-top: 70px;
