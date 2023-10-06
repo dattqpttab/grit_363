@@ -560,11 +560,14 @@ a {
                     text-transform: uppercase;
                 }
             }
+            &:hover{
+                background-color: #177aad;
+            }
 
             &.active {
                 background-color: #177aad;
                 z-index: 1;
-                transform: translateY(0px);
+           
 
                 &::after {
                     opacity: 1;
@@ -865,7 +868,16 @@ figure {
 
 
 }
+@media only screen and (min-width: 769px) and (max-width: 992px),
+(min-width: 769px) and (max-height: 680px) {
+    .fixed_banner {
+        font-size: 8px;
+    }
+    :root{
+        --wrapper: 70px; 
+    }
 
+}
 .btn a {
     &::after {
         @include before;
@@ -934,8 +946,8 @@ picture {
 
                 @include screen('min769') {
                     &:hover {
-
-                        background-color: var(--clr1);
+                        background-color: #0b7ec5;
+             
 
                         &::after {
                             right: 5px;
@@ -954,7 +966,16 @@ picture {
 
                     min-height: 2.2em;
                     padding: 0.1em;
-
+                    @include screen('min769') {
+                        &:hover {
+    
+                            background-color: #0b7ec5;
+    
+                            &::after {
+                                right: 5px;
+                            }
+                        }
+                    }
 
                 }
             }

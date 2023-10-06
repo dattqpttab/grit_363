@@ -364,7 +364,7 @@ section {
 			margin-top: 0.08em;
 			width: 1.03125em;
 			height: 1.0625em;
-
+			transition: all .3s;
 			--mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 66 67' %3E%3Cpath d='M64.218,66.855 L4.704,66.855 C2.649,66.855 0.984,65.280 0.984,63.336 L0.984,14.091 C0.984,12.147 2.649,10.572 4.704,10.572 L15.861,10.572 L15.861,3.535 C15.861,1.591 17.526,0.020 19.582,0.020 C21.637,0.020 23.301,1.591 23.301,3.535 L23.301,10.572 L45.618,10.572 L45.618,3.535 C45.618,1.591 47.286,0.020 49.338,0.020 C51.393,0.020 53.058,1.591 53.058,3.535 L53.058,10.572 L60.498,10.572 L64.218,10.572 C66.274,10.572 65.318,12.147 65.318,14.091 L65.318,63.336 C65.318,65.280 66.274,66.855 64.218,66.855 ZM31.670,44.295 L25.001,37.985 C23.549,36.611 21.194,36.611 19.741,37.985 C18.289,39.361 18.289,41.586 19.741,42.960 L29.041,51.756 C29.740,52.415 30.686,52.783 31.670,52.783 C32.657,52.783 33.603,52.415 34.301,51.756 L49.178,37.685 C50.634,36.310 50.634,34.083 49.178,32.708 C47.726,31.337 45.374,31.337 43.918,32.708 L31.670,44.295 Z'/%3E%3C/svg%3E");
 			mask-image: var(--mask);
 			-webkit-mask-image: var(--mask);
@@ -1166,6 +1166,7 @@ section {
 	.btn-group .btn.style01 {
 		margin: auto;
 		max-width: 800px;
+	
 		width: auto;
 
 		a {
@@ -1477,14 +1478,16 @@ section {
 .index07 {
 	padding: 141px 0px 346px;
 	background-position: bottom center;
-	background-size: auto;
+background-color: #fafafa;
 	background-image: url(../images/idx07_bg.jpg);
 
 	h3.t_center {
 		line-height: 1.4444;
 		padding-bottom: 0.74em;
 		color: #236692;
-
+max-width: 23em;
+margin-left: auto;
+margin-right: auto;
 		>span {
 			letter-spacing: 0.2em;
 			display: block;
@@ -1500,7 +1503,7 @@ section {
 		margin: 0px auto;
 		max-width: 800px;
 		text-align: center;
-
+		width: 80%;
 		p {
 			font-size: 1.125em;
 			line-height: 2.77777778em;
@@ -1558,6 +1561,7 @@ section {
 	}
 
 	.box {
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -1569,14 +1573,28 @@ section {
 		max-width: calc(50% - 28px);
 		width: 52em;
 		text-align: center;
+		transition: all .3s;
 
 		>p {
 			margin-bottom: 9px;
+			transition: all .3s;
 		}
-
+		.contact span{
+			transition: all .3s;
+		}
 		&:nth-child(2) {
 			padding-top: 1.125em;
-
+			&:hover{
+				background-color: #0b7ec5;
+				color: #fff;
+				.contact span{
+					color: #fff;
+					&::before{
+						background-color: #fff;
+					}
+				}
+			}
+		
 			>p {
 				line-height: 2;
 				margin-bottom: 2px;
@@ -1716,7 +1734,7 @@ section {
 
 
 	.box {
-		width: 48%;
+		width: 49%;
 		max-width: 600px;
 		display: flex;
 		flex-direction: column;
@@ -1783,8 +1801,11 @@ section {
 	}
 }
 
-@media only screen and (max-width: 1366px) and (min-width: 769px) {
-	.index05 {}
+@media only screen and (max-width: 1660px) and (min-width: 769px) {
+	.index07 {
+		padding-top: calc(60px + 4vw);
+		padding-bottom: calc(100px + 10vw);
+	}
 }
 
 @media only screen and (min-width: 769px) and (max-width: 1280px) {
@@ -1801,7 +1822,13 @@ section {
 	.index01 .content .box {
 		padding: 50px 20px 60px;
 	}
-
+.index07{
+	background-size: 120% auto;
+	padding-bottom: calc(140px + 15vw);
+	.text >p{
+		text-shadow: 0px 0px 2px #fafafa,0px 0px 2px #fafafa,0px 0px 3px #fafafa,0px 0px 2px #fafafa,0px 0px 5px #fafafa;
+	}
+}
 	.home_page {
 		h3 {
 			//	margin-bottom: 30px;
@@ -1880,5 +1907,8 @@ section {
 	.idx_bg::before,	.index08 .box{
 		font-size: 1vw;
 		
+	}
+	.index10 h4{
+		font-size: calc(var(--ttl_size) + 6px);
 	}
 }

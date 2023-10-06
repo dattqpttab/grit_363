@@ -250,7 +250,7 @@ header.active,
 @media only screen and (min-width: 769px) and (max-width: 1280px) {
 	:root {
 
-		--wrapper: 100px;
+		--wrapper: 70px;
 	}
 
 
@@ -286,7 +286,7 @@ header.active,
 	:root {
 
 		--ttl_size: 22px;
-		--wrapper: 80px;
+		--wrapper: 70px;
 	}
 	.pc_navi .inner_big > ul > li > a, .pc_navi .inner_big > ul > li p{
 		font-size: 1.5vw;
@@ -338,9 +338,6 @@ footer {
 .ft_link {
 	font-size: 10px;
 
-	a {
-		text-decoration: none;
-	}
 
 	@include screen('min769') {
 		.link_list {
@@ -436,7 +433,11 @@ footer {
 			a {
 				font-size: 1.4em;
 				color: #676767;
-
+				&:hover {
+					opacity: 1;
+					color: var(--main-color);
+		
+				}
 				&::before {
 					background-color: #59a9d2;
 				}
@@ -510,6 +511,10 @@ footer {
 		color: inherit;
 		font-size: 1.6em;
 	
+		
+			text-decoration: none;
+			
+	
 
 		letter-spacing: .2em;
 
@@ -524,6 +529,7 @@ footer {
 
 		&:hover {
 			opacity: 1;
+			color: var(--main-color);
 
 		}
 	}
