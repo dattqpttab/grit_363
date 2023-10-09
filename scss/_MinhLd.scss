@@ -22,6 +22,19 @@
         color: var(--main-color2);
         font-size: 1.25em;
     }
+    .txt_udl {
+        position: relative;
+        color: var(--bl-cl);
+        &::before {
+            content: "";
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background-color: var(--bl-cl);
+            bottom: -2px;
+            left: 0;
+        }
+    }
 
     .link_box {
         display: flex;
@@ -46,6 +59,33 @@
         }
         img {
             box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);  
+        }
+    }
+    ul {
+        &.list03 {
+            li {
+                font-size: 1.125em;
+                padding-left: 2.222222222222222em;
+                padding-bottom: 1.388888888888889em;
+                position: relative;
+                counter-increment: numb;
+                &::before {
+                    content: counter(numb);
+                    position: absolute;
+                    top: -0.1875em;
+                    left: 0;
+                    width: 1.875em;
+                    height: 1.875em;
+                    border-radius: 50%;
+                    color: #fff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding-top: 1px;
+                    font-size: 0.8888888888888889em;
+                    background-color: var(--bl-cl);
+                }
+            }
         }
     }
 }
