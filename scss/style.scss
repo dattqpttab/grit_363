@@ -1005,6 +1005,12 @@ picture {
     border: 3px solid #ddd;
     margin-bottom: 1.2em; 
     text-align: left;  
+    a{
+        span{
+            display: inline-block;
+            text-decoration: inherit;
+        }
+    }
 }
 .border-block:not(.fblock){
     display: table;

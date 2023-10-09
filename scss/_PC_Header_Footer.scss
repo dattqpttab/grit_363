@@ -15,7 +15,7 @@ header.active,
 .ovh header {
 
 
-	background-color: #fff;
+
 
 	.header_top {
 		padding-top: 5px;
@@ -35,6 +35,7 @@ header.active,
 	justify-content: center;
 	margin: 0 auto;
 	padding: 10px 20px;
+	height:var(--wrapper);
 	transition: all 0.3s ease-in-out;
 }
 
@@ -71,7 +72,7 @@ header.active,
 }
 
 .right_head {
-	width: 70%;
+	width: 76%;
 	max-width: 864px;
 	padding-right: 100px;
 	display: flex;
@@ -260,7 +261,7 @@ header.active,
 			}
 
 			.logo {
-				width: 30%;
+				width: 22%;
 				max-width: 294px;
 				.main{
 					position: absolute;
@@ -311,15 +312,45 @@ header.active,
 	}
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1800px) {
+	.under header, header.active {
+	.pc_navi .inner_big > ul > li > a, .pc_navi .inner_big > ul > li > p{
+		font-size: 1vw;
+	}
+}
+	.right_head{
+		padding-right: var(--wrapper);
+	}
+}
 @media only screen and (min-width: 769px) and (max-width: 1280px) {
 	:root {
 
 		--wrapper: 70px;
 	}
-
+	.header_top{
+		padding-left: 10px;
+		padding-right: 10px;
+	}
 
 	.pc_navi {
 		height: 7.5vw;
+	}
+	.under header, header.active {
+		.pc_navi {
+			height: 100%;
+		
+				.inner_big {
+					padding: 0;
+					> ul > li > a, > ul > li > p{
+						font-size: 1.2vw;
+						letter-spacing: 0.1em;
+					}
+				}
+			
+		}
+	}
+	.pc_navi {
+		
 
 		.inner_big {
 			>ul {
@@ -327,7 +358,7 @@ header.active,
 
 					>a,
 					p {
-						font-size: 1.4vw;
+						
 
 
 					}
@@ -638,6 +669,7 @@ footer {
 	}
 
 	.textwidget {
+
 		display: block;
 		margin-top: 4px;
 		margin-left: 23px;
@@ -682,6 +714,16 @@ footer {
 //end-dattq
 
 //dattq
+@media only screen and (min-width: 769px) {
+	.copyright .textwidget {
+		width: calc(100% - 175px);
+		p{
+			span{
+				display: inline;
+			}
+		}
+	}
+}
 @media only screen and (min-width: 1367px) {
 	footer {
 		.menu01 {
@@ -742,21 +784,7 @@ footer {
 
 	}
 
-	.copyright {
-		.flex {
-			flex-direction: column;
-		}
 
-		.grits {
-			padding-bottom: 10px;
-			border-bottom: 1px solid white;
-		}
-
-		.textwidget {
-			margin-top: 10px;
-			border-left: none;
-		}
-	}
 }
 
 //end-dattq
