@@ -328,12 +328,13 @@
 
 	.under .box_ct {
 		padding: 20px;
+
 		.list01.mcol-3 li:last-child {
 			padding-bottom: 0;
 		}
 
 		&.style_ico {
-			--size-ico:30px;
+			--size-ico: 30px;
 		}
 	}
 
@@ -399,283 +400,283 @@
 			}
 		}
 
-		//und_fee
-		.und_fee {}
 
-		.fee_card {
-			.card_num {}
-
-			.card_ct {}
+		.imgBox.colImg1 .item .slide_img {
+			figure{
+				width: 768px;
+			}}
 		}
+
 	}
 
-}
+	@media only screen and (max-width: 639px) {
+		.under {
+			.und_flow {
+				--size-w: 2px;
 
-@media only screen and (max-width: 639px) {
-	.under {
-		.und_flow {
-			--size-w: 2px;
-
-			.box_container {
-				font-size: 8px;
+				.box_container {
+					font-size: 8px;
 
 
-				.design_arr {
-					.arr_sc:after {
-						left: .5em;
+					.design_arr {
+						.arr_sc:after {
+							left: .5em;
+						}
 					}
 				}
 			}
-		}
 
-		//und_faq
-		.und_faq {
-			.box_a {
-				flex-direction: column;
+			//und_faq
+			.und_faq {
+				.box_a {
+					flex-direction: column;
 
-				picture {
+					picture {
+						margin-left: auto;
+						margin-right: auto;
+					}
+
+					p {
+						width: 100%;
+						padding-left: 0;
+						padding-top: 25px;
+					}
+				}
+
+				.box_noneimg {
+					.box_a {
+						p {
+							padding-top: 0;
+						}
+					}
+				}
+
+			}
+
+			.und_bn_gr {
+				>div {
+					width: 100%;
+					max-width: 320px;
 					margin-left: auto;
 					margin-right: auto;
 				}
-
-				p {
-					width: 100%;
-					padding-left: 0;
-					padding-top: 25px;
-				}
 			}
 
-			.box_noneimg {
-				.box_a {
-					p {
-						padding-top: 0;
-					}
-				}
+			//und_fee
+			.und_fee {
+				--size-sp-fee: 68px;
 			}
 
-		}
+			.fee_card {
+				width: calc(100%/3 - var(--size-sp-fee));
+				margin-top: calc(var(--size-sp-fee));
 
-		.und_bn_gr {
-			>div {
-				width: 100%;
-				max-width: 320px;
-				margin-left: auto;
-				margin-right: auto;
-			}
-		}
-
-		//und_fee
-		.und_fee {
-			--size-sp-fee: 68px;
-		}
-
-		.fee_card {
-			width: calc(100%/3 - var(--size-sp-fee));
-			margin-top: calc(var(--size-sp-fee));
-
-			&:after {
-				right: calc(var(--size-sp-fee) / -1.45);
-				top: calc(50% - var(--size-sp-fee) / 3);
-
-				border: calc(var(--size-sp-fee) / 3) solid transparent;
-				border-right: none;
-				border-left-color: var(--bl-cl);
-
-			}
-
-			.card_num {}
-
-			.card_ct {}
-		}
-	}
-}
-
-@media only screen and (max-width: 580px) {
-	.under .und_lawyer {
-		--size-space: 0;
-	}
-
-	.under .card_lawyer {
-		width: 100%;
-		margin-top: 40px;
-	}
-}
-
-
-@media only screen and (max-width: 520px) {
-	.under .und_fee {
-		--size-sp-fee: 9vw;
-	}
-}
-
-@media only screen and (max-width: 450px) {
-	.under {
-		#mainContent {
-			&:before {
-				clip-path: circle(150px at 50% -3.1vw);
-			}
-		}
-
-		.box {
-			--h-shape: 20px;
-
-			&:before,
-			&:after {
-				width: 40%;
-			}
-
-			.txt {
-				padding: 30px 30px 60px 30px;
-			}
-		}
-
-		.und_flow {
-			--size-w: 1.5px;
-
-			.box_container {
-				font-size: 6px;
-			}
-		}
-
-		.und_faq .box_q {
-			h4 {
 				&:after {
-					width: 50%;
+					right: calc(var(--size-sp-fee) / -1.45);
+					top: calc(50% - var(--size-sp-fee) / 3);
+
+					border: calc(var(--size-sp-fee) / 3) solid transparent;
+					border-right: none;
+					border-left-color: var(--bl-cl);
+
 				}
+
+				.card_num {}
+
+				.card_ct {}
 			}
 		}
-
 	}
-}
 
-@media only screen and (max-width: 375px) {
-	.under {
-		.imgBox {
-
-			&.colImg2,
-			&.colImg3 {
-				.item {
-					width: 100%;
-				}
-			}
+	@media only screen and (max-width: 580px) {
+		.under .und_lawyer {
+			--size-space: 0;
 		}
 
-		.und_flow {
-			.box_container {
-				font-size: 3.5px;
+		.under .card_lawyer {
+			width: 100%;
+			margin-top: 40px;
+		}
+	}
 
-				.design_arr .arr_f:after {
-					left: 1.7em;
+
+	@media only screen and (max-width: 520px) {
+		.under .und_fee {
+			--size-sp-fee: 9vw;
+		}
+	}
+
+	@media only screen and (max-width: 450px) {
+		.under {
+			#mainContent {
+				&:before {
+					clip-path: circle(150px at 50% -3.1vw);
 				}
 			}
 
 			.box {
-				margin-top: 50px;
+				--h-shape: 20px;
+
+				&:before,
+				&:after {
+					width: 40%;
+				}
+
+				.txt {
+					padding: 30px 30px 60px 30px;
+				}
 			}
 
-		}
+			.und_flow {
+				--size-w: 1.5px;
 
-		.mt_rps {
-			margin-top: 30px;
-		}
-
-		.und_fee {
-			--size-sp-fee:0;
-		}
-
-		.fee_card {
-			flex-direction: row;
-			width: 100%;
-			max-width: 100%;
-			&:not(:first-child) {
-				margin-top: 40px;
+				.box_container {
+					font-size: 6px;
+				}
 			}
 
-			&:after {
-				right: calc(50% - 15px);
-				bottom: -30px;
-				border: 15px solid transparent;
-				border-bottom: none;
-				border-top-color: var(--bl-cl);
-			}
-
-			.card_num {
-				margin-bottom: 0;
-			}
-
-			.card_ct {
-				width: 80%;
-				justify-content: flex-start;
-				padding-left: 15px;
-
-				p {
-					writing-mode: horizontal-tb;
-					br {
-						display: none;
+			.und_faq .box_q {
+				h4 {
+					&:after {
+						width: 50%;
 					}
 				}
 			}
+
 		}
 	}
 
-	.txt-big {
-		font-size: 20px;
-	}
+	@media only screen and (max-width: 375px) {
+		.under {
+			.imgBox {
 
-	.under table.tbl_style01 th {
-		font-size: 14px;
-	}
-
-	.under ul.list01 li {
-		font-size: 14px;
-	}
-
-	.under .btn-group .btn.style01 {
-		min-width: 100%;
-	}
-	.under .box_ct.style_ico {
-		--size-ico: 25px;
-	}
-}
-
-// End Under General
-
-
-@media only screen and (max-width: 768px) {
-	.under {
-		.clinic_tbl01 {
-			th {
-				width: auto;
-				min-width: 120px;
-				text-align: left;
+				&.colImg2,
+				&.colImg3 {
+					.item {
+						width: 100%;
+					}
+				}
 			}
-		}
 
-		.teeth_box {
-			.secH4 {
+			.und_flow {
+				.box_container {
+					font-size: 3.5px;
+
+					.design_arr .arr_f:after {
+						left: 1.7em;
+					}
+				}
+
+				.box {
+					margin-top: 50px;
+				}
+
+			}
+
+			.mt_rps {
+				margin-top: 30px;
+			}
+
+			.und_fee {
+				--size-sp-fee: 0;
+			}
+
+			.fee_card {
+				flex-direction: row;
 				width: 100%;
-			}
-		}
-	}
-}
+				max-width: 100%;
 
-@include screen('max425') {
-	.under {
-
-		.access_box_img01,
-		.access_box_img02 {
-			.block {
-				&:nth-child(even) {
-					.big {
-						order: 0;
-					}
+				&:not(:first-child) {
+					margin-top: 40px;
 				}
 
-				.big,
-				.small {
+				&:after {
+					right: calc(50% - 15px);
+					bottom: -30px;
+					border: 15px solid transparent;
+					border-bottom: none;
+					border-top-color: var(--bl-cl);
+				}
+
+				.card_num {
+					margin-bottom: 0;
+				}
+
+				.card_ct {
+					width: 80%;
+					justify-content: flex-start;
+					padding-left: 15px;
+
+					p {
+						writing-mode: horizontal-tb;
+
+						br {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+
+		.txt-big {
+			font-size: 20px;
+		}
+
+		.under table.tbl_style01 th {
+			font-size: 14px;
+		}
+
+		.under ul.list01 li {
+			font-size: 14px;
+		}
+
+		.under .btn-group .btn.style01 {
+			min-width: 100%;
+		}
+
+		.under .box_ct.style_ico {
+			--size-ico: 25px;
+		}
+	}
+
+	// End Under General
+
+
+	@media only screen and (max-width: 768px) {
+		.under {
+			.clinic_tbl01 {
+				th {
+					width: auto;
+					min-width: 120px;
+					text-align: left;
+				}
+			}
+
+			.teeth_box {
+				.secH4 {
 					width: 100%;
 				}
 			}
 		}
 	}
-}
+
+	@include screen('max425') {
+		.under {
+
+			.access_box_img01,
+			.access_box_img02 {
+				.block {
+					&:nth-child(even) {
+						.big {
+							order: 0;
+						}
+					}
+
+					.big,
+					.small {
+						width: 100%;
+					}
+				}
+			}
+		}
+	}
