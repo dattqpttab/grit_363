@@ -71,7 +71,7 @@
     ul {
         &.list03 {
             li {
-                font-size: 1.125em;
+                font-size: 18px;
                 padding-left: 2.222222222222222em;
                 padding-bottom: 1.388888888888889em;
                 position: relative;
@@ -91,6 +91,17 @@
                     padding-top: 1px;
                     font-size: 0.8888888888888889em;
                     background-color: var(--bl-cl);
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .under {
+        ul {
+            &.list03 {
+                li {
+                    font-size: 16px;
                 }
             }
         }
