@@ -328,6 +328,9 @@
 
 	.under .box_ct {
 		padding: 20px;
+		.list01.mcol-3 li:last-child {
+			padding-bottom: 0;
+		}
 	}
 
 	.under .und_bn_gr {
@@ -391,6 +394,15 @@
 				}
 			}
 		}
+
+		//und_fee
+		.und_fee {}
+
+		.fee_card {
+			.card_num {}
+
+			.card_ct {}
+		}
 	}
 
 }
@@ -439,6 +451,30 @@
 				margin-right: auto;
 			}
 		}
+
+		//und_fee
+		.und_fee {
+			--size-sp-fee: 68px;
+		}
+
+		.fee_card {
+			width: calc(100%/3 - var(--size-sp-fee));
+			margin-top: calc(var(--size-sp-fee));
+
+			&:after {
+				right: calc(var(--size-sp-fee) / -1.45);
+				top: calc(50% - var(--size-sp-fee) / 3);
+
+				border: calc(var(--size-sp-fee) / 3) solid transparent;
+				border-right: none;
+				border-left-color: var(--bl-cl);
+
+			}
+
+			.card_num {}
+
+			.card_ct {}
+		}
 	}
 }
 
@@ -450,6 +486,13 @@
 	.under .card_lawyer {
 		width: 100%;
 		margin-top: 40px;
+	}
+}
+
+
+@media only screen and (max-width: 520px) {
+	.under .und_fee {
+		--size-sp-fee: 9vw;
 	}
 }
 
@@ -522,6 +565,44 @@
 
 		.mt_rps {
 			margin-top: 30px;
+		}
+
+		.und_fee {
+			--size-sp-fee:0;
+		}
+
+		.fee_card {
+			flex-direction: row;
+			width: 100%;
+			max-width: 100%;
+			&:not(:first-child) {
+				margin-top: 40px;
+			}
+
+			&:after {
+				right: calc(50% - 15px);
+				bottom: -30px;
+				border: 15px solid transparent;
+				border-bottom: none;
+				border-top-color: var(--bl-cl);
+			}
+
+			.card_num {
+				margin-bottom: 0;
+			}
+
+			.card_ct {
+				width: 80%;
+				justify-content: flex-start;
+				padding-left: 15px;
+
+				p {
+					writing-mode: horizontal-tb;
+					br {
+						display: none;
+					}
+				}
+			}
 		}
 	}
 

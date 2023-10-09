@@ -47,23 +47,19 @@ $(function(){
 		let y = 0;
 		$(document).on('scroll', function() {
 			y = $(this).scrollTop();
-			if ( y > 10 ) {
-				$("header").addClass("active");
-			}
-			else {
-				$("header").removeClass("active");
-			}
+		
 			switch (isMobile) {
 				case true:
 					if ( y > 10 ) {
-						$(".fixed_banner").addClass("active");
+						$("header,.fixed_banner").addClass("active");
 					}
 					else {
-						$(".fixed_banner").removeClass("active");
+						$("header,.fixed_banner").removeClass("active");
 					}
+				
 					break;
 				case false:
-					
+				
 					$(".fixed_banner").removeClass("active");
 					break;
 			}
@@ -85,7 +81,12 @@ $(function(){
 		} else {
 			$(".totop, .bnr_corona").removeClass('active');
 		}
-
+		if ((y > 100) && (y > mv_h - win_h + 300)) {
+			$(".home_page header").addClass('active');
+		} else {
+			$(".home_page header").removeClass('active');
+		}
+		
 	});
 	$(".totop").on("click", function() {
 		$('html,body').animate({ scrollTop: 0}, 400);
