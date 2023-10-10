@@ -81,11 +81,16 @@ $(function(){
 		} else {
 			$(".totop, .bnr_corona").removeClass('active');
 		}
-		if ((y > 100) && (y > mv_h - win_h + 150)) {
+		if (!isMobile) {
+		
+		if ((y > 100) && (y > mv_h  - 150)) {
 			$(".home_page header").addClass('active');
 		} else {
 			$(".home_page header").removeClass('active');
 		}
+		}
+		
+	
 		
 	});
 	$(".totop").on("click", function() {
@@ -95,10 +100,10 @@ $(function(){
 	
 	// Navi
 	if( $(".pc_navi").length ) {
-		$(".pc_navi > ul > li").on("mouseenter", function(){
+		$(".pc_navi .inner_big > ul > li").on("mouseenter", function(){
 			$(this).find(".subInner").addClass("active");
 		});
-		$(".pc_navi > ul > li").on("mouseleave", function(){
+		$(".pc_navi .inner_big > ul > li").on("mouseleave", function(){
 			$(this).find(".subInner").removeClass("active");
 		});
 	}
