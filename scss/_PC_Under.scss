@@ -768,7 +768,6 @@
 
 .txt_ms {
 	color: var(--main-color);
-	margin-bottom: 20px;
 	font-size: 22px !important;
 	font-weight: 600;
 	text-transform: uppercase;
@@ -833,11 +832,6 @@
 
 	&.style02 {
 		background-image: none;
-	}
-
-	>p {
-		text-align: center;
-		font-weight: 500;
 	}
 
 	&.style_ico {
@@ -1227,7 +1221,7 @@
 
 	.section,
 	section {
-		>p {
+		p:not(.btn) {
 			font-family: var(--f-hiragino);
 			font-size: 16px;
 			letter-spacing: .3625em;
@@ -1628,6 +1622,9 @@
 
 
 .under {
+	ul {
+		display: table;
+	}
 	ul.list01 {
 		margin-bottom: 10px;
 
