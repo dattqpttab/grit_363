@@ -12,7 +12,6 @@
 	.header_top {
 		width: 100%;
 		align-items: center;
-		justify-content: flex-start;
 		height: 60px;
 		padding: 0;
 		padding-right: 60px;
@@ -27,20 +26,12 @@
 		.logo {
 			max-width: calc(100% - 80px);
 			width: auto;
-		
 			
 
 			transform: none;
 
 			img {
 				max-height: 40px;
-			}
-
-			.ud_sp {
-				display: block;
-			}
-			.ud_pc {
-				display: none;
 			}
 		}
 
