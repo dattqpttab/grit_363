@@ -76,6 +76,10 @@ header.active,
 		position: relative;
 		visibility: visible;
 	}
+
+	.ud_sp{
+		display: none;
+	}
 	
 	img {
 		transition: all .3s;
