@@ -38,6 +38,11 @@
         }
     }
 
+    .block_line  {
+        padding-top: 10px;
+        border-top: 1px dashed var(--main-color);
+    }
+
     .txt_udl {
         position: relative;
         color: var(--bl-cl);
