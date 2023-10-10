@@ -69,7 +69,9 @@
             max-width: 590px;
             margin: 0 auto;
 
-           
+           p {
+            padding: 0 10px;
+           }
 
         }
 
@@ -83,7 +85,7 @@
         }
 
         &_box {
-            margin-bottom: 50px;
+      
 
             // &:last-child{margin-bottom: 0px;}
             &.box_left {
@@ -100,13 +102,7 @@
         }
     }
 }
-@media only screen and (max-width: 700px)  {
-    .interview_box .interview_content {
-        >p {
-            padding:10px 40px 0 40px;
-        }
-    }
-}
+
 
 @media only screen and (max-width: 480px) {
     .under {
@@ -124,15 +120,13 @@
 
 
     }
+    .interview_sec {
+        margin-top: 40px;
+    }
 
     .under.page-interview .key .key_text {
         font-size: 1.5vw;
     }
 }
 @media only screen and (max-width: 425px) {
-    .interview_box .interview_content {
-        >p {
-            padding:10px 20px 0 20px;
-        }
-    }
 }
