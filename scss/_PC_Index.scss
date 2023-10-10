@@ -31,7 +31,7 @@ section {
 		height: 56.28vw;
 		min-height: 690px;
 		max-height: 1081px;
-		overflow: hidden;
+
 		font-size: 10px;
 		background-image: url(../images/idx_mv01.jpg);
 		background-size: auto 100%;
@@ -1282,7 +1282,7 @@ padding-bottom: 0.5em;
 			margin-right: 0;
 		}
 
-		@for $i from 0 to 16 {
+		@for $i from 0 to 15 {
 			&.b#{$i} p {
 				background-image: url(../images/idx05_ic#{$i}.png);
 			}

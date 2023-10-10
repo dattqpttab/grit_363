@@ -10,7 +10,7 @@ header {
 
 	z-index: 20;
 }
-
+.under header,
 header.active,
 .ovh header {
 
@@ -198,7 +198,7 @@ header.active,
 				}
 
 				ul {
-					background-color: rgba($color: #000, $alpha: 1.0);
+					background-color: var(--main-color);
 					padding-bottom: 10px;
 
 					li {
@@ -211,11 +211,11 @@ header.active,
 							border-bottom: 1px dashed rgba(255, 255, 255, 0.7);
 							transition: all 0.2s ease;
 							font-size: 14px;
-							font-weight: 500;
+					
 							color: #fff;
 							text-decoration: none;
 							text-align: left;
-							letter-spacing: 0px;
+					
 
 							&::before {
 								content: "\203A";
@@ -608,7 +608,12 @@ footer {
 			}
 		}
 	}
-
+.nohover >a{
+	pointer-events: none;
+	&:hover {
+		color: inherit;
+	}
+}
 	a {
 		position: relative;
 		display: table;
@@ -616,7 +621,7 @@ footer {
 		color: inherit;
 		font-size: 1.6em;
 
-font-weight: #333;
+
 		text-decoration: none;
 
 
