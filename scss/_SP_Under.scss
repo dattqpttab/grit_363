@@ -9,7 +9,7 @@
 		}
 
 		.key {
-			background-image: url(../images/und_key_bg_sp.png);
+			background-image: url(../images/und_key_bg_sp.jpg);
 			background-size: cover;
 			margin-top: 0;
 			height: 250px;
@@ -365,6 +365,12 @@
 
 			figure {
 				margin-bottom: 40px;
+			}
+
+			.flex.mcol-2 {
+				>:nth-child(n) {
+					width: 100%;
+				}
 			}
 		}
 
