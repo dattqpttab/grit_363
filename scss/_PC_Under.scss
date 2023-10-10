@@ -494,7 +494,18 @@
 				}
 			}
 		}
+
+		.flex {
+			justify-content: space-between;
+			&.mcol-2 {
+				 >:nth-child(n){
+					width: 48%;
+				}
+			}
+		}
 	}
+
+
 }
 
 //faq-m
@@ -648,8 +659,9 @@
 //component
 .under {
 	.btn-group .btn.style01 {
-		min-width: 350px;
 		display: table;
+		min-width: 350px;
+		max-width: 500px;
 		width: auto;
 
 		a {
@@ -1693,6 +1705,7 @@
 		&.style_box {
 			li {
 				padding-left: 2.2222em;
+
 				&:before {
 					width: 1em;
 					height: 1em;
