@@ -25,7 +25,8 @@
             min-height: 320px;
             font-size: 8.75px;
             background-image: url(../images/idx_mv01_sp.jpg);
-
+            -webkit-animation: idx_key 30s linear infinite;
+            animation: idx_key 30s linear infinite;
             .key_text {
 
 
@@ -38,11 +39,15 @@
                 }
             }
 
-            .catch h2::before {
-                width: 2em;
-                height: 2em;
+            .catch {
+                margin-top: 0;
+                margin-bottom: 8em;
+                h2::before {
+                    width: 2em;
+                    height: 2em;
+                }
+    
             }
-
        
 
             .key_copy {
@@ -59,13 +64,13 @@
 
 @media only screen and (max-width: 640px) {
     .home_page .key {
-        font-size: 1.15vmin;
+        font-size: 1vmin;
     }
 }
 
 @media only screen and (max-width: 768px) and (orientation: landscape) {
     .home_page .key {
-        font-size: 1.15vmin;
+        font-size: 1vmin;
     }
 }
 
