@@ -111,10 +111,14 @@
             }
         }
     }
-    .txt_list01 {
-        display: block;
-        font-size: 1em;
-        padding-bottom: 1.3889em;
+    ul {
+        &.list01 {
+            .txt_list01 {
+                display: block;
+                font-size: 1em;
+                padding-bottom: 1.3889em;
+            }
+        }
     }
 }
 @media only screen and (max-width: 768px) {
