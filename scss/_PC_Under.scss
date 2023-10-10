@@ -826,6 +826,7 @@
 	:nth-child(n):last-child {
 		margin-bottom: 0;
 	}
+
 	:nth-child(n):last-child {
 		margin-top: 0;
 	}
@@ -856,8 +857,9 @@
 		&:before {
 			display: none;
 		}
+
 		&:after {
-		border-top-color: var(--bl-cl);
+			border-top-color: var(--bl-cl);
 		}
 	}
 
@@ -895,6 +897,7 @@
 			color: white;
 		}
 	}
+
 	p {
 		text-align: left;
 	}
@@ -1625,6 +1628,7 @@
 	ul {
 		display: table;
 	}
+
 	ul.list01 {
 		margin-bottom: 10px;
 
@@ -1677,6 +1681,34 @@
 					border-left: 0.44444em solid var(--bl-cl);
 					border-radius: 0;
 					background: none;
+				}
+			}
+		}
+
+		&.style_box {
+			li {
+				padding-left: 40px;
+				&:before {
+					width: 1em;
+					height: 1em;
+					background: #d66262;
+					border: 1px solid #d66262;
+					top: 4px;
+					left: 5px;
+					border-radius: 0;
+				}
+
+				&:after {
+					@include before;
+					top: 0.555556em;
+					left: 0.555556em;
+					width: 0.44444em;
+					height: 3px;
+					border-left: 2px solid #fff;
+					border-bottom: 2px solid #fff;
+					-webkit-transform: rotate(-45deg);
+					transform: rotate(-45deg);
+					z-index: 10;
 				}
 			}
 		}
