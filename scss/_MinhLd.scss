@@ -121,7 +121,7 @@
         }
     }
 
-    
+
     .sitemap {
 		padding-top: 40px;
         ul {
@@ -262,6 +262,52 @@
                 >div {
                     width: auto;
                     max-width: 85%;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 768px) {
+    .under {
+        .sitemap {
+            >ul {
+                >li {
+                    li {
+                        a {
+                            padding-left: 40px;
+                            &::before {
+                                left: 20px;
+                            }
+                        }
+                    }
+                    
+                    >ul {
+                        >li {
+                            >ul {
+                                li {
+                                    >a {
+                                        padding-left: 60px;
+                                        &:before {
+                                            left:  30px;
+                                        }
+                                    }
+                                }
+                                
+                                >li {
+                                    >ul {
+                                        li {
+                                            a {
+                                                padding-left: 70px;
+                                                &:before {
+                                                    left: 50px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
