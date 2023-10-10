@@ -15,8 +15,19 @@ header.active,
 .ovh header {
 
 
-
-
+	background-color: #244786;
+.logo{
+	.main{
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+	}
+	.ov{
+		opacity: 1;
+		position: relative;
+		visibility: visible;
+	}
+}
 	.header_top {
 		padding-top: 5px;
 		padding-bottom: 5px;
@@ -224,7 +235,13 @@ header.active,
 
 
 }
+.under .wrapper{
+	
+	.key{
+		margin-top: var(--wrapper);
 
+	}
+}
 @media only screen and (min-width: 769px) {
 	.key .pc_navi {
 		position: absolute;
@@ -234,13 +251,7 @@ header.active,
 		height: calc(var(--wrapper) + 20px);
 		background-color: rgba($color: #183d80, $alpha: 0.95);
 	}
-	.under {
-	
-		.key{
-			margin-top: var(--wrapper);
-	
-		}
-	}
+
 	.right_head {
 		opacity: 0;
 		
@@ -249,7 +260,7 @@ header.active,
 
 	.under header,	header.active {
 			position: fixed;
-			height: var(--wrapper);		background-color: #244786;
+			height: var(--wrapper);		
 			.right_head {
 				opacity: 1;
 			
@@ -263,16 +274,7 @@ header.active,
 			.logo {
 				width: 22%;
 				max-width: 294px;
-				.main{
-					position: absolute;
-					opacity: 0;
-					visibility: hidden;
-				}
-				.ov{
-					opacity: 1;
-					position: relative;
-					visibility: visible;
-				}
+			
 			}
 
 			.right_head {

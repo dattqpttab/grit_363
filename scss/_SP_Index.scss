@@ -1,10 +1,30 @@
 @media only screen and (max-width: 768px) {
+    @-webkit-keyframes idx_key {
+        from {
+            background-position: 0px center;
+        }
+    
+        to {
+            background-position: -1202px center;
+        }
+    }
+    
+    @keyframes idx_key {
+        from {
+            background-position: 0px center;
+        }
+    
+        to {
+            background-position: -1202px center;
+        }
+    }
     .home_page {
         .key {
             height: calc(100vh - 60px);
             max-height: 156vw;
             min-height: 320px;
             font-size: 8.75px;
+            background-image: url(../images/idx_mv01_sp.jpg);
 
             .key_text {
 
@@ -23,17 +43,7 @@
                 height: 2em;
             }
 
-            .s1 {
-                background-image: url(../images/idx_mv01_sp.jpg);
-            }
-
-            .slick-initialized .s2 {
-                //	background-image: url(../images/idx_mv02_sp.jpg);
-            }
-
-            .slick-initialized .s3 {
-                //	background-image: url(../images/idx_mv03_sp.jpg);
-            }
+       
 
             .key_copy {
                 height: 100%;
@@ -65,6 +75,16 @@
         h3 {
             margin-bottom: 30px;
             font-size: calc(var(--ttl_size) + 2px);
+            &.sm{
+                font-size: calc(var(--ttl_size) + 0px); 
+                span{
+                    display: inline-block;
+
+                }
+                .en{
+                    display: block;
+                }
+            }
         }
     }
 }
@@ -74,7 +94,6 @@
 // End Index General
 
 
-@media only screen and (max-width: 375px) {}
 
 @media only screen and (max-width: 768px) {
     :root {
@@ -97,9 +116,13 @@
 
 
             }
+            h3{
+                max-width: 70%;
+                margin-bottom: 20px;
+            }
 
             .btn-group {
-                max-width: 150px;
+                max-width: 100px;
                 width: 44%;
             }
 
@@ -141,10 +164,16 @@
         }
 
         .box_head {
-            padding: 60px 0 0;
+          
             background-size: cover;
-            background-image: url(../images/idx02_bg_sp1.jpg);
-
+            background-image: url(../images/idx02_bg1_sp.jpg);
+            &.line::before{
+                left: -247px;
+            }
+.inner_big{
+    padding-top: 55px;
+padding-bottom: 0;
+}
             h3 {
                 .en {
                     left: 0;
@@ -162,10 +191,11 @@
             }
 
             picture {
-                padding-bottom: 90px;
+                padding-bottom: 80px;
 
                 &::before {
-                    right: -239px;
+                    height: 100%;
+                    right: -247px;
                 }
             }
 
@@ -186,8 +216,7 @@
 
         .content {
             picture {
-                position: relative;
-                z-index: 2;
+              
             }
         }
 
@@ -233,6 +262,8 @@
 
 
         .box_right {
+            width: 100%;
+            max-width: 624px;
             .box_img {
                 margin: 0px auto 20px;
                 padding: 0px 20px 20px;
@@ -247,13 +278,20 @@
     .index04 {
         padding: 55px 0px 60px;
         background-image: url(../images/idx04_bg_sp.jpg);
-
+h3{
+    span{
+        display: inline-block;
+    }
+}
         p.white {
             font-size: 18px;
         }
 
         .btn-group .btn.style01 {
             font-size: 8px;
+            span{
+                display: inline-block;
+            }
         }
     }
 
@@ -261,7 +299,7 @@
         padding: 60px 0px;
 
         .TabContainer .TabContent .flex {
-            margin: 30px -1vw 0;
+            margin: 30px -1vw 40px;
 
         }
 
@@ -379,7 +417,7 @@
 
         .box_right {
             padding: 50px 10px 40px;
-            width: 90%;
+            width: 100%;
             max-width: 400px;
             margin: 0px auto;
 
@@ -443,6 +481,11 @@
 }
 
 @media only screen and (max-width: 425px) {
+    .index08 .text{
+  
+    }
+}
+@media only screen and (max-width: 425px) {
     .index02 .box_head h3 {
         font-size: 5.6vw;
     }
@@ -457,7 +500,10 @@
     }
 
     .index08 .box {
-        font-size: 2.1vw;
+        font-size: 1.8vw;
+        .text p{
+            font-size: 14px;
+        }
     }
 
     .bnr {
@@ -467,7 +513,11 @@
     }
 }
 
-@media only screen and (max-width: 375px) {}
+@media only screen and (max-width: 375px) {
+    .index01 .content .box {
+        padding: 40px 10px;
+    }
+}
 
 
 @media only screen and (max-width: 768px) {

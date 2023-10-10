@@ -581,7 +581,7 @@ section {
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-color: var(--main-color);
-
+background-position: center;
 			&:nth-child(1) {
 				background-image: url(../images/idx01_bg01.jpg);
 			}
@@ -846,9 +846,7 @@ section {
 		.b1 {
 			order: 1;
 
-			.text {
-				padding-bottom: 48px;
-			}
+		
 		}
 
 		.b2 {
@@ -922,6 +920,7 @@ section {
 				background-image: url(../images/point_bg.svg);
 				background-position: top center;
 				background-size: 100% auto;
+				background-repeat: no-repeat;
 				line-height: 1.238;
 				font-size: 4.2em;
 				letter-spacing: -0.05em;
@@ -1337,6 +1336,7 @@ padding-bottom: 0.5em;
 }
 
 .index06 {
+	padding: 0px 4%;
 	position: relative;
 	z-index: 1;
 	background-color: #fafafa;
@@ -1831,6 +1831,11 @@ background-size: 1920px auto;
 		}
 	}
 }
+@media only screen  and (min-width: 1281px) {
+	.index02 .b1 .text{
+		padding-bottom: 48px;
+	}
+}
 @media only screen  and (min-width: 1367px) {
 	.index03 .box_img{
 	margin-left: auto;
@@ -1850,9 +1855,12 @@ background-size: 1920px auto;
 		--ttl_size: 24px;
 
 	}
-
+	.idx_en{
+		font-size: 5vw;right: -0.35em;
+	}
 	.index05 .flex {
 		font-size: 0.8vw;
+		
 	}
 
 	.index01 .content .box {
@@ -1878,6 +1886,24 @@ background-size: 1920px auto;
 @media only screen and (max-width: 1024px) and (min-width: 769px) {
 	.index02 .text{
 		padding: 25px 10px ;
+	}
+	.idx_en{
+		font-size: 4.8vw;
+	}
+	.index02 .box_head {
+		h3{
+			margin-bottom: 1em;
+			font-size: calc(var(--ttl_size) + 10px);
+			.en{
+				left: 0;
+			}
+		}
+		.inner_big{
+			padding-top: 80px;
+		}
+	}
+	.index02 picture{
+		width: 70%;
 	}
 	.index08 {
 		.flex{
