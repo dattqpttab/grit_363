@@ -89,6 +89,10 @@
 			background: rgba($color: #f8be27, $alpha: .1);
 		}
 
+		.inner {
+			max-width: 1056px;
+		}
+
 	}
 
 	.key {
@@ -855,7 +859,8 @@
 
 	&.style_none-bd {
 		border: none;
-		box-shadow: 0px 0px 10px 0px #ddd;
+		box-shadow: none;
+		background: #fef8e9;
 
 		&:before {
 			display: none;
@@ -1213,9 +1218,7 @@
 
 
 .under {
-	.inner {
-		max-width: 1056px;
-	}
+
 
 	.inner>section {
 		&:first-child {

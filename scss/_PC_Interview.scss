@@ -140,14 +140,12 @@
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
-        padding: 40px 0;
-        background-color: white;
-        box-shadow: 2.828px 2.828px 20px 0px rgba(0, 0, 0, 0.15);
+        --size-mg:60px;
 
         &.box_left {
 
             .interview_content {
-                margin-left: 80px;
+                margin-left: var(--size-mg);
             }
         }
 
@@ -155,7 +153,7 @@
             flex-direction: row-reverse;
 
             .interview_content {
-                margin-right: 80px;
+                margin-right: var(--size-mg);
             }
         }
     }
@@ -187,7 +185,7 @@
 
     &_content {
         max-width: 538px;
-        width: calc(49% - 80px);
+        width: calc(49% - var(--size-mg));
 
         h4 {}
     }
@@ -256,23 +254,14 @@
 
     .interview {
         &_box {
-            &.box_left {
-                .interview_content {
-                    margin-left: 40px;
-                }
-            }
+            --size-mg:40px;
 
             &.box_right {
                 flex-direction: row-reverse;
-
-                .interview_content {
-                    margin-right: 40px;
-                }
             }
         }
 
         &_content {
-            width: calc(49% - 40px);
 
             h4 {
                 font-size: 28px;
@@ -300,27 +289,27 @@
 
 @media only screen and (min-width: 769px) {
     .interview {
-        &_box {
-            &.box_left {
-                padding-right: 40px;
+        // &_box {
+        //     &.box_left {
+     
 
-                .interview_img {
-                    img {
-                        margin-left: 0;
-                    }
-                }
+        //         .interview_img {
+        //             img {
+        //                 margin-left: 0;
+        //             }
+        //         }
 
-            }
+        //     }
 
-            &.box_right {
-                padding-left: 40px;
+        //     &.box_right {
+            
 
-                .interview_img {
-                    img {
-                        margin-right: 0;
-                    }
-                }
-            }
-        }
+        //         .interview_img {
+        //             img {
+        //                 margin-right: 0;
+        //             }
+        //         }
+        //     }
+        // }
     }
 }
