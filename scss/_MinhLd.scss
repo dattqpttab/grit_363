@@ -97,6 +97,9 @@
                 padding-bottom: 1.388888888888889em;
                 position: relative;
                 counter-increment: numb;
+                &:last-child {
+                    padding-bottom: 0;
+                }
                 &::before {
                     content: counter(numb);
                     position: absolute;
@@ -112,6 +115,7 @@
                     padding-top: 1px;
                     font-size: 0.8888888888888889em;
                     background-color: var(--bl-cl);
+                    font-family: "Libre Baskerville", serif; 
                 }
             }
         }
