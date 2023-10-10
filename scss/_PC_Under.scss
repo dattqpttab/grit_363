@@ -381,6 +381,7 @@
 		.list01 {
 			li {
 				font-size: 16px;
+
 			}
 		}
 
@@ -802,6 +803,7 @@
 
 .under .box_ct {
 	position: relative;
+	z-index: 0;
 	margin: 40px 0 20px;
 	padding: 40px;
 	// background-image: url(../images/und_bn_sty01.jpg);
@@ -816,6 +818,7 @@
 
 	&:before {
 		@include before;
+		z-index: -1;
 		top: 3px;
 		bottom: 3px;
 		left: 3px;
@@ -1226,8 +1229,7 @@
 	section {
 		p:not(.btn) {
 			font-family: var(--f-hiragino);
-			font-size: 16px;
-			letter-spacing: .3625em;
+			letter-spacing: .21em;
 			line-height: 2.5;
 		}
 
@@ -1687,7 +1689,7 @@
 
 		&.style_box {
 			li {
-				padding-left: 40px;
+				padding-left: 2.2222em;
 				&:before {
 					width: 1em;
 					height: 1em;
@@ -1734,10 +1736,7 @@
 
 			padding-left: 1.4444em;
 			padding-bottom: 1.3889em;
-
-			font-size: 18px;
-			font-weight: 700;
-			letter-spacing: 0.29em;
+			letter-spacing: 0.21em;
 
 			&:last-child {
 				padding-bottom: 0;
@@ -1813,7 +1812,7 @@
 		a {
 			text-decoration: none;
 			color: var(--bl-dk-cl);
-			letter-spacing: 0.3571em;
+			letter-spacing: 0.21em;
 
 			&:hover {
 				opacity: 1;
@@ -1823,9 +1822,9 @@
 
 		span {
 			position: relative;
-			top: 1px;
+			top: -1px;
 			display: inline-block;
-			padding: 0 8px 0 5px;
+			padding: 0 7px;
 			font-weight: 700;
 			transform: scaleY(.8);
 			color: var(--bl-dk-cl);
