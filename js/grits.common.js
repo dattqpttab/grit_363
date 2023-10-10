@@ -81,7 +81,7 @@ $(function(){
 		} else {
 			$(".totop, .bnr_corona").removeClass('active');
 		}
-		if ((y > 100) && (y > mv_h - win_h + 300)) {
+		if ((y > 100) && (y > mv_h - win_h + 150)) {
 			$(".home_page header").addClass('active');
 		} else {
 			$(".home_page header").removeClass('active');
