@@ -998,7 +998,7 @@
 		font-family: var(--f-zennew);
 		font-weight: 600;
 		line-height: 1.5;
-
+		letter-spacing: inherit;
 
 		&.title {
 			font-size: 24px;
@@ -1227,7 +1227,7 @@
 
 	.section,
 	section {
-		p:not(.btn) {
+		p:not(.btn, .lawyer_box p) {
 			font-family: var(--f-hiragino);
 			letter-spacing: .21em;
 			line-height: 2.5;
