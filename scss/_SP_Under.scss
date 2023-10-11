@@ -62,8 +62,8 @@
 
 		.section,
 		section {
-			>p {
-				font-size: 14px;
+			p:not(.btn) {
+				line-height: 2;
 			}
 		}
 
@@ -249,7 +249,14 @@
 			display: block;
 		}
 
-
+		ul{
+			&.list01,
+			&.list03 {
+				li {
+					line-height: 2;
+				}
+			}
+		}
 		ul.list01 {
 			li {
 				font-size: 16px;
@@ -330,11 +337,6 @@
 
 	.under .box_ct {
 		padding: 20px;
-
-		.list01.mcol-3 li:last-child {
-			padding-bottom: 0;
-		}
-
 		&.style_ico {
 			--size-ico: 30px;
 		}

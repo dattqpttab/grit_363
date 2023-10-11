@@ -672,13 +672,14 @@
 
 		&.disable {
 			.accContainer {
-				
+
 				.accBtn {
 					pointer-events: none;
 				}
 
 				.accBlock {
 					display: inherit !important;
+
 					&.flex {
 						display: flex !important;
 					}
@@ -1322,7 +1323,7 @@
 
 	.section,
 	section {
-		p:not(.btn, .lawyer_box p) {
+		p:not(.btn) {
 			font-family: var(--f-hiragino);
 			letter-spacing: .21em;
 			line-height: 2.5;
@@ -1791,25 +1792,27 @@
 				padding-left: 2.2222em;
 
 				&:before {
-					width: 1em;
-					height: 1em;
+					width: 1.2em;
+					height: 1.2em;
 					background: #d66262;
 					border: 1px solid #d66262;
-					top: 4px;
-					left: 5px;
+					top: .625em;
+					left: 0.3125em;
 					border-radius: 0;
 				}
 
 				&:after {
-					@include before;
-					top: 0.555556em;
-					left: 0.555556em;
+					content: "";
+					display: block;
+					position: absolute;
+					transition: all 0.3s;
+					top: .75em;
+					left: 0.695556em;
 					width: 0.44444em;
-					height: 3px;
-					border-left: 2px solid #fff;
+					height: 0.6875em;
+					border-right: 2px solid #fff;
 					border-bottom: 2px solid #fff;
-					-webkit-transform: rotate(-45deg);
-					transform: rotate(-45deg);
+					transform: rotate(45deg);
 					z-index: 10;
 				}
 			}
