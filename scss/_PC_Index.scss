@@ -1131,7 +1131,7 @@ width: 100%;
 
 .index04 {
 	padding: 72px 0px 116px;
-	background: url(../images/idx04_bg.jpg);
+	background-image: url(../images/idx04_bg.jpg);
 
 	h3 {
 		.kt {
@@ -1278,10 +1278,12 @@ padding-bottom: 0.5em;
 				background-color: #fff;
 			}
 		}
-
-		&:last-child {
-			margin-right: 0;
+		@media only screen and (min-width: 993px) {
+			&.b6 {
+				margin-right: 0;
+			}
 		}
+		
 
 		@for $i from 0 to 15 {
 			&.b#{$i} p {
