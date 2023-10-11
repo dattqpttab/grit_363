@@ -235,6 +235,7 @@ padding-bottom: 0;
 
         .text {
             padding: 20px 5px;
+            background-size: cover;
         }
 
     }
@@ -263,6 +264,7 @@ padding-bottom: 0;
             position: absolute;
             left: 0;
             top: 0;
+            
         }
 
 
@@ -272,6 +274,9 @@ padding-bottom: 0;
             .box_img {
                 margin: 0px auto 20px;
                 padding: 0px 20px 20px;
+            }
+            .idx_en{
+              //  right: -0.6vw;
             }
         }
     }
@@ -335,6 +340,12 @@ h3{
     .index06 {
 
         padding: 55vw 0px 60px;
+        .inner_big{
+        
+        }
+        .idx_en{
+            right: -0em;
+        }
         &::before{
             background-image: url(../images/idx06_bg_sp.jpg);
             background-position: top center;
@@ -479,15 +490,15 @@ h3{
 
     .idx_en {
         font-size: 10vw;
-        right: -0.5vw;
+        right: -0.3em;
         top: 0.18vw;
     }
 
 }
 
 @media only screen and (max-width: 425px) {
-    .index08 .text{
-  
+    .index02 h4{
+  font-size: 4.6vw;
     }
 }
 @media only screen and (max-width: 425px) {

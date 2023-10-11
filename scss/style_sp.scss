@@ -360,8 +360,10 @@ General
 
                 a {
 
-
-                    &::after {}
+font-size: 1.8em;
+                    &::after {
+                        right: 15px;
+                    }
 
 
                 }

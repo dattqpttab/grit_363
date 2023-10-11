@@ -126,12 +126,17 @@
 						}
 
 
-						&.lv_sub li {
-							margin-left: 1em;
-						
-							a {	border: none;
-								&:before {
-									top: 1.3em;
+						&.lv_sub {
+							ul{
+								margin-top: 0;
+							}
+							li {
+								margin-left: 1em;
+							
+								a {	border: none;
+									&:before {
+										top: 1.3em;
+									}
 								}
 							}
 						}
