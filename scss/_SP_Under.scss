@@ -366,12 +366,14 @@
 			figure {
 				margin-bottom: 40px;
 			}
-		
+
 		}
+
 		.flex_und.mcol-2 {
 			>:nth-child(n) {
 				width: 100%;
 			}
+
 			&.img_right {
 				flex-direction: column-reverse;
 			}
@@ -413,286 +415,309 @@
 
 
 		.imgBox.colImg1 .item .slide_img {
-			figure{
+			figure {
 				width: 768px;
-			}}
+			}
 		}
-
 	}
 
-	@media only screen and (max-width: 639px) {
-		.under {
-			.und_flow {
-				--size-w: 2px;
+}
 
-				.box_container {
-					font-size: 8px;
+@media only screen and (max-width: 639px) {
+	.under {
+		.und_flow {
+
+			.box_container {
+				font-size: 8px;
 
 
-					.design_arr {
-						.arr_sc:after {
-							left: .5em;
-						}
+				.design_arr {
+					bottom: -21px;
+
+					.arr_sc:after {
+						left: .5em;
 					}
 				}
 			}
+		}
 
-			//und_faq
-			.und_faq {
-				.box_a {
-					display: block;
+		//und_faq
+		.und_faq {
+			.box_a {
+				display: block;
 
-					picture {
-						margin-left: auto;
-						margin-right: auto;
-					}
-
-					p {
-						width: 100%;
-						padding-left: 0;
-						padding-top: 25px;
-					}
-				}
-
-				.box_noneimg {
-					.box_a {
-						p {
-							padding-top: 0;
-						}
-					}
-				}
-
-			}
-
-			.und_bn_gr {
-				>div {
-					width: 100%;
-					max-width: 320px;
+				picture {
 					margin-left: auto;
 					margin-right: auto;
 				}
-			}
 
-			//und_fee
-			.und_fee {
-				--size-sp-fee: 68px;
-			}
-
-			.fee_card {
-				width: calc(100%/3 - var(--size-sp-fee));
-				margin-top: calc(var(--size-sp-fee));
-
-				&:after {
-					right: calc(var(--size-sp-fee) / -1.45);
-					top: calc(50% - var(--size-sp-fee) / 3);
-
-					border: calc(var(--size-sp-fee) / 3) solid transparent;
-					border-right: none;
-					border-left-color: var(--bl-cl);
-
-				}
-
-				.card_num {}
-
-				.card_ct {}
-			}
-		}
-	}
-
-	@media only screen and (max-width: 580px) {
-
-		.under .card_lawyer {
-			width: 100%;
-			margin-top: 40px;
-		}
-	}
-
-
-	@media only screen and (max-width: 520px) {
-		.under .und_fee {
-			--size-sp-fee: 9vw;
-		}
-	}
-
-	@media only screen and (max-width: 450px) {
-		.under {
-			#mainContent {
-				&:before {
-					clip-path: circle(150px at 50% -3.1vw);
+				p {
+					width: 100%;
+					padding-left: 0;
+					padding-top: 25px;
 				}
 			}
 
-			.box {
-				--h-shape: 20px;
-
-				&:before,
-				&:after {
-					width: 40%;
-				}
-
-				.txt {
-					padding: 30px 30px 50px;
-				}
-			}
-
-			.und_flow {
-				--size-w: 1.5px;
-
-				.box_container {
-					font-size: 6px;
-				}
-				.box_container:not(:first-child) {
-					margin-top: 60px;
-				}
-			}
-
-			.und_faq .box_q {
-				h4 {
-					&:after {
-						width: 50%;
+			.box_noneimg {
+				.box_a {
+					p {
+						padding-top: 0;
 					}
 				}
 			}
 
 		}
-	}
 
-	@media only screen and (max-width: 375px) {
-		.under {
-			.imgBox {
-
-				&.colImg2,
-				&.colImg3 {
-					.item {
-						width: 100%;
-					}
-				}
-			}
-
-			.und_flow {
-				.box_container {
-					font-size: 3.5px;
-
-					.design_arr .arr_f:after {
-						left: 1.7em;
-					}
-					&:not(:first-child) {
-						margin-top: 40px;
-					}
-				}
-
-				
-
-			}
-
-			.mt_rps {
-				margin-top: 30px;
-			}
-
-			.und_fee {
-				--size-sp-fee: 0;
-			}
-
-			.fee_card {
-				flex-direction: row;
+		.und_bn_gr {
+			>div {
 				width: 100%;
-				max-width: 100%;
+				max-width: 320px;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		}
+
+		//und_fee
+		.und_fee {
+			--size-sp-fee: 68px;
+		}
+
+		.fee_card {
+			width: calc(100%/3 - var(--size-sp-fee));
+			margin-top: calc(var(--size-sp-fee));
+
+			&:after {
+				right: calc(var(--size-sp-fee) / -1.45);
+				top: calc(50% - var(--size-sp-fee) / 3);
+
+				border: calc(var(--size-sp-fee) / 3) solid transparent;
+				border-right: none;
+				border-left-color: var(--bl-cl);
+
+			}
+
+			.card_num {}
+
+			.card_ct {}
+		}
+	}
+}
+
+@media only screen and (max-width: 580px) {
+
+	.under .card_lawyer {
+		width: 100%;
+		margin-top: 40px;
+	}
+}
+
+
+@media only screen and (max-width: 520px) {
+	.under .und_fee {
+		--size-sp-fee: 9vw;
+	}
+}
+
+@media only screen and (max-width: 450px) {
+	.under {
+		#mainContent {
+			&:before {
+				clip-path: circle(150px at 50% -3.1vw);
+			}
+		}
+
+		.box {
+			--h-shape: 20px;
+
+			&:before,
+			&:after {
+				width: 40%;
+			}
+
+			.txt {
+				padding: 30px 30px 50px;
+			}
+		}
+
+		.und_flow {
+
+			.box_container {
+				font-size: 6px;
+
+				.design_arr {
+					bottom: -17px;
+				}
+			}
+
+			.box_container:not(:first-child) {
+				margin-top: 60px;
+			}
+		}
+
+		.und_faq .box_q {
+			h4 {
+				&:after {
+					width: 50%;
+				}
+			}
+		}
+
+		.und_faq .box_a p {
+			padding-top: 15px;
+		}
+
+		 .und_faq .box_a {
+			padding: 20px;
+		}
+
+	}
+}
+
+@media only screen and (max-width: 375px) {
+	.under {
+		.imgBox {
+
+			&.colImg2,
+			&.colImg3 {
+				.item {
+					width: 100%;
+				}
+			}
+		}
+
+		.und_flow {
+			.box_container {
+				font-size: 3.5px;
+
+				.design_arr {
+					bottom: -11px;
+				}
+
+				.design_arr .arr_f:after {
+					left: 1.7em;
+				}
 
 				&:not(:first-child) {
 					margin-top: 40px;
 				}
+			}
 
-				&:after {
-					right: calc(50% - 15px);
-					bottom: -30px;
-					border: 15px solid transparent;
-					border-bottom: none;
-					border-top-color: var(--bl-cl);
-				}
 
-				.card_num {
-					margin-bottom: 0;
-				}
 
-				.card_ct {
-					width: 80%;
-					justify-content: flex-start;
-					padding-left: 15px;
+		}
 
-					p {
-						writing-mode: horizontal-tb;
+		.mt_rps {
+			margin-top: 30px;
+		}
 
-						br {
-							display: none;
-						}
+		.und_fee {
+			--size-sp-fee: 0;
+		}
+
+		.fee_card {
+			flex-direction: row;
+			width: 100%;
+			max-width: 100%;
+
+			&:not(:first-child) {
+				margin-top: 40px;
+			}
+
+			&:after {
+				right: calc(50% - 15px);
+				bottom: -30px;
+				border: 15px solid transparent;
+				border-bottom: none;
+				border-top-color: var(--bl-cl);
+			}
+
+			.card_num {
+				margin-bottom: 0;
+			}
+
+			.card_ct {
+				width: 80%;
+				justify-content: flex-start;
+				padding-left: 15px;
+
+				p {
+					writing-mode: horizontal-tb;
+
+					br {
+						display: none;
 					}
 				}
 			}
 		}
-
-		.txt-big {
-			font-size: 20px;
-		}
-
-		.under table.tbl_style01 th {
-			font-size: 14px;
-		}
-
-		.under ul.list01 li {
-			font-size: 14px;
-		}
-
-		.under .btn-group .btn.style01 {
-			min-width: 100%;
-		}
-
-		.under .box_ct.style_ico {
-			--size-ico: 25px;
-		}
-
-		.under .box .txt p:not(.btn) {
-			font-size: 14px;
-		}
 	}
 
-	// End Under General
+	.txt-big {
+		font-size: 20px;
+	}
+
+	.txt_attend {
+		font-size: 18px;
+	}
+
+	.under table.tbl_style01 th {
+		font-size: 14px;
+	}
+
+	.under ul.list01 li {
+		font-size: 14px;
+	}
+
+	.under .btn-group .btn.style01 {
+		min-width: 100%;
+	}
+
+	.under .box_ct.style_ico {
+		--size-ico: 25px;
+	}
+
+	.under .box .txt p:not(.btn) {
+		font-size: 14px;
+	}
+}
+
+// End Under General
 
 
-	@media only screen and (max-width: 768px) {
-		.under {
-			.clinic_tbl01 {
-				th {
-					width: auto;
-					min-width: 120px;
-					text-align: left;
-				}
+@media only screen and (max-width: 768px) {
+	.under {
+		.clinic_tbl01 {
+			th {
+				width: auto;
+				min-width: 120px;
+				text-align: left;
 			}
+		}
 
-			.teeth_box {
-				.secH4 {
+		.teeth_box {
+			.secH4 {
+				width: 100%;
+			}
+		}
+	}
+}
+
+@include screen('max425') {
+	.under {
+
+		.access_box_img01,
+		.access_box_img02 {
+			.block {
+				&:nth-child(even) {
+					.big {
+						order: 0;
+					}
+				}
+
+				.big,
+				.small {
 					width: 100%;
 				}
 			}
 		}
 	}
-
-	@include screen('max425') {
-		.under {
-
-			.access_box_img01,
-			.access_box_img02 {
-				.block {
-					&:nth-child(even) {
-						.big {
-							order: 0;
-						}
-					}
-
-					.big,
-					.small {
-						width: 100%;
-					}
-				}
-			}
-		}
-	}
+}

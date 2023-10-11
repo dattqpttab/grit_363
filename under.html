@@ -25,8 +25,8 @@
             <div class="header_top">
                 <h1 class="logo"><a href="<?php echo site_url(); ?>">
                         <img class="main" loading="lazy" loading="lazy" src="images/shared_header_logo.png" alt="main">
-                        <img loading="lazy" class="ov ud_pc" loading="lazy" src="images/shared_under_logo.png" alt="main">
-                        <img loading="lazy" class="ov ud_sp" loading="lazy" src="images/shared_under_logo_sp.png" alt="main">
+                        <img loading="lazy" class="ov" loading="lazy" src="images/shared_under_logo.png" alt="main">
+
                     </a></h1>
                 <div class="right_head pc_only">
                     <div class="pc_navi ">
@@ -274,18 +274,26 @@
                             <div class="box ">
                                 <h4>1. お電話またはWEB予約でご予約</h4>
                                 <div class="txt">
-                                    <figure>
-                                        <img src="./images/flow_img01.jpg" alt="お電話またはWEB予約でご予約">
-                                    </figure>
-                                    <p class="line">
-                                        ご相談は予約された方のみを対象にさせていただいております。 まずはご連絡ください。
-                                    </p>
-                                    <p class="line">予約専用ダイヤル:<b>0120-755-687</b></p>
+                                    <div class="flex_und mcol-2 img_right">
+                                        <div>
+                                            <p class="line">
+                                                ご相談は予約された方のみを対象にさせていただいております。 まずはご連絡ください。
+                                            </p>
+                                            <p class="line">予約専用ダイヤル:<b>0120-755-687</b></p>
 
-                                    <ul class="list01">
-                                        <li>受付時間：9:00～19:00（土日祝を除く平日）</li>
-                                        <li>遠方のお客様は、web相談もお受けしております。ご予約の際にご相談ください。詳しくはこちら 。</li>
-                                    </ul>
+                                            <ul class="list01">
+                                                <li>受付時間：9:00～19:00（土日祝を除く平日）</li>
+                                                <li>遠方のお客様は、web相談もお受けしております。ご予約の際にご相談ください。詳しくはこちら 。</li>
+                                            </ul>
+                                        </div>
+
+                                        <figure>
+                                            <img src="./images/flow_img01.jpg" alt="お電話またはWEB予約でご予約">
+                                        </figure>
+                                    </div>
+
+
+
                                     <div class="btn-group">
                                         <p class="btn style01 big center"><a href="https://www.komoda-law.jp/booking/"
                                                 target="_blank" rel="noopener">WEBで相談予約のお申込み（24時間受付中）</a></p>
@@ -321,16 +329,16 @@
                             </div>
 
                             <div class="box">
-                                <h4>3. 受任</h4>
-                                <div class="txt">
-                                    <p class="line">
-                                        正式にご依頼となりました場合は、再度ご来所いただいております。そのうえで、今後の業務方針および費用について再度確認をいたしまして、契約締結および業務開始となります。
-                                    </p>
+                                <div class="flex_und mcol-2 txt">
+                                    <div class="box_ct ">
+                                        <h4>3. 受任</h4>
+                                        <p>正式にご依頼となりました場合は、再度ご来所いただいております。そのうえで、今後の業務方針および費用について再度確認をいたしまして、契約締結および業務開始となります。
+                                        </p>
+                                    </div>
 
-                                    <div class="box_ct">
-                                        <p class="txt_ms">相談のみで終了</p>
+                                    <div class="box_ct style_none-bd">
+                                        <h5>相談のみで終了</h5>
                                         <p>相談料以外の費用は頂きません。</p>
-
                                     </div>
                                 </div>
                             </div>
@@ -361,21 +369,16 @@
                             </div>
 
                             <div class="box">
-                                <h4>5. 調停・訴訟提起</h4>
-                                <div class="txt">
-                                    <p class="line">
-                                        交渉での解決が困難な場合は、裁判所を利用した手続に移行します。
-                                    </p>
-
-                                    <div class="box_ct">
-                                        <p class="txt_ms">和解・示談成立</p>
-                                        <p>交渉の結果、和解または示談が成立した場合は、ここで業務終結となります。</p>
-
-
+                                <div class="flex_und mcol-2 txt">
+                                    <div class="box_ct ">
+                                        <h4>3. 受任</h4>
+                                        <p>正式にご依頼となりました場合は、再度ご来所いただいております。そのうえで、今後の業務方針および費用について再度確認をいたしまして、契約締結および業務開始となります。
+                                        </p>
                                     </div>
-                                    <div class="btn-group">
-                                        <p class="btn style01 center"><a href="[url]/contact/"
-                                                rel="noopener">お問い合わせはこちらから</a></p>
+
+                                    <div class="box_ct style_none-bd">
+                                        <h5>相談のみで終了</h5>
+                                        <p>相談料以外の費用は頂きません。</p>
                                     </div>
                                 </div>
                             </div>
@@ -1492,12 +1495,10 @@
             </div>
 
             <div class="secH4">
-                <div class="box_ct">
-                    <div class="und_flow_num">
-                        <p>ご依頼内容が遺産分割代理、もしくは遺留分侵害額請求代理の請求者側の場合</p>
-
-                        <p>報酬金をお支払いいただけるだけの回収可能性が見込まれる場合</p>
-                    </div>
+                <div class="und_bn_gr mcol-2">
+                    <div><a href="[url]/for_managers/harassment/"><img src="./images/harassment_btn.jpg" alt="お問い合わせ"> </a></div>
+                    <div><a href="[url]/for_managers/naibutsuho/"><img src="./images/naibutsuho_btn.jpg" alt="無料相談"></a></div>
+           
                 </div>
             </div>
 
