@@ -1003,6 +1003,13 @@ picture {
         }
     }
 }
+::-ms-input-placeholder { /* Edge 12-18 */
+    color: #ddd;
+  }
+  
+  ::placeholder {
+    color: #ddd;
+  }
 .under .main_blog_content .box_ct{
     margin: 0px 0 40px;
     text-align: left;
