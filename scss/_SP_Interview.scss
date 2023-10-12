@@ -7,13 +7,14 @@
             .key {
                 background-image: url(../images/interview_bg_sp.jpg);
                 background-position: center;
-                height: 450px;
+                height: 350px;
 
                 .key_text {
                     font-size: 7px;
                     padding: 10px 10px 1vh;
                     margin-left: auto;
                     margin-right: auto;
+                    margin-bottom: 10px;
 
                     background-color: rgba($color: #000000, $alpha: .2);
 
@@ -22,6 +23,10 @@
                         margin-right: auto;
                     }
                 }
+.inter_name {
+    padding-bottom: 0;
+}
+
                 .inner {
                     justify-content: center;
                     align-items: flex-end;
@@ -68,15 +73,13 @@
         &_content {
             max-width: 590px;
             margin: 0 auto;
-
-           p {
-            padding: 0 10px;
-           }
-
         }
 
         &_img {
             margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
 
             &:before {
                 left: 20px;

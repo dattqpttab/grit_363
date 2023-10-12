@@ -24,13 +24,13 @@
                     position: relative;
                     color: #fff;
                     margin-top: -0.625em;
-                    margin-bottom: 0.625em ;
+                    margin-bottom: 0.625em;
                     padding-left: 10px;
                     padding-top: 0;
                     font-size: 4em;
                     font-family: var(--f_lato);
                     line-height: 1;
-                    font-weight: 500;
+                    font-weight: 700;
                 }
             }
 
@@ -54,7 +54,7 @@
                 padding-bottom: 1.1875em;
                 margin-bottom: 1em;
                 padding-left: .5em;
-                font-weight: 500;
+                font-weight: 700;
                 font-family: var(--f_zen);
                 font-size: 2em;
 
@@ -96,6 +96,7 @@
                 display: table;
                 color: #fff;
                 letter-spacing: 0.1em;
+                font-weight: 700;
             }
 
 
@@ -104,7 +105,7 @@
 
         #mainContent {
             .inner {
-                max-width: 1280px;
+                max-width: 1056px;
             }
         }
     }
@@ -140,7 +141,7 @@
         display: flex;
         flex-wrap: wrap;
         align-items: flex-start;
-        --size-mg:60px;
+        --size-mg: 60px;
 
         &.box_left {
 
@@ -176,7 +177,7 @@
             position: absolute;
             bottom: -0.1em;
             left: 40px;
-
+            font-family: "Libre Baskerville", serif;
             line-height: 0.5;
             font-size: 120px;
             color: #f8be27;
@@ -191,10 +192,23 @@
     }
 }
 
+@media only screen and (min-width: 1367px) {
+    .under.page-interview .key .key_text {
+        padding-left: 20%;
+    }
+}
+
+@media only screen and (max-width: 1366px) and (min-width: 1000px) {
+    .under.page-interview .key .key_text {
+        padding-left: 10%;
+    }
+}
+
 @media only screen and (max-width: 1366px) and (min-width: 769px) {
     .under.page-interview .key {
         background-position: right 27% top;
     }
+
 }
 
 @media only screen and (max-width: 1280px) and (min-width: 769px) {
@@ -203,9 +217,7 @@
         &.page-short-interview,
         &.page-interview {
             .key {
-                .key_text {
-                    padding-left: 40px;
-                }
+                .key_text {}
 
                 h2 {
                     margin-bottom: 35px;
@@ -254,7 +266,7 @@
 
     .interview {
         &_box {
-            --size-mg:40px;
+            --size-mg: 40px;
 
             &.box_right {
                 flex-direction: row-reverse;
@@ -264,7 +276,7 @@
         &_content {
 
             h4 {
-                font-size: 28px;
+                font-size: 24px;
             }
         }
 
@@ -281,9 +293,14 @@
         .key {
             .key_text {
                 padding-top: 10%;
+                padding-left: 5%;
                 font-size: 1vw;
             }
         }
+    }
+
+    .interview_content h4 {
+        font-size: 22px;
     }
 }
 
@@ -291,7 +308,7 @@
     .interview {
         // &_box {
         //     &.box_left {
-     
+
 
         //         .interview_img {
         //             img {
@@ -302,7 +319,7 @@
         //     }
 
         //     &.box_right {
-            
+
 
         //         .interview_img {
         //             img {
