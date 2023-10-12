@@ -943,7 +943,7 @@ background-position: center;
 		padding: 32px 0px 47px;
 		width: 100%;
 		background-repeat: no-repeat;
-		background-position: bottom;
+		background-position: bottom right;
 
 		p {
 			max-width: 472px;
@@ -1534,7 +1534,11 @@ background-color: #fafafa;
 	background-image: url(../images/idx07_bg.jpg);
 	position: relative;
 	z-index: 1;
-
+    @supports (background-image: url(../images/idx07_bg.webp)) {
+	
+			background-image: url(../images/idx07_bg.webp);
+		
+	  }
 
 	h3.t_center {
 		line-height: 1.4444;
