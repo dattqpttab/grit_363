@@ -93,6 +93,10 @@
 			max-width: 1056px;
 		}
 
+		 a {
+			letter-spacing: .1em;
+		}
+
 	}
 
 	.key {
@@ -157,7 +161,7 @@
 		font-size: 32px;
 		text-align: center;
 		letter-spacing: .2em;
-		color: var(--main-color);
+		color: var(--bl-cl);
 		background-size: 50px auto;
 
 		&:before,
@@ -320,6 +324,7 @@
 			font-size: 7em;
 			letter-spacing: .1em;
 			font-weight: 700;
+			font-family: "Libre Baskerville",serif;
 			opacity: .1;
 		}
 
@@ -337,6 +342,12 @@
 			font-size: 16px;
 		}
 
+	}
+}
+
+.under .home_page {
+	.box {
+		box-shadow: none;
 	}
 }
 
@@ -367,9 +378,7 @@
 }
 
 
-.under a {
-	letter-spacing: .1em;
-}
+
 
 
 //und_flow-m
@@ -756,7 +765,7 @@
 
 	.und_bn_gr {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		flex-wrap: wrap;
 
 		&.flex_02 {
@@ -767,9 +776,15 @@
 			width: 33%;
 			padding: 10px;
 			max-width: 400px;
+			transition: all .3s;
+			a:hover {
+				opacity: 1;
+			}
 
-			&:hover {
-				opacity: .8;
+			@include screen('min769') {
+				&:hover {
+					opacity: .8;
+				}
 			}
 		}
 
@@ -866,7 +881,7 @@
 .under .box_ct {
 	position: relative;
 	z-index: 0;
-	margin: 40px 0 20px;
+	// margin: 40px 0 20px;
 	padding: 40px;
 	// background-image: url(../images/und_bn_sty01.jpg);
 	background-color: white;
@@ -937,6 +952,14 @@
 	}
 }
 
+.under .box_ct {
+	.imgBox.rowImg {
+		p {
+			line-height: 2;
+		}
+	}
+}
+
 //config page
 .under {
 	&.page-for_managers-naibutsuho {
@@ -948,6 +971,7 @@
 		 {
 			padding-top: 0;
 		}
+		#h3_2 + .secH4,
 		#h3_3 + .secH4 {
 			padding-top: 30px;
 		}
@@ -971,6 +995,21 @@
 	&.page-for_individuals {
 		#h5_1 {
 			padding-top: 0;
+		}
+	}
+
+	&.page-greeting {
+		.sign {
+			line-height: 1.6;
+		}
+	}
+
+	&.page-interview {
+		#mainContent .inner .img_wcap_ct:first-child {
+			margin-bottom: 0;
+			.catption_txt {
+				padding-top: 0;
+			}
 		}
 	}
 }
@@ -1485,7 +1524,7 @@
 				position: relative;
 				// background: #efefef;
 				overflow: hidden;
-				height: 280px;
+				height: 340px;
 				width: 100%;
 				text-align: center;
 			}
@@ -1746,6 +1785,10 @@
 	ul.list01 {
 		margin-bottom: 10px;
 
+		&:last-child {
+			margin-bottom: 0;
+		}
+
 		&.mcol-2,
 		&.mcol-3 {
 			position: relative;
@@ -1850,7 +1893,7 @@
 			position: relative;
 			line-height: 2.5;
 
-			padding-left: 1.4444em;
+			padding-left: 1.5444em;
 			padding-bottom: .75em;
 			letter-spacing: 0.21em;
 
@@ -1860,8 +1903,8 @@
 
 			&::before {
 				content: '';
-				width: 0.66667em;
-				height: 0.66667em;
+				width: 12px;
+				height: 12px;
 				border-radius: 50%;
 				background: #3d90ba;
 				position: absolute;
@@ -2039,18 +2082,14 @@
 		position: relative;
 		font-size: 10px;
 
-		p {
-			margin-bottom: 0;
-			font-family: var(--f-zennew);
-			line-height: 1.8;
-		}
+		
 
 		.lawyer_name {
 			position: absolute !important;
 			right: 2%;
-			bottom: 30px;
+			bottom: 10px;
 			background: var(--bl-cl);
-			padding: 10px 1.333em;
+			padding: 10px .4em;
 			z-index: 1;
 			color: white;
 			text-align: center;
@@ -2059,32 +2098,31 @@
 			letter-spacing: 0.1em;
 			line-height: 1.5;
 
+			p {
+				margin-bottom: 0;
+				font-family: var(--f-zennew) ;
+				line-height: 1.8 ;
+				letter-spacing: .1em;
+			}
+
 			span {
+				font-size: .8em;
 				font-size: 70%;
+				font-family: var(--f-en);
+				text-transform: uppercase;
 				font-weight: 400;
 				display: block;
 			}
 
-			&:before,
-			&:after {
+			&:before {
 				@include before;
 				right: 0;
-				width: 40%;
-				height: 0.66667em;
-				background-color: #f8be27;
-
-			}
-
-			&:before {
 				top: 0;
+				height: 0.66667em;
 				width: 100%;
 				height: 3px;
-			}
+				background-color: #f8be27;
 
-			&:after {
-				top: -0.66667em;
-				background-color: var(--bl-cl);
-				clip-path: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
 			}
 		}
 	}
@@ -2974,10 +3012,6 @@
 	.main_blog_content {
 		max-width: 100%;
 		width: calc(100% - 250px);
-
-		>div {
-			padding-top: 0;
-		}
 	}
 
 	.sidebar {
