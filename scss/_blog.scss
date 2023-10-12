@@ -468,12 +468,14 @@
 	  max-width: 300px;
 	  margin: 0 0px 15px 20px; } }
 
-	  
+	.catption_txt:empty{
+		display: none;
+	}  
 
 /*---------add post sp---------*/
 @media screen and (max-width: 768px) {
 	.img_wcap_ct {
-		margin-bottom: 30px;
+		margin-bottom: 20px;
 		width: auto !important;
 		
 	}
