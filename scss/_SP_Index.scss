@@ -23,7 +23,7 @@
             height: calc(100vh - 60px);
             max-height: 156vw;
             min-height: 320px;
-            font-size: 8.75px;
+            font-size: 7.5px;
             background-image: url(../images/idx_mv01_sp.jpg);
             -webkit-animation: idx_key 30s linear infinite;
             animation: idx_key 30s linear infinite;
@@ -52,7 +52,7 @@
 
             .key_copy {
                 height: 100%;
-
+font-size: 2.7vmin;
                 .scroll a {
                     font-size: 0.6em;
                 }
@@ -65,6 +65,9 @@
 @media only screen and (max-width: 640px) {
     .home_page .key {
         font-size: 1vmin;
+        .key_copy {
+            font-size: 3vmin;
+        }
     }
 }
 
@@ -248,7 +251,10 @@ padding-bottom: 0;
             margin-right: auto;
         }
     }
-
+    .idx_en {
+        font-size: 62px;
+        right: -0.4em;
+    }
     .index03 {
         padding: 60px 0px;
 
@@ -256,24 +262,46 @@ padding-bottom: 0;
             padding-top: 100px;
             flex-direction: column-reverse;
             position: relative;
-            max-width: 624px;
-            margin: auto;
+
         }
 
         h3 {
             position: absolute;
             left: 0;
             top: 0;
-            
+            padding-bottom: 0.78em;
+            text-align: center;
+            width: 100%;
+
+			&::before {
+				width: 2.17392em;
+				height: var(--p1);
+				left: calc(50% - 1.08695em);
+				bottom: 4px;
+
+			}
+
+			&::after {
+				border-bottom: none;
+				bottom: 0;
+				left: calc(50% - var(--p1));
+				border-top: 4px solid var(--clr_h3);
+				border-left: 4px solid transparent;
+				border-right: 4px solid transparent;
+			}
         }
 
-
+        .box_left .txt {
+            max-width: 750px;
+        }
         .box_right {
             width: 100%;
             max-width: 624px;
+          
+            margin: 0 auto;
             .box_img {
                 margin: 0px auto 20px;
-                padding: 0px 20px 20px;
+               
             }
             .idx_en{
               //  right: -0.6vw;
@@ -344,7 +372,11 @@ h3{
         
         }
         .idx_en{
-            right: -0em;
+            right: 0em;
+            text-align: center;
+            width: 100%;
+            top: -0.5em;
+            writing-mode: inherit;
         }
         &::before{
             background-image: url(../images/idx06_bg_sp.jpg);
