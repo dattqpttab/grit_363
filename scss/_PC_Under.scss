@@ -93,7 +93,7 @@
 			max-width: 1056px;
 		}
 
-		 a {
+		a {
 			letter-spacing: .1em;
 		}
 
@@ -324,7 +324,7 @@
 			font-size: 7em;
 			letter-spacing: .1em;
 			font-weight: 700;
-			font-family: "Libre Baskerville",serif;
+			font-family: "Libre Baskerville", serif;
 			opacity: .1;
 		}
 
@@ -552,6 +552,20 @@
 					}
 				}
 			}
+
+				&:not(:last-child):after {
+					position: absolute;
+					content: "";
+					width: 0;
+					height: 0;
+					bottom: -30px;
+					right: calc(50% - 30px);
+					border-left: 30px solid transparent;
+					border-right: 30px solid transparent;
+					border-top: 20px solid var(--bl-cl);
+					opacity: .8;
+				}
+			
 		}
 
 		.box_q {
@@ -777,6 +791,7 @@
 			padding: 10px;
 			max-width: 400px;
 			transition: all .3s;
+
 			a:hover {
 				opacity: 1;
 			}
@@ -811,9 +826,13 @@
 .under .youtube {
 	position: relative;
 	margin-bottom: 1.4em;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
+	padding-bottom: 44.25%;
+	padding-top: 27px;
+	width: 100%;
 	overflow: hidden;
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 800px;
 
 	iframe {
 		position: absolute;
@@ -864,10 +883,14 @@
 }
 
 .txt-big {
+	display: inline-block;
 	font-size: 24px;
 	font-weight: 500;
 }
 
+.page-expense table td {
+	text-align: center;
+}
 
 
 .mt_rps {
@@ -952,10 +975,12 @@
 	}
 }
 
-.under .box_ct {
-	.imgBox.rowImg {
-		p {
-			line-height: 2;
+@media only screen and (min-width: 1281px) {
+	.under .box_ct.mes {
+		.imgBox.rowImg {
+			.image_l {
+				margin-bottom: 58px;
+			}
 		}
 	}
 }
@@ -966,13 +991,12 @@
 
 		#h3_4,
 		#h4_5,
-		#h4_5 .secH5
-		
-		 {
+		#h4_5 .secH5 {
 			padding-top: 0;
 		}
-		#h3_2 + .secH4,
-		#h3_3 + .secH4 {
+
+		#h3_2+.secH4,
+		#h3_3+.secH4 {
 			padding-top: 30px;
 		}
 	}
@@ -1007,6 +1031,7 @@
 	&.page-interview {
 		#mainContent .inner .img_wcap_ct:first-child {
 			margin-bottom: 0;
+
 			.catption_txt {
 				padding-top: 0;
 			}
@@ -1199,7 +1224,7 @@
 //und_fee
 .under {
 	.und_fee {
-		--size-sp-fee:40px;
+		--size-sp-fee: 40px;
 		margin: 40px 0;
 		margin-left: var(--size-sp-fee);
 		display: flex;
@@ -1831,11 +1856,29 @@
 
 		&.style_triag {
 			li {
+				padding-left: 0;
+
 				&:before {
+					display: none;
+				}
+
+				a {
+					display: table;
+					position: relative;
+					padding-left: 1em;
+				}
+
+				a:before {
+					content: "";
 					width: 0;
 					height: 0;
-					border: 0.3333em solid transparent;
-					border-left: 0.44444em solid var(--bl-cl);
+					position: absolute;
+					left: 0;
+					top: 0.8em;
+					border-top: 0.4em solid transparent;
+					border-bottom: 0.4em solid transparent;
+
+					border-left: 0.4em solid var(--bl-cl);
 					border-radius: 0;
 					background: none;
 				}
@@ -2076,13 +2119,13 @@
 
 
 	.lawyer_box {
-		max-width: 750px;
+		max-width: 630px;
 		margin: auto;
 		margin-bottom: 40px;
 		position: relative;
 		font-size: 10px;
 
-		
+
 
 		.lawyer_name {
 			position: absolute !important;
@@ -2093,21 +2136,20 @@
 			z-index: 1;
 			color: white;
 			text-align: center;
-			font-size: 3em;
+			font-size: 2.5em;
 			font-weight: 600;
 			letter-spacing: 0.1em;
 			line-height: 1.5;
 
 			p {
 				margin-bottom: 0;
-				font-family: var(--f-zennew) ;
-				line-height: 1.8 ;
+				font-family: var(--f-zennew);
+				line-height: 1.8;
 				letter-spacing: .1em;
 			}
 
 			span {
 				font-size: .8em;
-				font-size: 70%;
 				font-family: var(--f-en);
 				text-transform: uppercase;
 				font-weight: 400;
@@ -2307,10 +2349,11 @@
 }
 
 @media only screen and (min-width: 1000px) {
-	.under .und_fee{
+	.under .und_fee {
 		--size-sp-fee: 80px;
 	}
 }
+
 // End Under Content
 
 

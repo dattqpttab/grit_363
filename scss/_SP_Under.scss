@@ -478,6 +478,11 @@
 		}
 
 	}
+	.under .btn-group .btn.style01 {
+		min-width: 280px;
+		max-width: 300px;
+
+	}
 }
 
 @media only screen and (max-width: 660px) {
@@ -692,7 +697,7 @@
 	}
 
 	.under .youtube {
-		width: 104%;
+		width: 108%;
 	}
 
 	.txt-big {
@@ -711,9 +716,7 @@
 		font-size: 14px;
 	}
 
-	.under .btn-group .btn.style01 {
-		min-width: 100%;
-	}
+
 
 	.under .box_ct.style_ico {
 		--size-ico: 25px;
