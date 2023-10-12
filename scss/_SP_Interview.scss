@@ -76,7 +76,7 @@
         }
 
         &_img {
-            margin-bottom: 25px;
+            margin-bottom: 40px;
 
             &:before {
                 left: 20px;
@@ -129,4 +129,7 @@
     }
 }
 @media only screen and (max-width: 425px) {
+    .interview_img  {
+        margin-bottom: 30px;
+    }
 }

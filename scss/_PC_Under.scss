@@ -948,10 +948,17 @@
 	&.page-for_managers-naibutsuho {
 
 		#h3_4,
-		#h3_4 .secH4,
-		#h3_4 .secH5 {
+		#h4_5,
+		#h4_5 .secH5
+		
+		 {
 			padding-top: 0;
 		}
+		#h3_3 + .secH4 {
+			padding-top: 30px;
+		}
+
+		
 	}
 
 	&.page-for_managers-harassment {
@@ -1149,7 +1156,7 @@
 //und_fee
 .under {
 	.und_fee {
-		--size-sp-fee: 40px;
+		--size-sp-fee:40px;
 		margin: 40px 0;
 		margin-left: var(--size-sp-fee);
 		display: flex;
@@ -1174,11 +1181,11 @@
 
 		&::after {
 			@include before;
-			right: calc(var(--size-sp-fee) / -1.3);
+			right: calc(var(--size-sp-fee) / -1.4);
 			top: calc(50% - var(--size-sp-fee) / 2);
 			width: 0;
 			height: 0;
-			border: calc(var(--size-sp-fee) / 2) solid transparent;
+			border: calc(var(--size-sp-fee) / 2.5) solid transparent;
 			border-right: none;
 			border-left-color: var(--bl-cl);
 		}
@@ -1198,8 +1205,9 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			padding-left: 0.1875em;
 			margin: 0 auto;
-			margin-bottom: 20px;
+			margin-bottom: 15px;
 			background-color: var(--bl-cl);
 			width: 35px;
 			height: 35px;
@@ -1213,7 +1221,7 @@
 
 			p {
 				writing-mode: vertical-rl;
-				line-height: 1.5;
+				line-height: 1.5 !important;
 			}
 		}
 	}
@@ -2256,6 +2264,11 @@
 	}
 }
 
+@media only screen and (min-width: 1000px) {
+	.under .und_fee{
+		--size-sp-fee: 80px;
+	}
+}
 // End Under Content
 
 

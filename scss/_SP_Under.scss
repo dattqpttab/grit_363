@@ -258,8 +258,13 @@
 			}
 		}
 		ul.list01 {
-			li {
-				font-size: 16px;
+			&.style_box li{
+				&:before {
+					top: .4em;
+				}
+				&:after {
+top: .5em;
+				}
 			}
 
 			&.mcol-2,
