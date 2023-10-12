@@ -97,8 +97,8 @@ section {
 				font-family: var(--f-en);
 				text-decoration: none;
 				background-image: url(../images/arr_down.svg);
-				background-size: auto 3.15385em;
-				background-position: bottom left 0.65em;
+				background-size: auto 3.1563em;
+				background-position: bottom 1px left 0.65em;
 				background-repeat: no-repeat;
 				transition: all 0.3s;
 				cursor: pointer;
@@ -259,7 +259,7 @@ section {
 		}
 
 		&.t_center {
-			padding-bottom: 0.8em;
+			padding-bottom: 0.78em;
 
 			&::before {
 				width: 2.17392em;
@@ -403,7 +403,7 @@ section {
 
 @media only screen and (min-width: 769px) and (max-width:1440px) {
 	.home_page .key {
-		font-size: 0.7vw;
+		font-size: 8px;
 
 		.key_copy {
 			font-size: 2em;
@@ -415,7 +415,13 @@ section {
 	}
 }
 
-@media only screen and (min-width: 769px) and (max-width:1280px) {}
+@media only screen and (min-width: 769px) and (max-width:1280px) {
+	.home_page .key {
+		font-size: 0.68vw;
+
+	
+	}
+}
 
 @media only screen and (min-width: 769px) {
 	.home_page {
@@ -649,7 +655,7 @@ background-position: center;
 
 				.title {
 					max-width: calc(100% - 8.8em);
-					padding-right: 10px;
+					padding-right: 16px;
 					position: relative;
 					white-space: nowrap;
 					text-overflow: ellipsis;
@@ -917,12 +923,13 @@ background-position: center;
 				align-items: center;
 				justify-content: center;
 				padding-right: 0.5em;
+				padding-top: 0.1em;
 				width: 2.4762em;
 				background-image: url(../images/point_bg.svg);
 				background-position: top center;
 				background-size: 100% auto;
 				background-repeat: no-repeat;
-				line-height: 1.238;
+				line-height: 1.15;
 				font-size: 4.2em;
 				letter-spacing: -0.05em;
 				color: #224a8a;
@@ -979,6 +986,9 @@ background-position: center;
 
 			h3 {
 				margin-bottom: 46px;
+				.en{
+					margin-top: 0.45em;
+				}
 			}
 
 			.content {
@@ -1076,6 +1086,28 @@ width: 100%;
 	background-position: center;
 	background-size: cover;
 	background-repeat: no-repeat;
+	transition: all .3s;
+	z-index: 1;
+	&::after{
+		@include before;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: -1;
+		opacity: 0;
+background-color: #3e9262;
+	}
+&:hover{
+
+	&::after{
+		opacity: 0.3;
+	
+	}
+	&::before{
+		right: 2%;
+	}
+}
 
 	&.st2 {
 		padding: 10px 2.9375em;
@@ -1085,7 +1117,12 @@ width: 100%;
 		overflow: hidden;
 		display: flex;
 		align-items: center;
-
+		&:hover{
+		
+			&::before{
+				right: 2%;
+			}
+		}
 		&::before {
 			@include before;
 			width: 1.625em;
@@ -1177,7 +1214,7 @@ width: 100%;
 
 		a {
 			min-height: 1px;
-			padding: 10px 35px 10px 30px;
+			padding: 10px 45px 10px 40px;
 			display: table;
 			margin: auto;
 			font-weight: 500;
@@ -1223,7 +1260,7 @@ width: 100%;
 			margin-bottom: 28px;
 
 			.en {
-				transform: translateY(2px);
+				
 
 			}
 		}
@@ -1338,7 +1375,8 @@ padding-bottom: 0.5em;
 
 }
 
-.index06 {
+.index06 {	max-width: 1920px;
+	margin: 0px auto;
 	padding: 0px 4%;
 	position: relative;
 	z-index: 1;
@@ -1520,7 +1558,7 @@ margin-right: auto;
 		margin: 0px auto;
 		max-width: 800px;
 		text-align: center;
-		width: 95%;
+		width: 85%;
 		p {
 			font-size: 1.125em;
 			line-height: 2.77777778em;
@@ -1543,6 +1581,16 @@ margin-right: auto;
 
 		}
 	}
+	.bnr.st2{
+		h4{
+			padding-top: 0.55em;
+			padding-bottom: 0.65em;
+		}
+	 .en{
+			opacity: 0.15;
+		}
+	}
+
 }
 
 .idx07_bnr {
@@ -1743,9 +1791,19 @@ margin-right: auto;
 			border-left: 2px solid #fff;
 		}
 
-		p {
+		li{
 			line-height: 2.5;
 			letter-spacing: 0.2em;
+		&:first-child{
+			display: flex;
+			.first{
+				width: 4.81em;
+			}
+			.txt{
+				max-width: calc(100% - 4.81em);
+			}
+		}
+			
 		}
 	}
 
@@ -1782,6 +1840,7 @@ margin-right: auto;
 		.box {
 			position: relative;
 			max-width: 305px;
+			width: calc(25% - 20px);
 			margin: 0 10px 20px;
 		}
 	}
@@ -1847,11 +1906,20 @@ background-size: 1920px auto;
 }
 @media only screen and (max-width: 1660px) and (min-width: 769px) {
 	.index07 {
-		padding-top: calc(60px + 4vw);
-		padding-bottom: calc(100px + 10vw);
+		padding-top: calc(50px + 3vw);
+		padding-bottom: calc(80px + 7vw);
 	}
 }
 
+@media only screen and (min-width: 769px) and (max-width: 1440px) {
+	.index08{
+		padding: 6vw 0;
+		background-position: left 35% center;
+.box{
+	font-size: 0.7vw;
+}
+	}
+}
 @media only screen and (min-width: 769px) and (max-width: 1280px) {
 	:root {
 
@@ -1861,19 +1929,25 @@ background-size: 1920px auto;
 	.idx_en{
 		font-size: 5vw;right: -0.35em;
 	}
+	.index02 .box_head h3{
+		font-size: 3.1vw;
+	}
 	.index05 .flex {
 		font-size: 0.8vw;
 		
 	}
 
 	.index01 .content .box {
-		padding: 50px 20px 60px;
+		padding: 50px 20px 37px;
 	}
 .index07{
-	background-size: 120% auto;
-	padding-bottom: calc(140px + 15vw);
-	.text >p{
-		text-shadow: 0px 0px 2px #fafafa,0px 0px 2px #fafafa,0px 0px 3px #fafafa,0px 0px 2px #fafafa,0px 0px 5px #fafafa;
+	background-size: 115% auto;
+	padding-bottom: calc(110px + 14vw);
+	.text {
+		width: 75%;
+		>p{
+			text-shadow: 0px 0px 2px #fafafa,0px 0px 2px #fafafa,0px 0px 3px #fafafa,0px 0px 2px #fafafa,0px 0px 5px #fafafa;
+		}
 	}
 }
 	.home_page {
@@ -1918,8 +1992,8 @@ background-size: 1920px auto;
 		}
 	}
 	.index11 .flex .box{
-		width: calc(33.33% - 20px);
-	
+	    width: calc(25% - 10px);
+	    margin: 0 5px 10px;
 	}
 }
 
@@ -1929,6 +2003,7 @@ background-size: 1920px auto;
 		--ttl_size: 22px;
 
 	}
+	
 	.idx_en{
 		font-size: 6vw;
 		right: -0.3em;
@@ -1979,6 +2054,12 @@ background-size: 1920px auto;
 			font-size: 1.4vw;
 		}
 	}
+	.index06 .bot .btn-group{
+		width: 48%;
+		.btn a::after{
+			right: 15px;
+		}
+	}
 	.idx_bg::before,	.index08 .box{
 		font-size: 1vw;
 		
@@ -1989,10 +2070,10 @@ background-size: 1920px auto;
 			margin-top: 20px;
 		}
 		.tt{
-			width: 100px;
+			width: 90px;
 		}
 		.text{
-			width: calc(100% - 100px);
+			width: calc(100% - 90px);
 		}
 	}
 	.index10 {
@@ -2008,5 +2089,14 @@ background-size: 1920px auto;
 @media only screen and (max-width: 800px) and (min-width: 769px) {
 	.index10 .text p{
 		font-size: 13.5px;
+	}
+	.index09 .box_right li{
+		font-size: 13.5px;
+	}
+	.index09 .box_right {
+		padding-right: 0;
+		.ft_logo{
+			max-width: 90%;
+				}
 	}
 }
