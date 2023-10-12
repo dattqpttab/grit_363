@@ -304,7 +304,7 @@
 	.txt {
 		position: relative;
 		font-size: 1em;
-		padding: 6em 4em;
+		padding: 6em;
 
 		&:before,
 		&:after {
@@ -319,6 +319,7 @@
 		}
 
 		&:before {
+			z-index: 5;
 			bottom: 5px;
 			right: 0.1628em;
 			font-size: 7em;
@@ -524,7 +525,7 @@
 
 		&.mcol-2 {
 			>:nth-child(n) {
-				width: 49%;
+				width: 47%;
 			}
 		}
 	}
@@ -904,7 +905,7 @@
 .under .box_ct {
 	position: relative;
 	z-index: 0;
-	// margin: 40px 0 20px;
+
 	padding: 40px;
 	// background-image: url(../images/und_bn_sty01.jpg);
 	background-color: white;
@@ -913,6 +914,11 @@
 	background-size: cover;
 	box-shadow: 0px 0px 10px 4px #ddd;
 	border: 2px solid #f8be27;
+
+	margin-bottom: 20px;
+	&:last-child {
+		margin-bottom: 0;
+	}
 
 
 
@@ -1080,9 +1086,22 @@
 
 .under .box_voice {
 	background-color: white;
-	padding: 40px 20px;
+	padding: 40px 20px 10px;
 	margin-bottom: 60px;
 	border: 2px solid var(--bl-cl);
+	li:last-child {
+		margin-bottom: 0;
+	}
+
+	@media only screen and (min-width: 1281px) {
+	 &.imgBox.rowImg .image_r {
+			margin-bottom: 30px;
+		}
+	
+		ul {
+			margin-bottom: 30px;
+		}
+	}
 }
 
 //under_lawyer
@@ -1230,6 +1249,10 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
 
 	.fee_card {
@@ -1242,7 +1265,7 @@
 		margin-right: var(--size-sp-fee);
 
 		width: calc(100%/6 - var(--size-sp-fee));
-		max-width: 70px;
+		max-width: 90px;
 		box-shadow: 0px 0px 5px 2px #ddd;
 		background-color: white;
 		border: 1px solid var(--bl-cl);
@@ -1290,6 +1313,7 @@
 			p {
 				writing-mode: vertical-rl;
 				line-height: 1.5 !important;
+				font-size: 20px;
 			}
 		}
 	}
@@ -1892,8 +1916,8 @@
 				&:before {
 					width: 1.2em;
 					height: 1.2em;
-					background: #d66262;
-					border: 1px solid #d66262;
+					background: var(--main-color);
+					border: 1px solid var(--main-color);
 					top: .625em;
 					left: 0.3125em;
 					border-radius: 0;
@@ -2350,7 +2374,7 @@
 
 @media only screen and (min-width: 1000px) {
 	.under .und_fee {
-		--size-sp-fee: 80px;
+		--size-sp-fee: 60px;
 	}
 }
 
