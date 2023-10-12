@@ -156,13 +156,15 @@
 
                 a {
                     padding: 20px 0;
+                    background-position: right 0 center;
 
                     .date {
                         width: 8em;
                     }
 
                     .title {
-                        width: calc(100% - 8em);
+                        padding-right: 10px;
+                        max-width: calc(100% - 8em);
                     }
                 }
             }
@@ -374,6 +376,9 @@
 
         .TabContainer .TabPager li {
             padding: 10px 5px;
+            &::after{
+                bottom: calc(1px - var(--p1));
+            }
 
             p {
                 margin-left: auto;
@@ -486,11 +491,14 @@
         .box {
             margin: 20px auto 0;
             max-width: 100%;
-            padding: 30px 10px;
+            padding: 3em 10px;
             font-size: 8.75px;
 
             &:first-child .text {
                 width: 95%;
+            }
+            &:nth-child(2){
+                padding-top: 2.6em;
             }
 
         }
@@ -553,7 +561,7 @@
         }
 
         h4 {
-            font-size: 24px;
+            font-size: 20px;
         }
     }
 
@@ -620,6 +628,9 @@
         p{
             letter-spacing: 0.1em;
         }
+        a::after{
+            width: 3.2em;
+        }
     }
 
     .TabContainer .TabPager li {
@@ -649,6 +660,9 @@
     .index09 .box_right ul{
         font-size: 3.6vw;
     }
+.index08 .box .text p{
+    font-size: 2em;
+}
 }
 
 

@@ -39,7 +39,11 @@ section {
 		animation: idx_key 40s linear infinite;
 
 		background-position: top 0 center;
-
+		@supports (background-image: url(../images/idx_mv01.webp)) {
+	
+			background-image: url(../images/idx_mv01.webp);
+		
+	  }
 		.inner {
 			position: relative;
 			height: 100%;
