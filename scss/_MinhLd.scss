@@ -300,6 +300,17 @@
             }
         }
     }
+    .contact-form-style01 .contact-table textarea{
+        height: 9em;
+    }
+    textarea::-ms-input-placeholder {
+        /* Edge 12-18 */
+        font-size: 12px;
+    }
+    
+    textarea::placeholder {
+        font-size: 12px;
+    }
 }
 @media only screen and (max-width: 768px) {
     .under {
