@@ -55,7 +55,7 @@
 		.inner>section {
 			&:first-child {
 				>h3 {
-					margin-top: 35px;
+					margin-top: 20px;
 				}
 			}
 		}
@@ -636,10 +636,13 @@
 
 		.und_flow {
 			.box_container {
-				font-size: 3.5px;
+				font-size: 5px;
 
 				.design_arr {
-					bottom: -11px;
+					bottom: -8px;
+					.arr_sc:after {
+						left: .6em;
+					}
 				}
 
 				.design_arr .arr_f:after {
