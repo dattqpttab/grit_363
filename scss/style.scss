@@ -938,7 +938,26 @@ picture {
             min-width: 150px;
             max-width: 400px;
             overflow: hidden;
-
+            &.university a::before{
+                content: "";
+                    width: 2.4em;
+                    height: 1.25em;
+                    margin-right: 0.5em;
+                    background-image: url(../images/ic_university.png);
+                    background-size:  auto 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+            }
+            &.drawing a::before{
+                content: "";
+                    width: 1.25em;
+                    height: 1.25em;
+                    margin-right: 0.5em;
+                    background-image: url(../images/ic_drawing.png);
+                    background-size:  auto 100%;
+                    background-position: center;
+                    background-repeat: no-repeat;
+            }
             a {
                 display: flex;
                 align-items: center;
@@ -957,6 +976,7 @@ picture {
                 transition: all .3s;
                 border-radius: 40px;
                 font-family: var(--f-zennew);
+              
 
                 &::after {
                     background-color: #fff;

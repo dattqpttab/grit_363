@@ -116,7 +116,7 @@
             li {
         
                 padding-left: 2.222222222222222em;
-                padding-bottom: 1.388888888888889em;
+                padding-bottom: 0.8em;
                 position: relative;
                 counter-increment: numb;    line-height: 2.5;
                 &:last-child {
@@ -282,6 +282,9 @@
 			}
 		}
 	}
+}
+.under.page-howtodl .und_flow .box_container:last-child .design_arr .arr_sc:after{
+display: none;
 }
 @media only screen and (min-width: 1281px) {
 #h4_2{
