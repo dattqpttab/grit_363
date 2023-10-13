@@ -181,6 +181,9 @@
 		table {
 			&.rollTable {
 				width: 768px;
+				th {
+					max-width: 60vw;
+				}
 			}
 
 			&.tbl_style01 {
@@ -351,6 +354,10 @@
 		margin-bottom: 10px;
 		font-size: 20px !important;
 		text-align: center;
+
+		&.t_left {
+			text-align: left;
+		}
 	}
 
 	.under .box_ct {
@@ -362,17 +369,13 @@
 	}
 
 	.under .und_bn_gr {
+		flex-direction: column;
 		>div {
-			width: 50%;
+			width: 100%;
 
 			&:not(:last-child) {
 				margin-bottom: 0;
 			}
-		}
-
-		&.flex_02>div {
-			width: 100%;
-			max-width: 350px;
 		}
 	}
 
@@ -483,6 +486,14 @@
 		max-width: 300px;
 
 	}
+.under .und_bn_gr {
+		>div {
+			width: 100%;
+			max-width: 320px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
 }
 
 @media only screen and (max-width: 660px) {
@@ -513,14 +524,7 @@
 
 
 
-		.und_bn_gr {
-			>div {
-				width: 100%;
-				max-width: 320px;
-				margin-left: auto;
-				margin-right: auto;
-			}
-		}
+		
 
 		//und_fee
 		.und_fee {
@@ -660,9 +664,12 @@
 		}
 
 		.fee_card {
+			align-items: center;
 			flex-direction: row;
 			width: 100%;
 			max-width: 100%;
+
+
 
 			&:not(:first-child) {
 				margin-top: 40px;
@@ -678,15 +685,17 @@
 
 			.card_num {
 				margin-bottom: 0;
+				margin-left: 0;
 			}
 
 			.card_ct {
-				width: 80%;
+				width: calc(100% - 32px);
 				justify-content: flex-start;
 				padding-left: 15px;
 
 				p {
 					writing-mode: horizontal-tb;
+					font-size: 18px;
 
 					br {
 						display: none;
