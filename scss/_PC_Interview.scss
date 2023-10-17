@@ -63,6 +63,7 @@
                     font-size: 1.25em;
                     letter-spacing: 0.2em;
                     position: relative;
+                    font-weight: 400;
 
                 }
 
@@ -105,7 +106,7 @@
 
         #mainContent {
             .inner {
-                max-width: 1056px;
+                max-width: 1300px;
             }
         }
     }
@@ -162,7 +163,8 @@
     &_img {
         position: relative;
         display: block;
-        width: 51%;
+        width: 47%;
+        max-width: 600px;
 
         img {
             display: block;
@@ -176,7 +178,7 @@
 
             position: absolute;
             bottom: -0.1em;
-            left: 40px;
+            left: 2%;
             font-family: "Libre Baskerville", serif;
             line-height: 0.5;
             font-size: 120px;
@@ -185,18 +187,14 @@
     }
 
     &_content {
-        max-width: 538px;
-        width: calc(49% - var(--size-mg));
+     
+        width: calc(53% - var(--size-mg));
 
         h4 {}
     }
 }
 
-@media only screen and (min-width: 1367px) {
-    .under.page-interview .key .key_text {
-        padding-left: 20%;
-    }
-}
+
 
 @media only screen and (max-width: 1366px) and (min-width: 1000px) {
     .under.page-interview .key .key_text {

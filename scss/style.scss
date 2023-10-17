@@ -125,7 +125,7 @@ a:not(.tel_click) {
 
     &:visited {}
 }
-
+@include screen('min769'){
 a:not([target*="_blank"]) {
     transition: opacity 0.3s ease;
 
@@ -133,7 +133,7 @@ a:not([target*="_blank"]) {
         opacity: 0.7;
     }
 }
-
+}
 a.logo,
 .logo a,
 a.ft_logo,
@@ -651,7 +651,7 @@ figure {
     cursor: pointer;
     position: fixed;
     z-index: 19;
-    bottom: 50px;
+    bottom: 20px;
     right: 0px;
 
     &.active {
@@ -834,7 +834,33 @@ figure {
 
         .tel {
             height: 26em;
-            padding-top: 0.4em;
+            padding-top: 0.5em;
+            position: relative;
+            transition: all .3s;
+            &:hover{     background-color: #244786;
+                .en{
+                    right: 100%;
+                }
+            }
+            .en{
+                transition: all .5s ease-in;
+                position: absolute;
+                right: -11em;
+                width: 9em;
+                top: 0;
+                z-index: -1;
+        
+                background-color: var(--main-color);
+                color: #fff;
+                writing-mode: horizontal-tb;
+                padding: 10px 1px;
+          justify-content: center;
+          border-radius: 5px 0px 0px 5px;
+                &::before{
+                    margin-bottom: 0;
+                    margin-right: 0.2em;
+                }
+            }
 
             p {
                 &::before {
@@ -846,7 +872,7 @@ figure {
 
         .web {
             height: 18em;
-            padding-top: 0.4em;
+            padding-top: 0.45em;
 
             p {
                 span {
@@ -854,7 +880,9 @@ figure {
                 }
 
                 &::before {
+                    margin-bottom: 0.409em;
                     width: 1.04546em;
+                    margin-right: 0.05em;
                     height: 1.04546em;
                     max-width: 23px;
                 }
@@ -1011,7 +1039,7 @@ picture {
 
                     @include screen('min769') {
                         &:hover {
-                            opacity: 0.9;
+                            opacity: 0.7;
                             background-color: transparent;
 
                             &::after {
@@ -1067,7 +1095,7 @@ picture {
             display: none;
         }
     }
-}
+
 
 .border-block {
     box-sizing: border-box;
@@ -1311,12 +1339,17 @@ picture {
     color: #000;
     /* 文字の色 */
     text-align: center;
+    justify-content: center;
     /* 内容は中央配置 */
 }
 
 .col_2>div {
     width: 50%;
     padding: 10px;
+    max-width: 320px;
+    img{
+        margin: 0;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -1346,18 +1379,21 @@ picture {
 
 /*-- title ------------*/
 
-.title {
-    color: #44a7da;
-    font-size: 22px;
-    display: block;
-    line-height: 1.6em;
-    letter-spacing: 0.06em;
-}
+    .title {
+        color: #44a7da;
+        font-size: 22px;
+        display: block;
+        line-height: 1.6em;
+        letter-spacing: 0.06em;
+    }
+    
+    p.title,
+    .title p {
+        margin-bottom: 0.5em;
+    }
 
-p.title,
-.title p {
-    margin-bottom: 0.5em;
-}
+
+
 
 @media screen and (max-width: 960px) {
     .col_3>div {
@@ -1382,15 +1418,24 @@ p.title,
         display: none;
     }
 }
-
+}
+.page-news,.page-blog{
+    .entry{
+        font-size: 16px;
+        line-height: 2;
+    }
+}
 .page-media {
     .btn-group {
         display: flex;
         justify-content: center;
     }
 }
+.under{
 .box.style01 h4.mh {
     min-height: calc(2.8em + 16px);
+    display: flex;
+    align-items: center;
 }
 a[href$="jpg"]:hover,
 a[href$="pdf"]:hover {
@@ -1416,8 +1461,15 @@ opacity: 1 !important;
     background-position: center;
     background-size: 100% auto;
 }
-
+}
 @media screen and (max-width: 768px) {
+    .page-for_managers-naibutsuho .imgBox.colImg.colImg3 {
+        figure {
+
+            height: 230px;
+        }
+    }
+    .under{
     .entry  .border-block {
         margin-left: auto;
         margin-right: auto;
@@ -1430,12 +1482,7 @@ opacity: 1 !important;
         margin-left: auto;
         margin-right: auto;
     }
-    .page-for_managers-naibutsuho .imgBox.colImg.colImg3 {
-        figure {
 
-            height: 230px;
-        }
-    }
 
     .blog_post_button {
         margin-top: 50px !important;
@@ -1465,6 +1512,7 @@ opacity: 1 !important;
     .title {
         font-size: 19px;
     }
+}
 }
 
 

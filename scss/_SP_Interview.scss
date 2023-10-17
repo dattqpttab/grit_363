@@ -1,5 +1,8 @@
 /*INTERVIEW PAGE*/
 @media only screen and (max-width: 768px) {
+    .mt0sp{
+        margin-top: 0 !important;
+    }
     .under {
         &.page-interview {
             counter-reset: count;

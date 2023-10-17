@@ -71,10 +71,10 @@ $(function(){
 	// To Top
 	var mv_h, win_h;
 	var y = 0;
-	mv_h = $('.key').height();
+
 	$(document).on('scroll', function () {
 		y = $(this).scrollTop();
-		
+		mv_h = $('.key').height();
 		win_h = $(window).height() - 200;
 		if ((y > 100) && (y > mv_h - win_h)) {
 			$(".totop, .bnr_corona").addClass('active');
@@ -83,7 +83,7 @@ $(function(){
 		}
 		if (!isMobile) {
 		
-		if ((y > 100) && (y > mv_h  - 150)) {
+		if ((y > 100) && (y > mv_h  - 100)) {
 			$(".home_page header").addClass('active');
 		} else {
 			$(".home_page header").removeClass('active');
